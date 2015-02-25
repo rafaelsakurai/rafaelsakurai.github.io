@@ -4,16 +4,20 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
-
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
+        <div>
+          <a href="{{ post.url }}" >
+            <img border="0" width="100%" height="100%" src="/img/posts/{{ post.image }}" alt="{{ post.summary }}">
+          </a>
+        </div>
+        <div>
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} - Tags: <i class="icon-tags"></i> {% for tag in post.tags %} <a href="/tags/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;"><u>{{ tag }}</u></a>  {% if forloop.last != true %} {% endif %} {% endfor %}</span>
+          <h2>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h2>
+        </div>
       </li>
     {% endfor %}
   </ul>
