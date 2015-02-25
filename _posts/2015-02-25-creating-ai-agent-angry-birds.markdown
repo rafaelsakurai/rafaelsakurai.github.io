@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Creating a intelligent agent to play Angry Birds in Java"
+title: "Creating an intelligent agent to play Angry Birds in Java"
 date: 2015-02-25 10:47:00
 tags: ia angrybirds java
 published: true
-summary: This post explain how to configure and start to create a intelligent agent to play Angry Birds.
+summary: This post explain how to configure and start to create an intelligent agent to play Angry Birds.
 image: 2015-02-25-creating-ai-agent-angry-birds-aibirds.png
 ---
 
@@ -18,7 +18,7 @@ image: 2015-02-25-creating-ai-agent-angry-birds-aibirds.png
 
 [Angry Birds AI Competition](http://aibirds.org/) its an event in which we can create intelligent agent to play Angry Birds. This competition occur every year since 2012 in a different city from World and the event is filiated to [Internation Joint Conference on Artificial Intelligence](http://ijcai-15.org/) proving to be a good place to show your knowledge.
 
-So, in this post, I will explain how to configure the environment to play Angry Birds and start to create a intelligent agent using Java.
+So, in this post, I will explain how to configure the environment to play Angry Birds and start to create an intelligent agent using Java.
 
 How things will work? To play Angry Birds you can simply open [http://chrome.angrybirds.com/](http://chrome.angrybirds.com/) on Google Chrome, and the Ai Birds provide a plugin from Chrome that identify the components of screen (like birds, pigs, sling shot, wood, ice, stone etc) and execute the commands send via Java.
 
