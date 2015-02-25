@@ -20,9 +20,9 @@ image: 2015-02-25-creating-ai-agent-angry-birds-aibirds.png
 
 So, in this post, I will explain how to configure the environment to play Angry Birds and start to create a intelligent agent using Java.
 
-How things will work? To play Angry Birds you can simply open [http://chrome.angrybirds.com/](http://chrome.angrybirds.com/) on Google Chrome, so the Ai Birds provide a plugin from Chrome that provide the components of screen (like birds, pigs, sling shot, wood, ice, stone etc) and execute the commands send via Java
+How things will work? To play Angry Birds you can simply open [http://chrome.angrybirds.com/](http://chrome.angrybirds.com/) on Google Chrome, and the Ai Birds provide a plugin from Chrome that identify the components of screen (like birds, pigs, sling shot, wood, ice, stone etc) and execute the commands send via Java.
 
-For a fast start up, access [http://aibirds.org/basic-game-playing-software/getting-started.html](http://aibirds.org/basic-game-playing-software/getting-started.html) and follow these instructions. At the end you will have the `abV1.32.zip` file that contains all files including Google Chrome plugin, a java executable `ABSoftware.jar` (that provide the comunication between Java and Chrome plugin), and an source code of a sample agent in Java that allow understand the basic of how to create your own Intelligent Agent that play Angry Birds.
+For a fast start up, access the page [http://aibirds.org/basic-game-playing-software/getting-started.html](http://aibirds.org/basic-game-playing-software/getting-started.html) and follow the instructions. At the end, you will have the `abV1.32.zip` file that contains all files including Google Chrome plugin, a java executable `ABSoftware.jar` (that provide the comunication between Java and Chrome plugin), and an source code of a sample agent in Java that allow understand the basic of how to create your own Intelligent Agent that play Angry Birds.
 
 So far, you can be able to execute the command `java -jar ABSoftware.jar -na 1` and see the screen of Angry Birds playing alone.
 
