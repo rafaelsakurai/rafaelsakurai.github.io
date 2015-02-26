@@ -31,7 +31,7 @@ The `ActionRobot` can communicate with Chrome plugin and make a screenshot from 
 Rectangle sling = vision.findSlingshotMBR();
 {% endhighlight %}
 
-So the slingshot is a rectangle like this `java.awt.Rectangle[x=185,y=317,width=17,height=66]` with your position on screen.
+So, the slingshot is a rectangle like this `java.awt.Rectangle[x=185,y=317,width=17,height=66]` with your position on screen.
 
 And we also can find the pigs:
 
