@@ -12,3 +12,6 @@ github_username:  rafaelsakurai
 
 # Build settings
 markdown: kramdown
+
+gems:
+  - jekyll-sitemap
