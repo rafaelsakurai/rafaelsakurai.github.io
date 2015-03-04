@@ -6,7 +6,7 @@ permalink: /about/
 
 <h1>Rafael Guimarães Sakurai</h1>
 
-I am a professor at [Universidade Metodista de São Paulo](htttp://www.metodista.br) and Editor at [InfoQ Brasil](http://www.infoq.com/br).
+I am professor at [Universidade Metodista de São Paulo](htttp://www.metodista.br) and Editor at [InfoQ Brasil](http://www.infoq.com/br).
 
 <h3>Education</h3>
 <ul>
@@ -22,11 +22,11 @@ I am a professor at [Universidade Metodista de São Paulo](htttp://www.metodista
 	<li>Sun Certified Web Component Developer for the Java 2 Platform, Enterprise Edition 1.4, Sun Microsystems(2007)</li>
 	<li>Sun Certified Programmer for the Java 2 Platform, Standard Edition 5.0, Sun Microsystems (2006)</li>
 </ul>
-<h3>Research insterest:</h3>
+<h3>Research interest:</h3>
 <ul>
 	<li>Artificial intelligence</li>
-	<li>Machine learning</li>
-	<li>Programmin languages</li>
+	<li>Machine learning in games</li>
+	<li>Programming languages</li>
 	<li>Software engineering</li>
 	<li>Software architecture</li>
 </ul>
