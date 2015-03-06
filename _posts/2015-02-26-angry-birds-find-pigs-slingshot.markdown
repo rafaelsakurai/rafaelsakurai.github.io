@@ -53,7 +53,7 @@ With these informations we know the position of slingshot and the position of pi
 
 <br/>
 
-To execute the shot, we will use `ab.demo.other.Shot` class, the constructor receive as parameter the position x and y from slingshot, the positions x and y from release point, a value zero, and a time that execute the tap in case when the bird have same effect like split into three or increase speed.
+To execute the shot, we will use `ab.demo.other.Shot` class, the constructor receive as parameter the position x and y from slingshot, the positions x and y from release point, a value zero (wait time before launch the bird), and a time that execute the tap in case when the bird have same effect like split into three or increase speed.
 
 For example:
 
