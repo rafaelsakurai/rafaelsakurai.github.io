@@ -1,21 +1,9 @@
 ---
 layout: default
 ---
-<div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %} - 
-    Tags: <i class="icon-tags"></i> {% for tag in page.tags %} <a href="/tags/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;"><u>{{ tag }}</u></a>  {% if forloop.last != true %} {% endif %} {% endfor %}
-    </p>
-    <p>
-    	<a href="https://twitter.com/share" class="twitter-share-button" data-via="rafaelsakurai">Tweet</a>
-    	<g:plusone size="medium"></g:plusone>
-    </p>
-  </header>
-
-  <article class="post-content">
-    {{ content }}
-  </article>
-
+<div class="content">    
+	{% include post_header.html %}
+    {{ content }}		
 </div>
+    

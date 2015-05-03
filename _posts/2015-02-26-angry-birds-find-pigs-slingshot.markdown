@@ -8,10 +8,12 @@ summary: This post explain how to identify in Angry Birds the pigs and execute a
 image: 2015-02-26-angry-birds-find-pigs-slingshot.png
 ---
 
-<div class="span2">
-  <a href="{{ post.url }}" >
-    <img border="0" width="100%" height="100%" src="/img/posts/2015-02-26-angry-birds-find-pigs-slingshot.png" alt="Angry Birds">
-  </a>
+<div class="row">
+	<div class="span12" align="center">
+		<a href="{{ post.url }}" >
+			<img border="0" width="80%" height="100%" src="/img/posts/2015-02-26-angry-birds-find-pigs-slingshot.png" alt="Angry Birds">
+		</a>
+	</div>
 </div>
 
 <br/>
@@ -45,10 +47,12 @@ Each pig is returned in a list of `ab.vision.ABObject`, a class that extends `ja
 
 With these informations we know the position of slingshot and the position of pig, so we can try to estimate the trajectory of shoot the bird in direction of the pig.
 
-<div class="span2">
-  <a href="{{ post.url }}" >
-    <img border="0" width="100%" height="100%" src="/img/posts/2015-02-26-angry-birds-find-pigs-slingshot2.png" alt="Pull the sling.">
-  </a>
+<div class="row">
+	<div class="span12" align="center">
+		<a href="{{ post.url }}" >
+			<img border="0" width="80%" height="100%" src="/img/posts/2015-02-26-angry-birds-find-pigs-slingshot2.png" alt="Pull the sling.">
+		</a>
+	</div>
 </div>
 
 <br/>
@@ -66,12 +70,53 @@ aRobot.cshoot(shot);
 
 Create a Shot object that inform to start the pull in position `(193, 328)`, that correspond of slingshot position, and the value `-100` say that need pull back in `x axis` and the value `50` say that need to pull down in `y axis`. To execute the shot just need to call `cshoot(shot)` method from `ActionRobot` class.
 
-<div class="span2">
-  <a href="{{ post.url }}" >
-    <img border="0" width="100%" height="100%" src="/img/posts/2015-02-26-angry-birds-find-pigs-slingshot3.png" alt="Slingshot.">
-  </a>
+<div class="row">
+	<div class="span12" align="center">
+		<a href="{{ post.url }}" >
+			<img border="0" width="80%" height="100%" src="/img/posts/2015-02-26-angry-birds-find-pigs-slingshot3.png" alt="Slingshot.">
+		</a>
+	</div>
 </div>
 
 <br/>
 
 But, how do I know how many I need to pull back and pull down the slingshot?
+
+<div class="row">	
+	<div class="span12 column">
+			<p class="pull-right">{% if page.previous.url %} <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}"><i class="icon-chevron-left"></i></a> 	{% endif %}   {% if page.next.url %} 	<a href="{{page.next.url}}" title="Next Post: {{page.next.title}}"><i class="icon-chevron-right"></i></a> 	{% endif %} </p>  
+	</div>
+</div>
+
+<div class="row">	
+    <div class="span12 columns">    
+		<h2>Comments Section</h2>
+	    <p>Feel free to comment on the post but keep it clean and on topic.</p>	
+	    <div id="disqus_thread"></div>
+		<script type="text/javascript">
+		    /* * * CONFIGURATION VARIABLES * * */
+		    var disqus_shortname = 'rafaelsakurai';
+		    
+		    /* * * DON'T EDIT BELOW THIS LINE * * */
+		    (function() {
+		        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		    })();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+		<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+	</div>
+</div>
+
+<!-- Twitter -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<!-- Google + -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>

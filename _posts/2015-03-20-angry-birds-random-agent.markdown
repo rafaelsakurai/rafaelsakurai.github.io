@@ -4,11 +4,9 @@ title: "Angry Birds: Execute a random shot and save the shots."
 date: 2015-03-20 04:30:00
 tags: ia angrybirds java random
 published: true
-summary: In this post i explain how create a agent that execute a shot in a random object in the screen, and save in a file (to future use) the shots used to win the level.
+summary: In this post I explain how create a agent that execute a shot in a random object in the screen, and save in a file (to future use) the shots used to win the level.
 image: 2015-03-20-angry-birds-random-agent.png
 ---
-
-<br/>
 
 <h2>Creating a random agent</h2>
 
@@ -311,11 +309,14 @@ The `executeShot` method get the screen information and execute the shot in dire
 
 After almost two hours playing alone, this code finish the first 21 levels and save the best shots.
 
-<div class="span2">
-  <a href="{{ post.url }}" >
-    <img border="0" width="100%" height="100%" src="/img/posts/2015-03-20-angry-birds-random-agent.png" alt="Angry Birds">
-  </a>
+<div class="row">
+  <div class="span12" align="center">
+    <a href="{{ post.url }}" >
+      <img border="0" width="80%" height="100%" src="/img/posts/2015-03-20-angry-birds-random-agent.png" alt="Angry Birds">
+    </a>
+  </div>
 </div>
+
 <br/>
 
 As we can see, I don't made many modifications. I just save the shots to execute again and change the target from pigs to all objects on screen.
@@ -681,3 +682,42 @@ public class RandomAgent implements Runnable {
 {% endhighlight %}
 
 So if you have more time, leave the gaming playing alone to see how far it can get. Last information, don't forget implements Serializable in all objects that will be saved in a file.
+
+<div class="row"> 
+  <div class="span12 column">
+      <p class="pull-right">{% if page.previous.url %} <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}"><i class="icon-chevron-left"></i></a>   {% endif %}   {% if page.next.url %}  <a href="{{page.next.url}}" title="Next Post: {{page.next.title}}"><i class="icon-chevron-right"></i></a>   {% endif %} </p>  
+  </div>
+</div>
+
+<div class="row"> 
+    <div class="span12 columns">    
+    <h2>Comments Section</h2>
+      <p>Feel free to comment on the post but keep it clean and on topic.</p> 
+      <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES * * */
+        var disqus_shortname = 'rafaelsakurai';
+        
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+  </div>
+</div>
+
+<!-- Twitter -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<!-- Google + -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
