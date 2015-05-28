@@ -2,23 +2,18 @@
 layout: post
 title: "Angry Birds: Find the pigs and execute a shot."
 date: 2015-02-26 11:07:00
-tags: ia angrybirds java
+tags: [ia, angrybirds, java]
 published: true
-summary: This post explain how to identify in Angry Birds the pigs and execute a shot.
+excerpt: This post explain how to identify in Angry Birds the pigs and execute a shot.
 image: 2015-02-26-angry-birds-find-pigs-slingshot.png
+comments: true
 ---
 
-<div class="row">
-	<div class="span12" align="center">
-		<a href="{{ post.url }}" >
-			<img border="0" width="80%" height="100%" src="/img/posts/2015-02-26-angry-birds-find-pigs-slingshot.png" alt="Angry Birds">
-		</a>
-	</div>
-</div>
+<figure>
+    <a href="/images/posts/2015-02-26-angry-birds-find-pigs-slingshot.png"><img src="/images/posts/2015-02-26-angry-birds-find-pigs-slingshot.png" alt="Angry Birds."></a>
+</figure>
 
-<br/>
-
-<h2>Identify the slingshot and pigs</h2>
+## Identify the slingshot and pigs
 
 After configure the environment is time to programming, so let's start to understand how to identify the slingshot and pigs. To do this, we need a `Vision` object, like this:
 
@@ -43,19 +38,13 @@ List<ABObject> pigs = vision.findPigsMBR();
 
 Each pig is returned in a list of `ab.vision.ABObject`, a class that extends `java.awt.Rectangle` and contains the type of component (Ground, Hill, Sling, Bird, Pig, Ice, Wood, Stone, etc). When you print a ABObject you have some like this `ab.vision.ABObject[x=537,y=291,width=11,height=10]` if you are using `findPigsMBR()`, just the rectangle of the component; or you can see some like this `Circ: id:1 type:Pig r:  7,250 at x:543,5 y:294,0`, if you are using `findPigsRealShape()` with the information of type, angle, etc.
 
-<h2>Shot</h2>
+## Shot
 
 With these informations we know the position of slingshot and the position of pig, so we can try to estimate the trajectory of shoot the bird in direction of the pig.
 
-<div class="row">
-	<div class="span12" align="center">
-		<a href="{{ post.url }}" >
-			<img border="0" width="80%" height="100%" src="/img/posts/2015-02-26-angry-birds-find-pigs-slingshot2.png" alt="Pull the sling.">
-		</a>
-	</div>
-</div>
-
-<br/>
+<figure>
+    <a href="/images/posts/2015-02-26-angry-birds-find-pigs-slingshot2.png"><img src="/images/posts/2015-02-26-angry-birds-find-pigs-slingshot2.png" alt="Pull the sling."></a>
+</figure>
 
 To execute the shot, we will use `ab.demo.other.Shot` class, the constructor receive as parameter the position x and y from slingshot, the positions x and y from release point, a value zero (wait time before launch the bird), and a time that execute the tap in case when the bird have same effect like split into three or increase speed.
 
@@ -70,53 +59,8 @@ aRobot.cshoot(shot);
 
 Create a Shot object that inform to start the pull in position `(193, 328)`, that correspond of slingshot position, and the value `-100` say that need pull back in `x axis` and the value `50` say that need to pull down in `y axis`. To execute the shot just need to call `cshoot(shot)` method from `ActionRobot` class.
 
-<div class="row">
-	<div class="span12" align="center">
-		<a href="{{ post.url }}" >
-			<img border="0" width="80%" height="100%" src="/img/posts/2015-02-26-angry-birds-find-pigs-slingshot3.png" alt="Slingshot.">
-		</a>
-	</div>
-</div>
-
-<br/>
+<figure>
+    <a href="/images/posts/2015-02-26-angry-birds-find-pigs-slingshot3.png"><img src="/images/posts/2015-02-26-angry-birds-find-pigs-slingshot3.png" alt="Slingshot."></a>
+</figure>
 
 But, how do I know how many I need to pull back and pull down the slingshot?
-
-<div class="row">	
-	<div class="span12 column">
-			<p class="pull-right">{% if page.previous.url %} <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}"><i class="icon-chevron-left"></i></a> 	{% endif %}   {% if page.next.url %} 	<a href="{{page.next.url}}" title="Next Post: {{page.next.title}}"><i class="icon-chevron-right"></i></a> 	{% endif %} </p>  
-	</div>
-</div>
-
-<div class="row">	
-    <div class="span12 columns">    
-		<h2>Comments Section</h2>
-	    <p>Feel free to comment on the post but keep it clean and on topic.</p>	
-	    <div id="disqus_thread"></div>
-		<script type="text/javascript">
-		    /* * * CONFIGURATION VARIABLES * * */
-		    var disqus_shortname = 'rafaelsakurai';
-		    
-		    /* * * DON'T EDIT BELOW THIS LINE * * */
-		    (function() {
-		        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-		        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-		        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-		    })();
-		</script>
-		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-		<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-	</div>
-</div>
-
-<!-- Twitter -->
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-<!-- Google + -->
-<script type="text/javascript">
-  (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/plusone.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
-</script>

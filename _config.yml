@@ -1,4 +1,60 @@
-auto: true
-markdown: rdiscount
-pygments: true
-permalink: /blog/:title
+# Site wide configuration
+
+title:            Rafael Sakurai
+locale:           en_US
+url:              
+
+
+# Jekyll configuration
+
+permalink:   /:categories/:title/
+markdown:    kramdown
+highlighter: pygments
+sass:
+  sass_dir: _sass
+  style: compressed
+gems:
+  - jekyll-sitemap
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
+
+
+# Site owner
+owner:
+  name: Rafael Sakurai
+  avatar: bio-photo.jpg
+  bio: "Professor at UMESP and Editor at InfoQ Brazil."
+  email: 
+  disqus-shortname: rafaelsakurai
+  twitter: rafaelsakurai
+  facebook: #username
+  google:
+    plus: RafaelSakurai
+    analytics: UA-60110243-1
+    verify: 
+    ad-client: 
+    ad-slot: 
+  bing-verify: 
+  github: rafaelsakurai
+  stackoverflow: #http://stackoverflow.com/users/123456/username
+  linkedin: rafaelsakurai
+  xing: #username
+  instagram: #rafaelsakurai
+  lastfm: #username
+  tumblr: #username
+  pinterest: #username
+  foursquare: #username
+  steam: #username
+  dribbble: #username
+  youtube: #username
+  soundcloud: #username
+  weibo: #username
+  flickr: #username
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
