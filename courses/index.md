@@ -13,4 +13,4 @@ modified: 2016-02-04T16:36:00.573882-03:00
 
 - Programação de Jogos Digitais para Web e Mobile
 
-- [Segurança](/courses/seguranca.html)
+- [Segurança](/courses/seguranca)
