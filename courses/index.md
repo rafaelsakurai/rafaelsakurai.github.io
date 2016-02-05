@@ -5,11 +5,13 @@ tags: [courses]
 modified: 2016-02-04T16:36:00.573882-03:00
 ---
 
-- [Desenvolvimento de Aplicações Móveis - Android](/courses/android.html)
+#### (Material em português)
 
-- [Integração Contínua](/courses/integracao_continua.html)
+- [Desenvolvimento de Aplicações Móveis - Android](/courses/android)
 
-- [Programação Baseada em Componentes](/courses/programacao_componentes.html)
+- [Integração Contínua](/courses/integracao_continua)
+
+- [Programação Baseada em Componentes](/courses/programacao_componentes)
 
 - Programação de Jogos Digitais para Web e Mobile
 
