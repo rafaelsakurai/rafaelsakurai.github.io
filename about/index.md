@@ -11,7 +11,7 @@ image:
 I am professor at <a href="htttp://www.metodista.br">Universidade Metodista de São Paulo</a> and Editor at <a href="http://www.infoq.com/br">InfoQ Brasil</a>.
 
 ## Education
-* **Universidade Federal do ABC** Master, Computer Science (2014 - 2016);
+* **Universidade Federal do ABC** Master, Computer Science (2014 - 2017);
 * **Faculdade de Informática e Administração Paulista (FIAP)** MBA, IT Architecture (2009 - 2010);
 * **Faculdade de Informática e Administração Paulista (FIAP)** Specialization, Engineering Components with Java Enterprise and Webservices (2006 - 2007);
 * **Universidade Metodista de São Paulo (UMESP)** BS, Computer Science (2002 - 2005).
@@ -24,7 +24,7 @@ I am professor at <a href="htttp://www.metodista.br">Universidade Metodista de S
 
 ## Research interest:
 * Artificial intelligence;
-* Machine learning in games;
+* Machine learning for games;
 * Programming languages;
 * Software engineering;
 * Software architecture.

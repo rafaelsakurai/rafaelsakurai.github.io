@@ -2,45 +2,56 @@
 layout: page
 title: Desenvolvimento de Aplicações Móveis - Android
 tags: [courses]
-modified: 2015-12-12T00:05:00.573882-03:00
+modified: 2017-08-17T00:45:00.573882-03:00
 ---
 
-### Aula 01 - Introdução Android, Android Studio, emulador, projeto Android e componentes de tela
+Estas aulas utilizam o conteúdo do livro [Google Android: Uma abordagem prática e didática](https://leanpub.com/google-android).
 
-<iframe src="https://docs.google.com/presentation/d/1wRPq9n-7-zvrgkA8BVSuiPb8Lx-fP0TBL3zoht2vU_k/embed" width="100%" height="400" title="Aula 01 - Introdução Android" frameborder="0"> </iframe>
+### <a href="https://docs.google.com/presentation/d/1wRPq9n-7-zvrgkA8BVSuiPb8Lx-fP0TBL3zoht2vU_k" target="_blank">Aula 01</a>
+* Introdução Android
+* Android Studio
+* Emulador
+* Criando um projeto Android e componentes de tela
 
-### Aula 02 - Activity, TextView, ImageView, RelativeLayout, Toast e string.xml
+### <a href="https://docs.google.com/presentation/d/1WuIRzlaTqO6hASsYLevCWooQgTHg-LZzZkDD-kxEtEs" target="_blank">Aula 02</a>
+* Activity
+* Componentes TextView, ImageView, RelativeLayout e Toast
+* Utilizando o string.xml
 
-<iframe src="https://docs.google.com/presentation/d/1WuIRzlaTqO6hASsYLevCWooQgTHg-LZzZkDD-kxEtEs/embed" width="100%" height="400" title="Aula 02 - Olá Android!" frameborder="0"> </iframe>
+### <a href="https://docs.google.com/presentation/d/1PWpRVVR9CGjysvxw1rPQDWPOdTrqazDSK7N3cgASQRI" target="_blank">Aula 03</a>
+* Componentes Button e LinearLayout
+* Acionando métodos da Activity
+* Acessando os componentes do layout na Activity com findViewById
 
-### Aula 03 - Button, LinearLayout, acionando métodos da activity e findViewById
+### <a href="https://docs.google.com/presentation/d/1ZT9S3z2NdsCgVnGoPvxlxayW9-GqLtTXzHdCMjTS3OI" target="_blank">Aula 04</a>
+* Imagem como background
+* Layout de tela 
+* Alert Dialog
 
-<iframe src="https://docs.google.com/presentation/d/1PWpRVVR9CGjysvxw1rPQDWPOdTrqazDSK7N3cgASQRI/embed" width="100%" height="400" title="Aula 03 - Calculadora" frameborder="0"> </iframe>
+### <a href="https://docs.google.com/presentation/d/1VJFynMe1IZr8mFoSMHYTJdDI_NPc_u-5UwzsLX6p9PA" target="_blank">Aula 05</a>
+* Componentes EditText e ListView
+* Intent
+* Simulação em diversos tamanhos de telas
 
-### Aula 04 - Imagem como background, layout de tela e Alert Dialog
+### <a href="https://docs.google.com/presentation/d/16UkbkfCQ9gUdIorTA2Tq1QJ6JL0GTqYOr2gsTdkB4oo" target="_blank">Aula 06</a>
+* Obter o resultado da Intent
+* Menu flutuante
 
-<iframe src="https://docs.google.com/presentation/d/1ZT9S3z2NdsCgVnGoPvxlxayW9-GqLtTXzHdCMjTS3OI/embed" width="100%" height="400" title="Aula 04 - Jogo da Velha" frameborder="0"> </iframe>
+### <a href="https://docs.google.com/presentation/d/1jWcgdVR7i1MK8pu2JwMOge16LFL-gJl37IzbItKxN1U" target="_blank">Aula 07</a>
+* Introdução ao SQLite
 
-### Aula 05 - EditText, ListView, Intent e simulação em diversos tamanhos de telas
+### <a href="https://docs.google.com/presentation/d/1du3boJyHWUvcv2VOZi9zhN-ShNzGr54fpppzpOsIsZA" target="_blank">Aula 08</a>
+* Personalizando a ListView
+* Obtendo imagens da galeria
 
-<iframe src="https://docs.google.com/presentation/d/1VJFynMe1IZr8mFoSMHYTJdDI_NPc_u-5UwzsLX6p9PA/embed" width="100%" height="400" title="Aula 05 - Minhas Tarefas" frameborder="0"> </iframe>
+### <a href="https://docs.google.com/presentation/d/1PjOp7ZraTcjQrmBjxbACVMIoOcTvjD_EdX8l2bxcUV0" target="_blank">Aula 09</a>
+* Usado um Web Service REST
+* URL
+* HttpURLConnection
+* AsyncTask
+* permissão para acesso a Internet
 
-### Aula 06 - Obter resultado da Intent, adicionar item no menu flutuante
-
-<iframe src="https://docs.google.com/presentation/d/16UkbkfCQ9gUdIorTA2Tq1QJ6JL0GTqYOr2gsTdkB4oo/embed" width="100%" height="400" title="Aula 06 - Valet" frameborder="0"> </iframe>
-
-### Aula 07 - Introdução ao SQLite
-
-<iframe src="https://docs.google.com/presentation/d/1jWcgdVR7i1MK8pu2JwMOge16LFL-gJl37IzbItKxN1U/embed" width="100%" height="400" title="Aula 07 - ValetDB" frameborder="0"> </iframe>
-
-### Aula 08 - Personalizando a ListView e obter imagem da galeria
-
-<iframe src="https://docs.google.com/presentation/d/1du3boJyHWUvcv2VOZi9zhN-ShNzGr54fpppzpOsIsZA/embed" width="100%" height="400" title="Aula 08 - Meus Produtos" frameborder="0"> </iframe>
-
-### Aula 09 - Usado Web Service REST, URL, HttpURLConnection, JSON, Gson, AsyncTask e permissão para acesso a Internet
-
-<iframe src="https://docs.google.com/presentation/d/1PjOp7ZraTcjQrmBjxbACVMIoOcTvjD_EdX8l2bxcUV0/embed" width="100%" height="400" title="Aula 09 - Meus Produtos com Web Service REST" frameborder="0"> </iframe>
-
-### Aula 10 - Action Bar, DataPicker, TimePicker e Material Design
-
-<iframe src="https://docs.google.com/presentation/d/1NhIhHNX7E0ugulF2LxZqxE4ZF7BifwTSYgAf_0KsAgY/embed" width="100%" height="400" title="Aula 10 - Tá na hora" frameborder="0"> </iframe>
+### <a href="https://docs.google.com/presentation/d/1NhIhHNX7E0ugulF2LxZqxE4ZF7BifwTSYgAf_0KsAgY" target="_blank">Aula 10</a>
+* Action Bar
+* DataPicker e TimePicker
+* Material Design

@@ -48,6 +48,7 @@
               <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
               <p class="small">Published on <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>{% if post.modified %} and last modified on <time datetime="{{ post.modified | date: "%Y-%m-%d" }}">{{ post.modified | date: "%B %d, %Y" }}</time>{% endif %}.</p>
               <p>{{ post.excerpt | strip_html | truncate: 200 }}</p>
+              <br/>
             </div>
           {% endif %}
         </div>
