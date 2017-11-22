@@ -9,7 +9,7 @@ comments: true
 image: 2017-11-22-introducao-big-data.png
 ---
 
-#Introdução
+## Introdução
 
 Big Data está relacionado com a capacidade de gerar conhecimento legível ou por meio de modelo computacional, a partir de dados estruturados e não estruturados, e também utilizando mais dados do que é possível armazenar.
 
@@ -29,7 +29,7 @@ Os dados brutos são tantos, que é necessário distribuir o armazenamento em di
 
 O dados são obtidos normalmente de forma contínua e precisam ser processados on-line para gerar conhecimento o mais rápido possível. Os algoritmos devem ser implementados para permitir processar todos os dados de forma distribuída e ao termino (parcial ou final) conseguir combinar todos os resultados para gerar os resultados da sua tarefa.
 
-#MapReduce
+## MapReduce
 
 O MapReduce é uma forma de trabalhar com grandes quantidades de dados distribuídos sem alterar o resultado do algoritmo. No qual o *map* faz o mapeamento dos dados (muitas vezes relacionados a transformações) e o *reduce* reduz a quantidade de dados.
 
