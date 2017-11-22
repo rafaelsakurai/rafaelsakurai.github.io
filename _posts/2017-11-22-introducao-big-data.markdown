@@ -16,12 +16,12 @@ Big Data está relacionado com a capacidade de gerar conhecimento legível ou po
 As principais tarefas estão relacionadas a classificação, agrupamento e regressão, que são implementados a partir do treinamento de modelos de aprendizado de máquinas.
 
 O pipeline básico do Big Data segue o fluxo:
-1- Obter dados
-2- Separar os dados (teste e treino)
-3- Transformar os dados (filtrar atributos, normalizar valores, converter valores, etc)
-4- Treinar e avaliar os modelos de acordo com a tarefa necessária
-5- Otimizar o modelo escolhido
-6- Validar o modelo com novos valores
+1. Obter dados
+2. Separar os dados (teste e treino)
+3. Transformar os dados (filtrar atributos, normalizar valores, converter valores, etc)
+4. Treinar e avaliar os modelos de acordo com a tarefa necessária
+5. Otimizar o modelo escolhido
+6. Validar o modelo com novos valores
 
 O Big Data atende a 4 V's: Variedade (diversidade dos dados), Velocidade (captura e processamento), Volume (quantidade de dados) e Veracidade (relevância dos dados).
 
@@ -31,7 +31,7 @@ O dados são obtidos normalmente de forma contínua e precisam ser processados o
 
 ## MapReduce
 
-O MapReduce é uma forma de trabalhar com grandes quantidades de dados distribuídos sem alterar o resultado do algoritmo. No qual o *map* faz o mapeamento dos dados (muitas vezes relacionados a transformações) e o *reduce* reduz a quantidade de dados.
+O MapReduce é uma forma de trabalhar com grandes quantidades de dados distribuídos sem alterar o resultado do algoritmo. No qual o **map** faz o mapeamento dos dados (muitas vezes relacionados a transformações) e o **reduce** reduz a quantidade de dados.
 
 Mas mapear e reduzir gera o que? Esse é o ponto principal, dado a tarefa que deve ser executada, o objetivo é como aplicar o MapReduce para executar essa tarefa.
 
