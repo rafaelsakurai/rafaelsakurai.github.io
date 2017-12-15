@@ -1,20 +1,20 @@
 # Site wide configuration
 
-title:            Rafael Sakurai
-locale:           pt_BR
-url:
-
-
+title:  Rafael Sakurai
+locale: pt_BR
+url:    http://rafaelsakurai.github.io
+plugins:
+  - jekyll-sitemap
+  
 # Jekyll configuration
 
 permalink:   /:categories/:title/
 markdown:    kramdown
+# highlighter: rouge
 # highlighter: pygments
 sass:
   sass_dir: _sass
   style: compressed
-gems:
-  - jekyll-sitemap
 
 kramdown:
   auto_ids: true

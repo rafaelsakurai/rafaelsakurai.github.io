@@ -1,79 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>/angry-birds-random-agent-improved/</loc>
-    <lastmod>2015-05-04T00:10:00-03:00</lastmod>
-  </url>
-  <url>
-    <loc>/angry-birds-random-agent/</loc>
-    <lastmod>2015-03-20T01:30:00-03:00</lastmod>
-  </url>
-  <url>
-    <loc>/angry-birds-find-pigs-slingshot/</loc>
-    <lastmod>2015-02-26T08:07:00-03:00</lastmod>
-  </url>
-  <url>
-    <loc>/creating-ai-agent-angry-birds/</loc>
-    <lastmod>2015-02-25T07:47:00-03:00</lastmod>
-  </url>
-  <url>
-    <loc>/courses/metodos_ageis/</loc>
-    <lastmod>2017-08-17T14:31:46-03:00</lastmod>
-  </url>
-  <url>
-    <loc>/books/</loc>
-    <lastmod>2017-08-17T14:31:46-03:00</lastmod>
-  </url>
-  <url>
-    <loc>/courses/ciencia_dados/</loc>
-    <lastmod>2017-08-17T14:31:46-03:00</lastmod>
-  </url>
-  <url>
-    <loc>/courses/jogos_ia/</loc>
-    <lastmod>2017-08-17T14:31:46-03:00</lastmod>
-  </url>
-  <url>
-    <loc>/about/</loc>
-    <lastmod>2017-08-17T14:31:46-03:00</lastmod>
-  </url>
-  <url>
-    <loc>/courses/servidores_web/</loc>
-    <lastmod>2017-08-17T14:31:46-03:00</lastmod>
-  </url>
-  <url>
-    <loc>/courses/jogos_web/</loc>
-    <lastmod>2017-08-17T14:31:46-03:00</lastmod>
-  </url>
-  <url>
-    <loc>/</loc>
-    <lastmod>2017-08-17T14:31:46-03:00</lastmod>
-  </url>
-  <url>
-    <loc>/talks/</loc>
-    <lastmod>2017-08-17T14:31:46-03:00</lastmod>
-  </url>
-  <url>
-    <loc>/courses/programacao_componentes/</loc>
-    <lastmod>2017-08-17T14:31:46-03:00</lastmod>
-  </url>
-  <url>
-    <loc>/courses/android/</loc>
-    <lastmod>2017-08-17T14:31:46-03:00</lastmod>
-  </url>
-  <url>
-    <loc>/courses/seguranca/</loc>
-    <lastmod>2017-08-17T14:31:46-03:00</lastmod>
-  </url>
-  <url>
-    <loc>/posts/</loc>
-    <lastmod>2017-08-17T14:31:46-03:00</lastmod>
-  </url>
-  <url>
-    <loc>/courses/</loc>
-    <lastmod>2017-08-17T14:31:46-03:00</lastmod>
-  </url>
-  <url>
-    <loc>/courses/integracao_continua/</loc>
-    <lastmod>2017-08-17T14:31:46-03:00</lastmod>
-  </url>
+<url>
+<loc>/creating-ai-agent-angry-birds/</loc>
+<lastmod>2015-02-25T07:47:00-03:00</lastmod>
+</url>
+<url>
+<loc>/angry-birds-find-pigs-slingshot/</loc>
+<lastmod>2015-02-26T08:07:00-03:00</lastmod>
+</url>
+<url>
+<loc>/angry-birds-random-agent/</loc>
+<lastmod>2015-03-20T01:30:00-03:00</lastmod>
+</url>
+<url>
+<loc>/angry-birds-random-agent-improved/</loc>
+<lastmod>2015-05-04T00:10:00-03:00</lastmod>
+</url>
+<url>
+<loc>/introducao-big-data/</loc>
+<lastmod>2017-11-21T22:00:00-02:00</lastmod>
+</url>
+<url>
+<loc>/classificacao-doencas-microarray/</loc>
+<lastmod>2017-12-14T22:10:00-02:00</lastmod>
+</url>
+<url>
+<loc>/about/</loc>
+</url>
+<url>
+<loc>/books/</loc>
+</url>
+<url>
+<loc>/courses/programacao_componentes/</loc>
+</url>
+<url>
+<loc>/courses/integracao_continua/</loc>
+</url>
+<url>
+<loc>/courses/jogos_ia/</loc>
+</url>
+<url>
+<loc>/courses/ciencia_dados/</loc>
+</url>
+<url>
+<loc>/courses/metodos_ageis/</loc>
+</url>
+<url>
+<loc>/posts/</loc>
+</url>
+<url>
+<loc>/courses/android/</loc>
+</url>
+<url>
+<loc>/courses/servidores_web/</loc>
+</url>
+<url>
+<loc>/courses/jogos_web/</loc>
+</url>
+<url>
+<loc>/courses/</loc>
+</url>
+<url>
+<loc>/</loc>
+</url>
+<url>
+<loc>/courses/seguranca/</loc>
+</url>
+<url>
+<loc>/talks/</loc>
+</url>
 </urlset>

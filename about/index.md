@@ -2,13 +2,15 @@
 layout: page
 title: Rafael Guimarães Sakurai
 tags: [about]
-modified: 2015-05-07T19:00:00.573882-04:00
+modified: 2017-12-15T10:00:00.573882-04:00
 comments: true
 image:
   feature: sample-image-2.jpg
 ---
 
 I am professor at <a href="htttp://www.metodista.br">Universidade Metodista de São Paulo</a> and Editor at <a href="http://www.infoq.com/br">InfoQ Brasil</a>.
+
+**Lates CV:** <a href="http://lattes.cnpq.br/2777638174344195">http://lattes.cnpq.br/2777638174344195</a>
 
 ## Education
 * **Universidade Federal do ABC** Master, Computer Science (2014 - 2017);
