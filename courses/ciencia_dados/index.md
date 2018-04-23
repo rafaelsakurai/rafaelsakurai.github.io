@@ -2,7 +2,7 @@
 layout: page
 title: Ciência de Dados
 tags: [courses]
-modified: 2017-08-17T14:29:00.573882-03:00
+modified: 2018-04-23T17:15:00.573882-03:00
 ---
 
 ### <a href="https://docs.google.com/presentation/d/10hNjhbBbEXRS3lt3KrxGmTjK16OzmQkwOyLeQdGbQtU" target="_blank">Aula 01</a>
@@ -35,14 +35,8 @@ modified: 2017-08-17T14:29:00.573882-03:00
 ### <a href="https://docs.google.com/presentation/d/1SWjfdRHXzKwuYlw6wD1ACzqLQ-6zYgRvOvywUOhkqvU" target="_blank">Aula 10</a>
 * Exercícios de regressão linear, múltipla e logística
 
-Aula 11
-
+### <a href="https://docs.google.com/presentation/d/1PKM-XrLzafFE7yOVUl8-RXyDiVpD5aCOqf9qGcr7VK0" target="_blank">Aula 11</a>
 * Agrupamento
 
-Aula 12
-
-* Exercícios de agrupamento
-
-Aula 13
-
+### <a href="https://docs.google.com/presentation/d/1yru9oGL1Q7zSxra0lvAFoc47wkqRkgSEQwIBnWjv9HE" target="_blank">Aula 12</a>
 * Recomendação de conteúdo

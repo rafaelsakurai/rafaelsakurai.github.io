@@ -2,7 +2,7 @@
 layout: page
 title: Integração Contínua
 tags: [courses]
-modified: 2017-08-17T00:47:00.573882-03:00
+modified: 2018-04-23T17:20:00.573882-03:00
 ---
 
 ### <a href="https://docs.google.com/presentation/d/1EKugrdo4ONhrFuxWVBeng7CE1U0kmqz59ccktB3ARvE" target="_blank">Aula 01</a>
@@ -25,3 +25,12 @@ modified: 2017-08-17T00:47:00.573882-03:00
 
 ### <a href="https://docs.google.com/presentation/d/1nQUTu-vav9_KUK-YUSaJl74JmIr75W-zHg3JvvGixiQ" target="_blank">Aula 06</a>
 * Introdução ao Jenkins
+
+### <a href="https://docs.google.com/presentation/d/1x18Tykap0Kv3dBXtiPLQ2As1zqEQRkN0Knd9APhv4B0" target="_blank">Aula 07</a>
+* Exercício de Jenkins
+
+### <a href="https://docs.google.com/presentation/d/1ejoQ3l2-cgmznYfapG5BjMf1eVQ-cVH30IdGb1Imc-A" target="_blank">Aula 08</a>
+* Deploy com Jenkins
+
+### <a href="https://docs.google.com/presentation/d/1IXYZk_KHwFUJ1PvaykN2Lp1Ze2MZ-feuDxuC13-f9gM" target="_blank">Aula 09</a>
+* Exercício de deploy com Jenkins
