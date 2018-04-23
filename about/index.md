@@ -48,10 +48,18 @@ Planejamento, definição de arquitetura e desenvolvimento de aplicações web e
 
 ## Cursos complementares
 
-* **Alura**:
+* **Alura**
+  * <a href="https://cursos.alura.com.br/certificate/ace73ea6-e188-4bc0-8c56-32ed50ad643e">Visualização de Dados Parte 1: Começando com gráficos (2018)</a>
   * <a href="https://cursos.alura.com.br/certificate/ca5a5d95-dc61-4c1b-81e1-8f105f68234b">Machine Learning: Introdução ao sistemas de recomendação (2018)</a>
   * <a href="https://cursos.alura.com.br/certificate/9c09326d-7525-47f8-9192-c7a8b1c958b0">Machine Learning II: Avançando com tipos diferentes de classificação (2017)</a>
   * <a href="https://cursos.alura.com.br/certificate/386ce18a-ca4b-4726-bf69-074f923abe71">Machine Learning: Introdução a classificação (2017)</a>
+  * <a href="https://cursos.alura.com.br/certificate/9f27f1c05b28bbe13d3126e1817fa721">Git: Controle e compartilhe seu código (2013)</a>
+  * <a href="https://cursos.alura.com.br/certificate/b662db975c853e69aeeb738faaf63126">Teste de integração: Testes SQL e DAOs automatizados em Java (2013)</a>
+  * <a href="https://cursos.alura.com.br/certificate/bba14a1bf3e9dd42993f21e9d0b371d5">Selenium: Sua WebApp testada de ponta a ponta em Java (2012)</a>
+  * <a href="https://cursos.alura.com.br/certificate/c2d9c2fd3c0294319ae72ab3fbff0084">Mocks: Testes de comportamento automatizados em Java (2012)</a>
+  * <a href="https://cursos.alura.com.br/certificate/977e848d21192129af848a86d09c76c6">Refatorando na prática em Java (2012)</a>
+  * <a href="https://cursos.alura.com.br/certificate/11dccaf59a1cbb6fae6dc5ec1d500d17">Testes: TDD com Java (2012)</a>
+  * <a href="https://cursos.alura.com.br/certificate/5168b3e0fe8f15b7c6640ea895f81105">Design patterns Java I: Boas práticas de programação (2011)</a>
 
 * **Cognitive Class**
   * <a href="https://courses.cognitiveclass.ai/certificates/9e99a048eee946eeb2732e6b6aa3c06f">Spark Fundamentals I (2018)</a>
@@ -65,10 +73,10 @@ Planejamento, definição de arquitetura e desenvolvimento de aplicações web e
   * <a href="https://www.fiap.com.br/2012/03/22/fiap-realiza-2-edicao-do-executive-program-da-singularity-university/">Executive Program FIAP (2012)</a>
 
 * **Caelum**
-  * FJ-91 - Arquitetura e Design de Projetos Java (2009)
+  * FJ-91 - Arquitetura e design de projetos Java (2009)
 
 * **Instituto de Matemática e Estatística (IME-USP)**
-  * Programação Distribuída em Java (2006)
+  * Programação distribuída em Java (2006)
 
 ## Áreas de interesse:
 * Inteligência artificial
