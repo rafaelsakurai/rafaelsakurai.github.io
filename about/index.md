@@ -11,7 +11,7 @@ image:
 Atualmente sou professor na <a href="htttp://www.metodista.br">Universidade Metodista de São Paulo</a> e Editor no <a href="http://www.infoq.com/br">InfoQ Brasil</a>.
 
 \\
-**Lates CV:** <a href="http://lattes.cnpq.br/2777638174344195">http://lattes.cnpq.br/2777638174344195</a>
+**Lattes CV:** <a href="http://lattes.cnpq.br/2777638174344195">http://lattes.cnpq.br/2777638174344195</a>
 
 ## Educação
 
