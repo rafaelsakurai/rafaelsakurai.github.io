@@ -26,11 +26,11 @@ Atualmente sou professor na <a href="htttp://www.metodista.br">Universidade Meto
 
 Leciono disciplinas relacionadas à programação em Java (SE e EE), Web (HTML5, CSS e JS), Android, Desenvolvimento de jogos 2D com HTML5, Construct2 e Unity, Inteligência Artificial para jogos, Segurança de Aplicações Web, Servidor de Aplicações Web, Integração Contínua e Ciência de Dados.
 
-**Analista Desenvolvedor Sênior** <a href="www.virginiasurety.com.br">Virginia Surety Companhia de Seguros do Brasil</a> (06/2008 à 03/2014)
+* **Analista Desenvolvedor Sênior** <a href="www.virginiasurety.com.br">Virginia Surety Companhia de Seguros do Brasil</a> (06/2008 à 03/2014)
 
 Análise, planejamento e definição de arquitetura de desenvolvimento de aplicações web em Java voltados para área de seguros. Desenvolvimento usando a plataforma Java Enterprise Edition, Struts ou JavaServer Faces (RichFaces e PrimeFaces) para camada de visualização web, EJB para criação de componentes distribuídos e WebService para integração com outros sistemas, JPA e Hibernate para mapeamento objeto/relacional com o banco de dados SQL Server, DB2 e AS400.
 
-**Arquiteto de Software** <a href="www.metodista.br">Universidade Metodista de São Paulo</a> (07/2005 – 06/2008)
+* **Arquiteto de Software** <a href="www.metodista.br">Universidade Metodista de São Paulo</a> (07/2005 – 06/2008)
 
 Planejamento, definição de arquitetura e desenvolvimento de aplicações web em java voltados para área acadêmica. Desenvolvimento usando a plataforma JEE, utilizando EJB para distribuir as camadas da aplicação, JPA para mapeamento objeto/relacional e JavaServer Faces para camada de visualização Web.
 
