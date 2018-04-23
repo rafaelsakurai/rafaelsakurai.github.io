@@ -61,7 +61,7 @@ Planejamento, definição de arquitetura e desenvolvimento de aplicações web e
   * <a href="https://cursos.alura.com.br/certificate/11dccaf59a1cbb6fae6dc5ec1d500d17">Testes: TDD com Java (2012)</a>
   * <a href="https://cursos.alura.com.br/certificate/5168b3e0fe8f15b7c6640ea895f81105">Design patterns Java I: Boas práticas de programação (2011)</a>
 
-\\
+
 * **Cognitive Class**
   * <a href="https://courses.cognitiveclass.ai/certificates/9e99a048eee946eeb2732e6b6aa3c06f">Spark Fundamentals I (2018)</a>
   * <a href="https://courses.cognitiveclass.ai/certificates/d3ff6a3b85a6445f8a5639aedf41540e">Big Data 101 (2017)</a>
@@ -70,15 +70,15 @@ Planejamento, definição de arquitetura e desenvolvimento de aplicações web e
   * <a href="https://courses.cognitiveclass.ai/certificates/f02670429d304147ba1ad38b84d54968">Deep Learning Fundamentals (2017)</a>
   * <a href="https://courses.cognitiveclass.ai/certificates/debec88c38a44bd69b29320c74956f3f">Data Science Methodology (2017)</a>
 
-\\
+
 * **Singularity University**
   * <a href="https://www.fiap.com.br/2012/03/22/fiap-realiza-2-edicao-do-executive-program-da-singularity-university/">Executive Program FIAP (2012)</a>
 
-\\
+
 * **Caelum**
   * FJ-91 - Arquitetura e design de projetos Java (2009)
 
-\\
+
 * **Instituto de Matemática e Estatística (IME-USP)**
   * Programação distribuída em Java (2006)
 
