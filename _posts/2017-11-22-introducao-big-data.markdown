@@ -4,7 +4,7 @@ title: "Introdução ao Big Data"
 date: 2017-11-22 00:00:00
 tags: [big data, mapreduce]
 published: true
-excerpt: Uma breve introdução ao uso de Big Data.
+excerpt: Uma breve introdução ao uso de Big Data com seu pipeline básico, e também a ideia de como o MapReduce é usado para tratar a distribuição dos dados.
 comments: true
 image: 2017-11-22-introducao-big-data.png
 ---
