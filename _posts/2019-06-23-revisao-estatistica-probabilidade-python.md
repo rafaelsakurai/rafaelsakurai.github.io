@@ -6,7 +6,7 @@ tags: [numpy, estatistica, media, mediana, dispersão, variancia, desvio, covari
 published: true
 excerpt: Veja uma revisão de alguns conceitos importantes de Estatística e Probabilidade e como usar em Python com a biblioteca NumPy.
 comments: true
-image: 2019-06-23-revisao-estatistica-probabilidade-python-03.png
+image: 2019-06-23-revisao-estatistica-probabilidade-python.png
 ---
 
 # Estatística
