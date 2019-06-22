@@ -55,8 +55,9 @@ apto = np.array([67, 250, 2])
 
 E podemos continuar adicionando informações no vetor e a cada novo valor aumentamos um eixo do vetor.
 
-A Figura 1 mostra como um vetor pode ser representado visualmente até o terceiro eixo.
+A **Figura 1** mostra como um vetor pode ser representado visualmente até o terceiro eixo.
 
+\\
 **Figura 1:** Visualizando um vetor de 1, 2 e 3 dimensões.
 
 <figure>
@@ -169,8 +170,9 @@ Se quiser saber o total de gorjeta é só somar o vetor **sum(gorjeta)**.
 
 ## Produto escalar de vetores
 
-A Figura 2 mostra o produto escalar de dois vetores.
+A **Figura 2** mostra o produto escalar de dois vetores.
 
+\\
 **Figura 2:** Equação do produto escalar de dois vetores.
 
 <figure>
@@ -185,8 +187,9 @@ y = np.array([5, 6, 7, 8])
 prod = np.dot(x, y)        # 70
 {% endhighlight %}
 
-Para calcular a soma dos quadrados de um vetor, também podemos usar o produto escalar como mostrado na Figura 3.
+Para calcular a soma dos quadrados de um vetor, também podemos usar o produto escalar como mostrado na **Figura 3**.
 
+\\
 **Figura 3:** Soma dos quadrados de um vetor.
 
 <figure>
@@ -202,40 +205,45 @@ Porque obtemos como resultado a soma da multiplicação do vetor **x** por ele m
 
 ## Distância entre vetores
 
-No cenário a seguir temos o vetor **[1,4] (quadrado verde)** e um vetor **[2,1] (quadrado azul)**. Temos um novo vetor **[4,2] (triângulo vermelho)**, mas gostaríamos de classificar este novo vetor como quadrado verde ou azul. Para isso podemos verificar qual o quadrado mais próximo e usar a mesma cor, mas qual quadrado está mais perto do triângulo?
+Na **Figura 4** temos o vetor **[1,4] (quadrado verde)** e um vetor **[2,1] (quadrado azul)**. Temos um novo vetor **[4,2] (triângulo vermelho)**, mas gostaríamos de classificar este novo vetor como quadrado verde ou azul. Para isso podemos verificar qual o quadrado mais próximo e usar a mesma cor, mas qual quadrado está mais perto do triângulo?
 
+\\
 **Figura 4:** Distância entre vetores.
 
 <figure>
     <a href="/images/posts/2019-06-21-revisao-algebra-linear-python-04.png"><img src="/images/posts/2019-06-21-revisao-algebra-linear-python-04.png" alt="Distância entre vetores."></a>
 </figure>
 
-Na Figura 5 podemos perceber que o quadrado azul está mais próximo do triângulo vermelho, então podemos classificar este novo vetor como um quadrado azul.
+Na **Figura 5** podemos perceber que o quadrado azul está mais próximo do triângulo vermelho, então podemos classificar este novo vetor como um quadrado azul.
 
+\\
 **Figura 5:** Distância entre vetores.
 
 <figure>
     <a href="/images/posts/2019-06-21-revisao-algebra-linear-python-05.png"><img src="/images/posts/2019-06-21-revisao-algebra-linear-python-05.png" alt="Distância entre vetores."></a>
 </figure>
 
-Uma das formas de calcular a distância entre vetores é usando a **Distância Euclidiana**, que é dada pela equação da Figura 6.
+Uma das formas de calcular a distância entre vetores é usando a **Distância Euclidiana**, que é dada pela equação da **Figura 6**.
 
+\\
 **Figura 6:** Distância Euclidiana.
 
 <figure>
     <a href="/images/posts/2019-06-21-revisao-algebra-linear-python-06.png"><img src="/images/posts/2019-06-21-revisao-algebra-linear-python-06.png" alt="Distância Euclidiana."></a>
 </figure>
 
-Então, na Figura 7 calculamos o distância euclidiana entre o vetor **[1,4] (quadrado verde)** com o vetor **[4,2] (triângulo vermelho)**.
+Então, na **Figura 7** calculamos o distância euclidiana entre o vetor **[1,4] (quadrado verde)** com o vetor **[4,2] (triângulo vermelho)**.
 
+\\
 **Figura 7:** Distância Euclidiana.
 
 <figure>
     <a href="/images/posts/2019-06-21-revisao-algebra-linear-python-07.png"><img src="/images/posts/2019-06-21-revisao-algebra-linear-python-07.png" alt="Distância Euclidiana."></a>
 </figure>
 
-E na Figura 8 calculamos distância euclidiana entre o vetor **[2,1] (quadrado azul)** com o vetor **[4,2] (triângulo vermelho)**.
+E na **Figura 8** calculamos distância euclidiana entre o vetor **[2,1] (quadrado azul)** com o vetor **[4,2] (triângulo vermelho)**.
 
+\\
 **Figura 8:** Distância Euclidiana.
 
 <figure>
@@ -267,7 +275,7 @@ Matriz é formada por um conjunto de vetores, normalmente representada em maiús
 
 {% highlight python %}
 A = np.matrix([[1, 2, 3, 4],
-                        [5, 6, 7, 8]])
+               [5, 6, 7, 8]])
 {% endhighlight %}
 
 Nesse caso dizemos que a matriz **A** tem tamanho **[2, 4]**, ou duas linhas e quatro colunas. Para acessar uma determinada posição da matriz precisamos informar os valores da linha e coluna, lembrando que os índices começam com **zero**, o valor da posição **A[1, 3]** é **8**.
@@ -278,9 +286,9 @@ A soma de matrizes:
 
 {% highlight python %}
 A = np.matrix([[1, 2, 3, 4], 
-                        [5, 6, 7, 8]])
+               [5, 6, 7, 8]])
 B = np.matrix([[1, 2, 3, 4], 
-                        [5, 6, 7, 8]])
+               [5, 6, 7, 8]])
 
 SOMA = A + B
 # [[ 2,  4,  6,  8],
@@ -293,11 +301,11 @@ Com o Numpy podemos obter facilmente a transposta de uma matriz:
 
 {% highlight python %}
 A = np.matrix([[1, 2, 3, 4], 
-                        [5, 6, 7, 8]])
+               [5, 6, 7, 8]])
 A.T    # [[1, 5],
-    #   [2, 6],
-    #   [3, 7],
-    #   [4, 8]]
+       #  [2, 6],
+       #  [3, 7],
+       #  [4, 8]]
 {% endhighlight %}
 
 ## Multiplicação de matrizes
@@ -306,11 +314,11 @@ Para multiplicar duas matrizes é necessário que uma matriz **A** tenha dimens�
 
 {% highlight python %}
 A = np.matrix([[1, 2, 3, 4], 
-                        [5, 6, 7, 8]])
+               [5, 6, 7, 8]])
 B = np.matrix([[1, 2],
-                        [3, 4], 
-                        [5, 6],
-                        [7, 8]])
-mult = A * B     #[[ 50,  60],
-          [114, 140]]
+               [3, 4], 
+               [5, 6],
+               [7, 8]])
+mult = A * B     # [[ 50,  60],
+                 # [114, 140]]
 {% endhighlight %}
