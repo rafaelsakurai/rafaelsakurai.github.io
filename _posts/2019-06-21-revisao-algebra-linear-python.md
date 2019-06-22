@@ -82,7 +82,7 @@ Exemplo: quando temos um vetor com valores de almoço e outro vetor com valores 
 {% highlight python %}
 x = np.array([1, 2, 3, 4])
 y = np.array([5, 6, 7, 8])
-soma = x + y        #[6, 8, 10, 12]
+soma = x + y  #[6, 8, 10, 12]
 {% endhighlight %}
 
 ## Soma escalar
@@ -101,26 +101,28 @@ Com o novo vetor de notas, queremos saber quais os alunos obtiveram nota maior o
 
 {% highlight python %}
 aprovados = soma >= 7.0
-# o resultado é um vetor de booleanos: array([True, True, True, False, True, True, False, False, True, True, True, True], dtype=bool) que indica com True as notas que são maior ou igual a 7,0 e False as notas menores que 7,0.
+# o resultado é um vetor de booleanos: 
+# array([True, True, True, False, True, True, False, False, True, True, True, True], dtype=bool) 
+# que indica com True as notas que são maior ou igual a 7,0 e False as notas menores que 7,0.
 {% endhighlight %}
 
 E contar quantos valores são **True**, portanto tem nota maior ou igual a **7,0**:
 
 {% highlight python %}
-qtdAprovados = sum(soma >= 7.0)    #9
+qtdAprovados = sum(soma >= 7.0)  #9
 {% endhighlight %}
 
 O mesmo pode ser feito para saber quantos alunos tiveram a nota menor que **7,0** e foram reprovados. Podemos aplicar uma comparação a cada elemento do vetor, exemplo:
 
 {% highlight python %}
 reprovados = soma < 7.0
-# array([False, False, False,  True, False, False,  True,  True, False, False, False, False], dtype=bool)
+# array([False, False, False, True, False, False, True, True, False, False, False, False], dtype=bool)
 {% endhighlight %}
 
 E contar quantos valores são **True**, portanto tem nota menor que **7,0**:
 
 {% highlight python %}
-qtdReprovados = sum(soma < 7.0)    # 3
+qtdReprovados = sum(soma < 7.0)  # 3
 {% endhighlight %}
 
 ## Multiplicação de vetores
@@ -130,7 +132,7 @@ Dois ou mais vetores podem ser multiplicados e para isso é calculado a multipli
 {% highlight python %}
 x = np.array([1, 2, 3, 4])
 y = np.array([5, 6, 7, 8])
-mult = x * y        #[5, 12, 21, 32]
+mult = x * y  #[5, 12, 21, 32]
 {% endhighlight %}
 
 Se temos um vetor com as notas de um aluno:
@@ -163,7 +165,7 @@ valores = np.array([18.0, 16.5, 17.0, 19.5, 18.5])
 E queremos calcular 10% de gorjeta para cada um dos valores:
 
 {% highlight python %}
-gorjeta = valores * 0.1        #[1.8, 1.65, 1.7, 1.95, 1.85]
+gorjeta = valores * 0.1  #[1.8, 1.65, 1.7, 1.95, 1.85]
 {% endhighlight %}
 
 Se quiser saber o total de gorjeta é só somar o vetor **sum(gorjeta)**.
@@ -184,7 +186,7 @@ sendo **x** e **y**, dois vetores de tamanho iguais e **n** o tamanho dos vetore
 {% highlight python %}
 x = np.array([1, 2, 3, 4])
 y = np.array([5, 6, 7, 8])
-prod = np.dot(x, y)        # 70
+prod = np.dot(x, y)  # 70
 {% endhighlight %}
 
 Para calcular a soma dos quadrados de um vetor, também podemos usar o produto escalar como mostrado na **Figura 3**.
@@ -198,7 +200,7 @@ Para calcular a soma dos quadrados de um vetor, também podemos usar o produto e
 
 {% highlight python %}
 x = np.array([1, 2, 3, 4])
-prod = np.dot(x, x)        # 30
+prod = np.dot(x, x)  # 30
 {% endhighlight %}
 
 Porque obtemos como resultado a soma da multiplicação do vetor **x** por ele mesmo.
@@ -264,7 +266,7 @@ com:
 
 {% highlight python %}
 distanciaQuadradoVerde = np.sqrt(sum((qv - tv) ** 2)) #3.6055
-distanciaQuadradoAzul = np.sqrt(sum((qa - tv) ** 2)) #2.2360
+distanciaQuadradoAzul  = np.sqrt(sum((qa - tv) ** 2)) #2.2360
 {% endhighlight %}
 
 Obs: O ** é utilizado para calcular o número da esquerda elevado ao número da direita. Exemplo 5² é calculado como 5 ** 2.
@@ -319,6 +321,6 @@ B = np.matrix([[1, 2],
                [3, 4], 
                [5, 6],
                [7, 8]])
-mult = A * B     # [[ 50,  60],
-                 # [114, 140]]
+mult = A * B  # [[ 50,  60],
+              # [114, 140]]
 {% endhighlight %}
