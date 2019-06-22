@@ -6,12 +6,10 @@ tags: [numpy, vetores, matriz, distancia, euclidiana]
 published: true
 excerpt: Veja uma revisão de alguns conceitos importantes de Álgebra Linear e como usar em Python com a biblioteca NumPy.
 comments: true
-image: 2019-06-21-revisao-algebra-linear-python.png
+image: 2019-06-21-revisao-algebra-linear-python-01.png
 ---
 
-# Revisão de álgebra linear em Python
-
-## Numpy
+# Numpy
 
 A biblioteca de computação científica [NumPy](http://www.numpy.org) facilita muito a manipulação algébrica de matrizes de **n** dimensões.
 
@@ -62,7 +60,7 @@ A Figura 1 mostra como um vetor pode ser representado visualmente até o terceir
 **Figura 1:** Visualizando um vetor de 1, 2 e 3 dimensões.
 
 <figure>
-    <a href="/images/posts/2019-06-21-revisao-algebra-linear-python-01.png"><img src="/images/posts/2019-06-21-revisao-algebra-linear-python.png" alt="Visualizando um vetor de 1, 2 e 3 dimensões."></a>
+    <a href="/images/posts/2019-06-21-revisao-algebra-linear-python-01.png"><img src="/images/posts/2019-06-21-revisao-algebra-linear-python-01.png" alt="Visualizando um vetor de 1, 2 e 3 dimensões."></a>
 </figure>
 
 ## Métodos úteis da np.array
