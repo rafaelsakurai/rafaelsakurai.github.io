@@ -11,6 +11,8 @@ image: 2019-06-23-revisao-estatistica-probabilidade-python.png
 
 # Estatística
 
+Nesse [post](http://rafaelsakurai.github.io/revisao-algebra-linear-python) faço uma revisão sobre Álgebra Linear e como usar a biblioteca NumPy para realizar as operações, recomendo a leitura caso você nunca tenha usado o NumPy.
+
 ## Média
 
 A média é usada para obter facilmente um valor que representa a tendência central dos dados. Para calcular a média, soma-se os valores e divide pela quantidade de valores.
