@@ -350,6 +350,7 @@ int[] y = dataset.getY();
 
 No Python temos o [Pandas](https://pandas.pydata.org/), podemos carregar facilmente os dados a partir de um dataset como um arquivo CSV. Informamos qual o path do dataset e também quais são as características desse dataset. Passamos essas características porque esse dataset não possui um cabeçalho com o nome das colunas.
 
+\\
 **Python:**
 {% highlight python %}
 import pandas as pd
@@ -390,6 +391,7 @@ DecisionTree tree = new DecisionTree(X, y, 3, DecisionTree.SplitRule.ENTROPY);
 
 No Python temos o [Scikit](https://scikit-learn.org/stable/) que também tem um Decision Tree, que podemos criar explicitando o tipo de critério que queremos utilizar para gerar os nós de decisão e também a profundidade máxima da árvore gerada.
 
+\\
 **Python:**
 {% highlight python %}
 from sklearn.tree import DecisionTreeClassifier
