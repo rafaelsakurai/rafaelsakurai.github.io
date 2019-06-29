@@ -405,7 +405,7 @@ Com o modelo treinado, agora queremos tentar predizer os novos exemplos.
 
 **Java:**
 {% highlight java %}
-double[][] novos_exemplos = new double[][]{{5.0, 3.6, 1.6, 0.5}, {5.8, 2.7, 4.2, 1.2}, {7.0, 3.2, 5.2, 2.4}};
+double[][] novos_exemplos = new double[][]{ {5.0, 3.6, 1.6, 0.5}, {5.8, 2.7, 4.2, 1.2}, {7.0, 3.2, 5.2, 2.4} };
 for (double[] novo : novos_exemplos) {
   // O método predict classifica novos exemplos de amostras.
   int predicao = tree.predict(novo);

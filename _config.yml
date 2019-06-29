@@ -10,7 +10,7 @@ plugins:
 
 permalink:   /:categories/:title/
 markdown:    kramdown
-# highlighter: rouge
+highlighter: rouge
 # highlighter: pygments
 sass:
   sass_dir: _sass
