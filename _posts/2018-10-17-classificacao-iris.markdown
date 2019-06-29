@@ -229,6 +229,7 @@ Se você não está familiarizado com equações matemáticas, como da entropia:
 
 Pode ter pensado, não preciso saber implementar isso, por que hoje em dia já tem disponível em algum lugar já implementado, mas só para mostrar que a equação não é nenhum bixo de sete cabeças, a sua implementação em Java e Python é assim:
 
+\\
 **Java:**
 {% highlight java %}
 public double entropia(double ... probabilidades) {
@@ -248,6 +249,7 @@ Você tem uma somatoria da negação de cada probabilidade multiplicado pelo log
 
 Então com base no dataset você pode contar quantos exemplos possui representando cada classe e calcular a probabilidade que será passada para o cálculo da entropia:
 
+\\
 **Java:**
 {% highlight java %}
 double p1 = 50.0 / 150.0;
@@ -271,7 +273,7 @@ print entropia([p1, p2, p3])
 
 Mas continuando, vamos ver como usar uma biblioteca que já possui a Decision Tree implementada.
 
-# Usando Pandas e Scikit-learn para treinar uma Decision Tree
+# Usando Smile e Scikit-learn para treinar uma Decision Tree em Java e Python
 
 No Java e Python, temos várias bibliotecas implementadas que facilitam o uso de modelos de aprendizado de máquinas:
 
@@ -281,6 +283,7 @@ Você pode fazer o download do dataset de [Iris Dataset](https://archive.ics.uci
 
 Para carregar esse arquivo separando os valores da classe, podemos implementar uma classe em Java para isso, similar a seguinte:
 
+\\
 **Java:**
 {% highlight java %}
 public class Dataset {
@@ -334,6 +337,7 @@ Nos algoritmos a classe (Versicolor, Setosa e Virginica) converti para um númer
 
 Para usar essa classe e obter os dados do arquivo **iris.data**:
 
+\\
 **Java:**
 {% highlight java %}
 Dataset dataset = new Dataset("caminho_dataset/iris.data");
@@ -373,6 +377,7 @@ No Java podemos usar o [Smile](http://haifengl.github.io/smile/) que possui uma 
 
 Mas se preferir pode fazer download do jar e colocar nas dependências do projeto.
 
+\\
 **Java:**
 {% highlight java %}
 Dataset dataset = new Dataset("/Users/rafaelsakurai/Documents/blog/Blog/src/main/resources/iris.data");
@@ -403,6 +408,7 @@ Após treinar o modelo, podemos passar novas amostras que esse modelo não conhe
 
 Com o modelo treinado, agora queremos tentar predizer os novos exemplos. 
 
+\\
 **Java:**
 {% highlight java %}
 double[][] novos_exemplos = new double[][]{ {5.0, 3.6, 1.6, 0.5}, {5.8, 2.7, 4.2, 1.2}, {7.0, 3.2, 5.2, 2.4} };
