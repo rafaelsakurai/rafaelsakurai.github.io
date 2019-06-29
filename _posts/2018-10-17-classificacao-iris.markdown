@@ -2,6 +2,7 @@
 layout: post
 title: "Decision Tree: Aprendendo a classificar flores do tipo Iris"
 date: 2018-10-17 08:00:00
+modified: 2019-06-28T21:00:00
 tags: [classificação, aprendizado, supervisionado, entropia, decision tree, iris]
 published: true
 excerpt: Este post explica como funciona o treinamento de uma Decision Tree (Árvore de Decisão) com o objetivo de aprender classificação de dados e como utilizar sua implementação feita no scikit-learn.
