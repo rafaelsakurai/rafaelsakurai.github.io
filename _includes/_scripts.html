@@ -6,11 +6,13 @@
 <script type="opt-in" data-type="application/javascript" data-src="https://www.googletagmanager.com/gtag/js?id=UA-60110243-1" data-name="analytics"></script>
 
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  if(consent) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'UA-60110243-1');
+    gtag('config', 'UA-60110243-1');
+  }
 </script>
 {% if page.comments %}
   {% include _disqus_comments.html %}
