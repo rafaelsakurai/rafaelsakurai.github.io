@@ -2,13 +2,13 @@
 layout: page
 title: Rafael Guimarães Sakurai
 tags: [about]
-modified: 2017-12-15T10:00:00.573882-04:00
+modified: 2019-11-21T13:00:00.573882-04:00
 comments: true
 image:
   feature: sample-image-2.jpg
 ---
 
-Atualmente sou professor na <a href="htttp://www.metodista.br">Universidade Metodista de São Paulo</a> e Editor no <a href="http://www.infoq.com/br">InfoQ Brasil</a>.
+Atualmente sou líder técnico da equipe de engenharia de Big Data na <a href="htttp://tail.digital">Tail</a> e Editor no <a href="http://www.infoq.com/br">InfoQ Brasil</a>.
 
 \\
 **Lattes CV:** <a href="http://lattes.cnpq.br/2777638174344195">http://lattes.cnpq.br/2777638174344195</a>
@@ -22,7 +22,10 @@ Atualmente sou professor na <a href="htttp://www.metodista.br">Universidade Meto
 
 ## Experiência Profissional
 
-* **Docente** <a href="www.metodista.br">Universidade Metodista de São Paulo</a> (08/2007 à dias atuais)
+* **Engenheiro de Big Data** <a href="htttp://tail.digital">Tail</a> (08/2018 à dias atuais)
+Desenvolvimento de soluções de Big Data que utilizam HDFS para armazenar o Data Lake, Apache Spark para processar os dados em cluster distribuído, e Java para gerenciar, agendar e executar os pipelines.
+
+* **Docente** <a href="www.metodista.br">Universidade Metodista de São Paulo</a> (08/2007 à 12/2018)
 
 Leciono disciplinas relacionadas à programação em Java (SE e EE), Web (HTML5, CSS e JS), Android, Desenvolvimento de jogos 2D com HTML5, Construct2 e Unity, Inteligência Artificial para jogos, Segurança de Aplicações Web, Servidor de Aplicações Web, Integração Contínua e Ciência de Dados.
 
@@ -47,6 +50,9 @@ Planejamento, definição de arquitetura e desenvolvimento de aplicações web e
 * Espanhol – Básico (Skill)
 
 ## Cursos complementares
+
+* **MongoDB University**
+ * <a href="https://university.mongodb.com/course_completion/dbffbf2e-4832-4b3b-a5f6-1d8b9f0d">M001: MongoDB Basics (2019)</a>
 
 * **Alura**
   * <a href="https://cursos.alura.com.br/certificate/ace73ea6-e188-4bc0-8c56-32ed50ad643e">Visualização de Dados Parte 1: Começando com gráficos (2018)</a>
