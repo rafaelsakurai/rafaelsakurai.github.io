@@ -4,7 +4,7 @@ title: "Automating Notebook Execution with Spark"
 date: 2019-11-21 13:00:00
 tags: []
 published: true
-excerpt: 
+excerpt: Notebooks help data scientists to explore datasets and has became one of the main tools used in Data Science, but they also add some challenges like how to deploy in production or how to show the results to end users.
 comments: true
 image: 2019-11-21-automating-notebooks-spark-01.png
 ---
