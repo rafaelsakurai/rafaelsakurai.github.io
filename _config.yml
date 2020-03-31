@@ -11,7 +11,6 @@ plugins:
 permalink:   /:categories/:title/
 markdown:    kramdown
 highlighter: rouge
-# highlighter: pygments
 sass:
   sass_dir: _sass
   style: compressed
@@ -22,6 +21,10 @@ kramdown:
   entity_output: as_char
   toc_levels: 1..6
   use_coderay: false
+  input: GFM
+  syntax_highlighter_opts:
+    default_lang: html
+    css_class   : 'syntax'
 
 
 # Site owner

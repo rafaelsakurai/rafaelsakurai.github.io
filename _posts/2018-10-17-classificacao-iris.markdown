@@ -263,7 +263,7 @@ System.out.println(entropia(p1, p2, p3));
 p1 = 50.0/150.0
 p2 = 50.0/150.0
 p3 = 50.0/150.0
-print entropia([p1, p2, p3])
+print(entropia([p1, p2, p3]))
 {% endhighlight %}
 
 **Saída:**
@@ -421,14 +421,6 @@ for (double[] novo : novos_exemplos) {
 }
 {% endhighlight %}
 
-**Python:**
-{% highlight python %}
-novos_exemplos = [[1.6, 0.5, 5.0, 3.6], [4.2, 1.2, 5.8, 2.7], [5.2, 2.4, 7.0, 3.2]]
-
-# Função predict classificar novos exemplos de amostras.
-print iris_classificador.predict(novos_exemplos)
-{% endhighlight %}
-
 **Saída:**
 {% highlight java %}
 [5.0, 3.6, 1.6, 0.5] = Iris-setosa
@@ -436,15 +428,32 @@ print iris_classificador.predict(novos_exemplos)
 [7.0, 3.2, 5.2, 2.4] = Iris-virginica
 {% endhighlight %}
 
+**Python:**
+{% highlight python %}
+novos_exemplos = [[1.6, 0.5, 5.0, 3.6], [4.2, 1.2, 5.8, 2.7], [5.2, 2.4, 7.0, 3.2]]
+
+# Função predict classificar novos exemplos de amostras.
+print(iris_classificador.predict(novos_exemplos))
+{% endhighlight %}
+
+**Saída:**
+{% highlight python %}
+['Iris-setosa' 'Iris-versicolor' 'Iris-virginica']
+{% endhighlight %}
+
 Uma forma bem utilizada para avaliar como está a classificação dessa Decision Tree é por meio da Validação Cruzada, mas depois vou montar um post só falando sobre validação de modelos.
 
 ## Avaliando a Decision Tree com validação cruzada
+
+A validação cruzada é uma forma de tentar avaliar o quanto seu modelo está conseguindo aprender a classificar os dados. A ideia é dividir o dataset em **n** partes iguais e para cada uma das **n** partes, esconde uma parte para teste e usa as demais para treino.
+
+Nesse exemplo, vou dividir o dataset em 5 partes, por tanto cada parte terá 20 amostras do dataset, então a validação cruzada vai pegar uma dessas partes com 20 amostras e guardar para usar no teste e usar 80 amostras para treinar o Decision Tree. Isso será feito 5 vezes, uma para cada parte, e no final imprime a média do resultado do teste de cada parte.
 
 **Python:**
 {% highlight python %}
 from sklearn.model_selection import cross_val_score
 avaliacao = cross_val_score(iris_classificador, X, y, scoring='accuracy', cv=5)
-print avaliacao.mean()
+print(avaliacao.mean())
 {% endhighlight %}
 
 Acho que o básico da Decision Tree é isso mesmo, se tiver alguma dúvida só comentar.

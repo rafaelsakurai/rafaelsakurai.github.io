@@ -19,10 +19,6 @@ Apresentar os conceitos relacionados a aprendizado de máquinas, classificação
 
 Introduzir os conceitos basicos de criação de jogos 2D para web utilizando o Canvas do HTML5, Game Loop, uso de Sprites, colisão com os elementos do jogo, uso do framework Phaser para trabalhar com física e som, uso do Apache Cordova / PhoneGap com o Phaser para criar uma aplicação mobile.
 
-## [Inteligência Artificial para Jogos Digitais](/courses/jogos_ia)
-
-Introduzir alguns dos principais conceitos do uso de Inteligência Artificial (IA) aplicadas no desenvolvimento de jogos, como a movimentação dos personagens e como isto pode ser feito com o algoritmo A*, e tomada de decisão utilizando Árvore de Decisão, Maquina de Estados e Árvore de Comportamento.
-
 ## [Desenvolvimento de Aplicações Móveis - Android](/courses/android)
 
 Introduzir o desenvolvimento de aplicativos Android, apresentar os componentes mais utilizados, persistência de dados interna com o SQLite e comunicação com serviços web REST.
