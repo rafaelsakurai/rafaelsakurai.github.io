@@ -6,7 +6,7 @@ tags: [classificação, knn, java, python]
 published: true
 excerpt: KNN é um algoritmo que permite classificar novas amostras a partir da distância em relação às demais amostras do dataset. Veja nesse artigo como funciona o KNN.
 comments: true
-image: 2020-03-31-classificacao-knn.png
+image: 2020-03-31-classificacao-knn-01.png
 ---
 
 Na tarefa de classificação estamos procurando por um modelo (algoritmo) que melhor consiga definir a classe (rótulo) dos dados.
@@ -24,24 +24,24 @@ Quando queremos realizar a tarefa de classificação, precisamos de um dataset c
 
 Na montagem do dataset também identificamos a qual classe cada amostra pertence. Exemplo de um dataset simples, no qual temos duas características **x** e **y** que serão usadas para aprender a definir qual classe (classificação) **0** ou **1** esses valores representam:
 
-x|y|classe
-----------
-7|30|1
-8|30|1
-3|20|0
-6|60|1
-5.5|35|0
-8|50|1
-8|60|1
-2|70|0
-3|40|0
-9|60|1
-6|30|0
-3|90|0
-3|60|0
-7|20|1
-5|40|0
-7|70|1
+| x   |  y | classe |
+|:----|:---|:-------|
+| 7   | 30 | 1      |
+| 8   | 30 | 1      |
+| 3   | 20 | 0      |
+| 6   | 60 | 1      |
+| 5.5 | 35 | 0      |
+| 8   | 50 | 1      |
+| 8   | 60 | 1      |
+| 2   | 70 | 0      |
+| 3   | 40 | 0      |
+| 9   | 60 | 1      |
+| 6   | 30 | 0      |
+| 3   | 90 | 0      |
+| 3   | 60 | 0      |
+| 7   | 20 | 1      |
+| 5   | 40 | 0      |
+| 7   | 70 | 1      |
 
 Obs: para facilitar o exemplo estou usando só duas características **x** e **y** (imagine que as características são as informações que representam os dados que serão classificados) e duas classes **0** e **1** (imagine as possíveis classificações que essas características podem representar), mas na prática os problemas possuem muito mais características. Outro ponto importante é que estou usando valores numéricos para representar os valores das características e possíveis classificações.
 
@@ -371,11 +371,11 @@ Mas você pode querer perguntar: porque o K = 6 é o melhor, sendo que o K = 7 e
 
 Realizei o treinamento usando todo o dataset para treinar o KNN e com o valor de K = 6. Agora peguei as medidas de mais três novas amostras para classificar.
 
-SepalLength|SepalWidth|PetalLength	PetalWidth|Class
----------------------------------------------------
-5.0|3.6|1.6|0.5|?
-5.8|2.7|4.2|1.2|?
-7.0|3.2|5.2|2.4|?
+|SepalLength|SepalWidth|PetalLength|PetalWidth|Class|
+|-----------|----------|-----------|----------|-----|
+|5.0        |3.6       |1.6        |0.5       |?    |
+|5.8        |2.7       |4.2        |1.2       |?    |
+|7.0        |3.2       |5.2        |2.4       |?    |
 
 A qual classe pertence cada uma dessas amostras?
 
