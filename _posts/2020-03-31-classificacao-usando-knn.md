@@ -388,7 +388,11 @@ Na classe **Dataset** implementei uma lista que guarda todas as possíveis class
 Altere a classe **Classificador** e inclui após o treinamento alguns novos exemplos para ver como o KNN vai classificá-los:
 
 {% highlight java %}
-double[][] novos_exemplos = new double[][]{{5.0, 3.6, 1.6, 0.5}, {5.8, 2.7, 4.2, 1.2}, {7.0, 3.2, 5.2, 2.4}};
+double[][] novos_exemplos = new double[][]{
+	{5.0, 3.6, 1.6, 0.5}, 
+	{5.8, 2.7, 4.2, 1.2}, 
+	{7.0, 3.2, 5.2, 2.4}
+};
 for (double[] novo : novos_exemplos) {
     int predicao = knn.predict(novo);
     System.out.println(Arrays.toString(novo) + " = " + dataset.getClasses().get(predicao));
