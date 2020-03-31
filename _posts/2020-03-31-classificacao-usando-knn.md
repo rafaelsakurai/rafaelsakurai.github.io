@@ -6,7 +6,7 @@ tags: [classificação, knn, java, python]
 published: true
 excerpt: KNN é um algoritmo que permite classificar novas amostras a partir da distância em relação às demais amostras do dataset. Veja nesse artigo como funciona o KNN.
 comments: true
-image: 2020-03-31-classificacao-knn-01.png
+image: 2020-03-31-classificacao-knn.png
 ---
 
 Na tarefa de classificação estamos procurando por um modelo (algoritmo) que melhor consiga definir a classe (rótulo) dos dados.
