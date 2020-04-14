@@ -159,20 +159,20 @@ A distância Levenshtein é usada para calcular quantos caracteres precisam ser 
 
 ## Utilizando o KNN para classificar as flores íris
 
-Vamos fazer um novo exemplo usando o [Iris Dataset](https://archive.ics.uci.edu/ml/datasets/Iris) que é composto por cinco características: SepalLength (Comprimento da Sépala), SepalWidth (Largura da Sépala), PetalLength (Comprimento da Pétala), PetalWidth (Largura da Pétala) e class (Classe).
+Vamos fazer um novo exemplo usando o [Iris Dataset](https://archive.ics.uci.edu/ml/datasets/Iris) que é composto por cinco características: **SepalLength** (Comprimento da Sépala), **SepalWidth** (Largura da Sépala), **PetalLength** (Comprimento da Pétala), **PetalWidth** (Largura da Pétala) e **Class** (Classe).
 
 A seguir temos algumas linhas deste dataset:
 
-SepalLength|SepalWidth|PetalLength	PetalWidth|Class
----------------------------------------------------
-5.1|3.5|1.4|0.2|Iris-setosa
-5.0|3.3|1.4|0.2|Iris-setosa
-7.0|3.2|4.7|1.4|Iris-versicolor
-5.7|2.8|4.1|1.3|Iris-versicolor
-6.3|3.3|6.0|2.5|Iris-virginica
-5.9|3.0|5.1|1.8|Iris-virginica
+| SepalLength|SepalWidth|PetalLength|PetalWidth|Class          |
+|------------|----------|-----------|----------|---------------|
+| 5.1        |3.5       |1.4        |0.2       |Iris-setosa    |
+| 5.0        |3.3       |1.4        |0.2       |Iris-setosa    |
+| 7.0        |3.2       |4.7        |1.4       |Iris-versicolor|
+| 5.7        |2.8       |4.1        |1.3       |Iris-versicolor|
+| 6.3        |3.3       |6.0        |2.5       |Iris-virginica |
+| 5.9        |3.0       |5.1        |1.8       |Iris-virginica |
 
-Existem três classes (Versicolor, Setosa e Virginica) e com base nas características da flor queremos identificar a qual classe ela pertence.
+Existem três classes **Versicolor**, **Setosa** e **Virginica**, e com base nas características da flor queremos identificar a qual classe ela pertence.
 
 \\
 **Figura 8:** tipos de flores Íris.
@@ -185,7 +185,7 @@ Vou mostrar a seguir como carregar e treinar esse modelo usando Java e Python, o
 
 ### Carregando o dataset
 
-Vamos iniciar carregando os dados que estão no arquivo **iris.data**, esse arquivo contém 100 exemplos e seus dados estão separados por vírgula.
+Vamos iniciar carregando os dados que estão no [Iris Dataset](https://archive.ics.uci.edu/ml/datasets/Iris), esse arquivo contém 100 exemplos e seus dados estão separados por vírgula.
 
 #### Carregando o dataset em Java
 
@@ -231,9 +231,7 @@ Observação: quando você for executar esse código no seu computador, verifiqu
 
 #### Carregando o dataset em Python
 
-Para carregar os dados das flores Iris em Python, vou usar o Pandas para ajudar.
-
-Neste código importei o Pandas, informei o nome das características do dataset (porque esse arquivo não tem cabeçalho), li o CSV e separei em duas variáveis, sendo **X** uma matriz com as características e **y** um vetor com as classes:
+Para carregar os dados das flores Iris em Python, vou usar o Pandas para ajudar. Neste código importei o Pandas, informei o nome das características do dataset (porque esse arquivo não tem cabeçalho), li o CSV e separei em duas variáveis, sendo **X** uma matriz com as características e **y** um vetor com as classes:
 
 {% highlight python %}
 import pandas as pd
@@ -386,7 +384,7 @@ Para classificar usando a implementação do KNN em Python:
 novos_exemplos = [[1.6,0.5,5.0,3.6],
                   [4.2,1.2,5.8,2.7],
                   [5.2,2.4,7.0,3.2]]
-print iris_classificador.predict(novos_exemplos)
+print(iris_classificador.predict(novos_exemplos))
 {% endhighlight %}
 
 O **KNeighborsClassifier** possui o método **predict**, que recebe uma ou mais amostras para ele classificar e sua saída é um vetor com as classificações.
