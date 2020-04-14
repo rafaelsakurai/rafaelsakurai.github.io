@@ -2,7 +2,7 @@
 layout: post
 title: "Classificação usando KNN"
 date: 2020-03-31 18:00:00
-tags: [classificação, knn, java, python]
+tags: [classificação, knn, smile, java, python]
 published: true
 excerpt: KNN é um algoritmo que permite classificar novas amostras a partir da distância em relação às demais amostras do dataset. Veja nesse artigo como funciona o KNN.
 comments: true
@@ -189,58 +189,42 @@ Vamos iniciar carregando os dados que estão no arquivo **iris.data**, esse arqu
 
 #### Carregando o dataset em Java
 
-Criei a classe **Dataset** para ler esses dados e separar as características na matriz **X** e as classes no vetor **y**:
+A biblioteca [Smile](http://haifengl.github.io) possui uma implementação em Java do KNN, para usá-lo no seu projeto, você pode fazer [download](http://haifengl.github.io/quickstart.html) do projeto no Github ou adicionar a dependência Maven no pom.xml:
 
-{% highlight java %}
-public class Dataset {
-  private double[][] X;
-  private int[] y;
-  private int posicao = 0;
-  private List<String> classes = new ArrayList();
+{% highlight java%}
+<dependency>
+  <groupId>com.github.haifengl</groupId>
+  <artifactId>smile-core</artifactId>
+  <version>2.0.0</version>
+</dependency>
 
-  public Dataset(String filePath) throws IOException {
-    Path path = Paths.get(filePath);
-    int exemplos = (int) Files.lines(path).count();
-    X = new double[exemplos][];
-    y = new int[exemplos];
-    Files.lines(path).map(linha -> linha.split(",")).forEach(colunas -> add(colunas));
-  }
-
-  private void add(String[] colunas) {
-    double[] Xi = new double[colunas.length - 1];
-    for (int i = 0; i < colunas.length - 1; i++) {
-      Xi[i] = Double.valueOf(colunas[i]);
-    }
-    X[posicao] = Xi;
-
-    if (!classes.contains(colunas[colunas.length - 1])) {
-      classes.add(colunas[colunas.length - 1]);
-    }
-    y[posicao] = classes.indexOf(colunas[colunas.length - 1]);
-
-    posicao++;
-  }
-
-  public double[][] getX() {
-    return X;
-  }
-
-  public int[] getY() {
-    return y;
-  }
-
-  public List<String> getClasses() {
-    return classes;
-  }
-}
+<dependency>
+  <groupId>com.github.haifengl</groupId>
+  <artifactId>smile-io</artifactId>
+  <version>2.3.0</version>
+</dependency>
 {% endhighlight %}
 
-Agora para ler o arquivo é só criar um objeto da classe **Dataset** passando o caminho do arquivo como parâmetro e podemos pegar os dados separados:
+Depois de adicionar a dependência no projeto, vamos carregar os dados. Criei um formato do CSV para definir o cabeçalho, porque esse arquivo não possui cabeçalho, depois carreguei o DataFrame a partir do arquivo **iris.data** e criei uma escala para a coluna "Class" que representa os três tipos de rótulos para as flores Iris.
+
+A partir do DataFrame, selecionei as colunas com as características serão usadas no treino do KNN e guardei na matrix **X** e também peguei a coluna "Class", mas primeiro converti ela para a escala numerica e guardei no vetor **y**.
 
 {% highlight java %}
-Dataset dataset = new Dataset("iris.data");
-double[][] X = dataset.getX();
-int[] y = dataset.getY();
+import org.apache.commons.csv.CSVFormat;
+import smile.data.DataFrame;
+import smile.data.measure.NominalScale;
+import smile.io.CSV;
+
+public class Classificador {
+  public static void main(String[] args) throws Exception {
+    CSVFormat format = CSVFormat.DEFAULT.withHeader("SepalLength", "SepalWidth", "PetalLength", "PetalWidth", "Class");
+    DataFrame df = new CSV(format).read("iris.data");
+    NominalScale nominalScale = df.stringVector("Class").nominal();
+
+    double[][] X = df.select("SepalLength", "SepalWidth", "PetalLength", "PetalWidth").toArray();
+    int[] y = df.stringVector("Class").factorize(nominalScale).toIntArray();
+  }
+}
 {% endhighlight %}
 
 Observação: quando você for executar esse código no seu computador, verifique se o caminho do arquivo **iris.data** está correto.
@@ -266,44 +250,33 @@ Conseguimos ler os dados do dataset e guardamos as características na matriz **
 
 #### Treinando o KNN em Java
 
-A biblioteca [Smile](http://haifengl.github.io) possui uma implementação em Java do KNN, para usá-lo no seu projeto, você pode fazer [download](http://haifengl.github.io/quickstart.html) do projeto no Github ou adicionar a dependência Maven no pom.xml:
-
-{% highlight java%}
-<dependency>
-  <groupId>com.github.haifengl</groupId>
-  <artifactId>smile-core</artifactId>
-  <version>2.0.0</version>
-</dependency>
-{% endhighlight %}
-
-Depois de adicionar a dependência no projeto, vamos treinar o KNN. Crie uma classe que carrega os dados do dataset e depois treina o KNN:
+Altere a classe Classificador para treina o KNN após carregar os dados:
 
 {% highlight java %}
 import java.util.Arrays;
+import org.apache.commons.csv.CSVFormat;
 import smile.classification.KNN;
+import smile.data.DataFrame;
+import smile.data.measure.NominalScale;
+import smile.io.CSV;
 import smile.math.distance.EuclideanDistance;
 import smile.neighbor.CoverTree;
 import smile.neighbor.KNNSearch;
 
 public class Classificador {
-    public static void main(String[] args) throws Exception {
-        Dataset dataset = new Dataset("iris.data");
-        double[][] X = dataset.getX();
-        int[] y = dataset.getY();
-        int k = 3;
-        
-        KNNSearch search = new CoverTree(X, new EuclideanDistance());
-        KNN knn = new KNN(search, y, k);
-    }
+  public static void main(String[] args) throws Exception {
+    CSVFormat format = CSVFormat.DEFAULT.withHeader("SepalLength", "SepalWidth", "PetalLength", "PetalWidth", "Class");
+    DataFrame df = new CSV(format).read("iris.data");
+    NominalScale nominalScale = df.stringVector("Class").nominal();
+
+    double[][] X = df.select("SepalLength", "SepalWidth", "PetalLength", "PetalWidth").toArray();
+    int[] y = df.stringVector("Class").factorize(nominalScale).toIntArray();
+
+    int k = 3;
+    KNNSearch search = new CoverTree(X, new EuclideanDistance());
+    KNN knn = new KNN(search, y, k);
+  }
 }
-{% endhighlight %}
-
-E adicione o seguinte código:
-
-{% highlight java %}
-int k = 3;
-KNNSearch search = new CoverTree(X, new EuclideanDistance());
-KNN knn = new KNN(search, y, k);
 {% endhighlight %}
 
 Nesse código estamos instanciando o algoritmo do **KNN** usando a distância Euclidiana para calcular a distância das características das flores que foi passada na variável **X**. Também passei o vetor **y** com as classificações esperadas e o valor do **k** (nesse exemplo usei k = 3).
@@ -383,19 +356,17 @@ A qual classe pertence cada uma dessas amostras?
 
 A implementação do **KNN** possui o método **predict** que recebe como parâmetro um vetor de características e devolve o número da classe que ele classificou esses dados.
 
-Na classe **Dataset** implementei uma lista que guarda todas as possíveis classes, quando recebemos o inteiro que representa a predição feita pelo KNN, esse inteiro representa a posição que está a classe na lista **classes**.
-
 Altere a classe **Classificador** e inclui após o treinamento alguns novos exemplos para ver como o KNN vai classificá-los:
 
 {% highlight java %}
 double[][] novos_exemplos = new double[][]{
-	{5.0, 3.6, 1.6, 0.5}, 
-	{5.8, 2.7, 4.2, 1.2}, 
-	{7.0, 3.2, 5.2, 2.4}
+  {5.0, 3.6, 1.6, 0.5}, 
+  {5.8, 2.7, 4.2, 1.2}, 
+  {7.0, 3.2, 5.2, 2.4}
 };
 for (double[] novo : novos_exemplos) {
-    int predicao = knn.predict(novo);
-    System.out.println(Arrays.toString(novo) + " = " + dataset.getClasses().get(predicao));
+  int predicao = knn.predict(novo);
+  System.out.println(Arrays.toString(novo) + " = " + nominalScale.level(predicao));
 }
 {% endhighlight %}
 
