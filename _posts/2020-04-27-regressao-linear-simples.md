@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Classificação usando KNN"
+title: "Regressão Linear Simples"
 date: 2020-04-27 08:00:00
-tags: [regressao, linear, smile, java, python]
+tags: [regressao, linear, smile, java, python, data, science]
 published: true
-excerpt: 
+excerpt: O que acha de tentar prever quanto será o lucro da empresa com base no investimento de marketing, ou quanto custa um apartamento com base na sua metragem, esse são alguns exemplos do uso da Regressão Linear. Nesse post explico o que é e como você pode implementar passo a passo um programa para calcular a Regressão Linear Simples.
 comments: true
-image: 2020-04-27-regressao-linear-simples-03.png
+image: 2020-04-27-regressao-linear-simples.png
 ---
 
 A **Regressão Linear Simples** é usada quando queremos entender a relação que existe entre duas variáveis quantitativas, como: o valor e a metragem de um apartamento, ou as horas de estudo e a nota da prova, investimento em marketing e lucro das vendas, etc.
