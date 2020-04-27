@@ -18,7 +18,7 @@ Utilizando um conjunto de dados podemos identificar essa relação existente ent
 Imagina que você está querendo comprar ou vender um imóvel, então resolve pesquisar em alguns sites como estão os preços dos imóveis próximos da sua localidade. Procurando na Internet você encontrou alguns imóveis e anotou o tamanho de metros quadrados e o preço. Esses são alguns valores de apartamentos em SBC.
 
 |m² |preço    |
-|---|---------|
+|:-:|:-------:|
 |45 |R$227.000|
 |51 |R$249.000|
 |64 |R$340.000|
@@ -39,7 +39,7 @@ Na **Figura 1** temos um gráfico de dispersão mostrando como estão dispostos 
 **Figura 1:** Dispersão dos valores de m² e valor dos apartamentos.
 
 <figure>
-    <a href="/images/posts/2020-04-27-regressao-linear-simples-01.png"><img src="/images/posts/2020-04-27-regressao-linear-simples-03.png" alt="Dispersão dos valores de m² e valor dos apartamentos."></a>
+    <a href="/images/posts/2020-04-27-regressao-linear-simples-01.png"><img src="/images/posts/2020-04-27-regressao-linear-simples-01.png" alt="Dispersão dos valores de m² e valor dos apartamentos."></a>
 </figure>
 
 No gráfico, podemos reparar uma correlação nessas duas variáveis, porque quanto mais m² tem o apartamento, mais caro esse apartamento custa.
@@ -113,7 +113,7 @@ Se desenharmos uma linha tracejada vertical no valor dos 100m² até a linha de 
 
 
 <figure>
-    <a href="/images/posts/2020-04-27-regressao-linear-simples-01.png"><img src="/images/posts/2020-04-27-regressao-linear-simples-01.png" alt="Tentando predizer o valor de um apartamento de 100m²."></a>
+    <a href="/images/posts/2020-04-27-regressao-linear-simples-03.png"><img src="/images/posts/2020-04-27-regressao-linear-simples-03.png" alt="Tentando predizer o valor de um apartamento de 100m²."></a>
 </figure>
 
 Mas o que fizemos foi tentar traçar uma reta que representa a correlação dos dados, mas como fazemos para encontrar os valores dessa reta ou ter certeza que essa é a melhor reta?
@@ -153,13 +153,17 @@ Sabemos qual função usar e como escrever o código dessa função, também tem
 
 Se achamos que um apartamento de 100m² custa R$510.000, podemos chutar que **alpha = 500.000** e **beta = 100**. Porque:
 
+{% highlight python %}
 f(100) = 500.000 + 100 * 100
 f(100) = 510.000
+{% endhighlight %}
 
 Parece bom o nosso chute, mas e se tentarmos predizer o valor de um apartamento de 60m²?
 
+{% highlight python %}
 f(60) = 500.000 + 100 × 60
 f(60) = 506.000
+{% endhighlight %}
 
 O valor de uma apartamento de 60m² é muito similar ao de 100m² e bem longe da realidade desses dados. Então não dá para simplesmente ficar chutando valores de alpha e beta.
 
