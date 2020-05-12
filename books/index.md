@@ -9,7 +9,7 @@ modified: 2016-04-26T15:25:00.573882-03:00
 
 ## Desenvolvimento Distribuído com Java EE (gratuito)
 
-- [link](https://www.gitbook.com/book/rafaelsakurai/desenvolvimento-distribuido/details){:target="_blank"}
+- [link](https://rafael-sakurai.gitbook.io/desenvolvimento-distribuido){:target="_blank"}
 
 ## Google Android
 
