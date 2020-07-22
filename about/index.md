@@ -27,7 +27,7 @@ Desenvolvimento de soluções de Big Data que utilizam HDFS para armazenar o Dat
 
 * **Docente** <a href="www.metodista.br">Universidade Metodista de São Paulo</a> (08/2007 à 12/2018)
 
-Leciono disciplinas relacionadas à programação em Java (SE e EE), Web (HTML5, CSS e JS), Android, Desenvolvimento de jogos 2D com HTML5, Construct2 e Unity, Inteligência Artificial para jogos, Segurança de Aplicações Web, Servidor de Aplicações Web, Integração Contínua e Ciência de Dados.
+Lecionei disciplinas relacionadas à programação em Java (SE e EE), Web (HTML5, CSS e JS), Android, Desenvolvimento de jogos 2D com HTML5, Construct2 e Unity, Inteligência Artificial para jogos, Segurança de Aplicações Web, Servidor de Aplicações Web, Integração Contínua e Ciência de Dados.
 
 * **Analista Desenvolvedor Sênior** <a href="www.virginiasurety.com.br">Virginia Surety Companhia de Seguros do Brasil</a> (06/2008 à 03/2014)
 
@@ -39,6 +39,7 @@ Planejamento, definição de arquitetura e desenvolvimento de aplicações web e
 
 ## Certificações
 
+* Google Cloud Certified Professional Data Engineer (2019)
 * Sun Certified Java Associate, Sun Microsystems (2009)
 * Sun Certified Specialist for NetBeans IDE, Sun Microsystems (2008)
 * Sun Certified Web Component Developer for the Java 2 Platform, Enterprise Edition 1.4, Sun Microsystems(2007)
@@ -51,12 +52,22 @@ Planejamento, definição de arquitetura e desenvolvimento de aplicações web e
 
 ## Cursos complementares
 
+* **Google Cloud Training**
+ * <a href="https://google.qwiklabs.com/public_profiles/810314fc-8f33-4917-af05-d79451322fa6">Cloud Development (2019)</a>
+ * <a href="https://google.qwiklabs.com/public_profiles/810314fc-8f33-4917-af05-d79451322fa6">Cloud Engineering (2019)</a>
+ * <a href="https://google.qwiklabs.com/public_profiles/810314fc-8f33-4917-af05-d79451322fa6">Data Engineering (2019)</a>
+ * <a href="https://google.qwiklabs.com/public_profiles/810314fc-8f33-4917-af05-d79451322fa6">Baseline: Data, ML, AI (2019)</a>
+ * <a href="https://google.qwiklabs.com/public_profiles/810314fc-8f33-4917-af05-d79451322fa6">Google Cloud Essentials (2019)</a>
+
 * **MongoDB University**
  * <a href="https://university.mongodb.com/course_completion/dbffbf2e-4832-4b3b-a5f6-1d8b9f0d">M001: MongoDB Basics (2019)</a>
 
 * **Alura**
-  * <a href="https://cursos.alura.com.br/certificate/ace73ea6-e188-4bc0-8c56-32ed50ad643e">Visualização de Dados Parte 1: Começando com gráficos (2018)</a>
+  * <a href="https://cursos.alura.com.br/certificate/7ae35503-dba3-441c-a15f-1392d9539a24">Data Science: O pipeline do Big Data (2018)</a>
+  * <a href="https://cursos.alura.com.br/certificate/9490da58-b58a-4dbe-99fc-fa98ff1c3502">Visualização de Dados Parte 2: Escolhendo o melhor gráfico (2018)</a>
+  * <a href="https://cursos.alura.com.br/certificate/ace73ea6-e188-4bc0-8c56-32ed50ad643e">Data Visualization Parte 1: Introdução ao design de gráficos (2018)</a>
   * <a href="https://cursos.alura.com.br/certificate/ca5a5d95-dc61-4c1b-81e1-8f105f68234b">Machine Learning: Introdução ao sistemas de recomendação (2018)</a>
+  * <a href="https://cursos.alura.com.br/certificate/376704d4-ee18-4e9b-ba12-88d7318efe90">Python Pandas: Tratando e analisando dados (2018)</a>
   * <a href="https://cursos.alura.com.br/certificate/9c09326d-7525-47f8-9192-c7a8b1c958b0">Machine Learning II: Avançando com tipos diferentes de classificação (2017)</a>
   * <a href="https://cursos.alura.com.br/certificate/386ce18a-ca4b-4726-bf69-074f923abe71">Machine Learning: Introdução a classificação (2017)</a>
   * <a href="https://cursos.alura.com.br/certificate/9f27f1c05b28bbe13d3126e1817fa721">Git: Controle e compartilhe seu código (2013)</a>
@@ -75,6 +86,9 @@ Planejamento, definição de arquitetura e desenvolvimento de aplicações web e
   * <a href="https://courses.cognitiveclass.ai/certificates/f02670429d304147ba1ad38b84d54968">Deep Learning Fundamentals (2017)</a>
   * <a href="https://courses.cognitiveclass.ai/certificates/debec88c38a44bd69b29320c74956f3f">Data Science Methodology (2017)</a>
 
+* **IBM**
+  * <a href="https://www.youracclaim.com/badges/5d1a6f13-dfd2-4e7d-8a79-8ae5dbd00707">Spark - Level 1 (2018)</a>
+
 * **Singularity University**
   * <a href="https://www.fiap.com.br/2012/03/22/fiap-realiza-2-edicao-do-executive-program-da-singularity-university/">Executive Program FIAP (2012)</a>
 
@@ -89,9 +103,3 @@ Planejamento, definição de arquitetura e desenvolvimento de aplicações web e
 * Aprendizado de máquinas
 * Processamento de linguagem natural
 * Linguagens de programação
-
-## Conhecimentos
-
-* **Linguagens:** Java, Scala (básico), Python, Haskell (básico)
-* **Algoritmos:** K-NN, Naive Bayes, Decision Tree, Random Forest, SVM, K-Means, Neural Networks, Convolutional Neural Networks
-* **Ferramentas:** Spark (básico)
