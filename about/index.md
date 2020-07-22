@@ -39,7 +39,7 @@ Planejamento, definição de arquitetura e desenvolvimento de aplicações web e
 
 ## Certificações
 
-* Google Cloud Certified Professional Data Engineer (2019)
+* <a href="https://www.credential.net/efe6a318-2502-442f-b46c-fbc801c3e239">Google Cloud Certified Professional Data Engineer (2019)</a>
 * Sun Certified Java Associate, Sun Microsystems (2009)
 * Sun Certified Specialist for NetBeans IDE, Sun Microsystems (2008)
 * Sun Certified Web Component Developer for the Java 2 Platform, Enterprise Edition 1.4, Sun Microsystems(2007)
