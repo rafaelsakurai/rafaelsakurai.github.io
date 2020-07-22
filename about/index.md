@@ -53,14 +53,14 @@ Planejamento, definição de arquitetura e desenvolvimento de aplicações web e
 ## Cursos complementares
 
 * **Google Cloud Training**
- * <a href="https://google.qwiklabs.com/public_profiles/810314fc-8f33-4917-af05-d79451322fa6">Cloud Development (2019)</a>
- * <a href="https://google.qwiklabs.com/public_profiles/810314fc-8f33-4917-af05-d79451322fa6">Cloud Engineering (2019)</a>
- * <a href="https://google.qwiklabs.com/public_profiles/810314fc-8f33-4917-af05-d79451322fa6">Data Engineering (2019)</a>
- * <a href="https://google.qwiklabs.com/public_profiles/810314fc-8f33-4917-af05-d79451322fa6">Baseline: Data, ML, AI (2019)</a>
- * <a href="https://google.qwiklabs.com/public_profiles/810314fc-8f33-4917-af05-d79451322fa6">Google Cloud Essentials (2019)</a>
+  * <a href="https://google.qwiklabs.com/public_profiles/810314fc-8f33-4917-af05-d79451322fa6">Cloud Development (2019)</a>
+  * <a href="https://google.qwiklabs.com/public_profiles/810314fc-8f33-4917-af05-d79451322fa6">Cloud Engineering (2019)</a>
+  * <a href="https://google.qwiklabs.com/public_profiles/810314fc-8f33-4917-af05-d79451322fa6">Data Engineering (2019)</a>
+  * <a href="https://google.qwiklabs.com/public_profiles/810314fc-8f33-4917-af05-d79451322fa6">Baseline: Data, ML, AI (2019)</a>
+  * <a href="https://google.qwiklabs.com/public_profiles/810314fc-8f33-4917-af05-d79451322fa6">Google Cloud Essentials (2019)</a>
 
 * **MongoDB University**
- * <a href="https://university.mongodb.com/course_completion/dbffbf2e-4832-4b3b-a5f6-1d8b9f0d">M001: MongoDB Basics (2019)</a>
+  * <a href="https://university.mongodb.com/course_completion/dbffbf2e-4832-4b3b-a5f6-1d8b9f0d">M001: MongoDB Basics (2019)</a>
 
 * **Alura**
   * <a href="https://cursos.alura.com.br/certificate/7ae35503-dba3-441c-a15f-1392d9539a24">Data Science: O pipeline do Big Data (2018)</a>
