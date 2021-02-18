@@ -4,10 +4,14 @@ title: "Introdução a classificação de textos"
 date: 2021-02-18 13:30:00
 tags: [classificação, ia, inteligencia artificial, ml, machine learning, classificação de textos]
 published: true
-excerpt: 
+excerpt: Tudo pode ser classificado e rotulado, mas porque queremos classificar textos ou como isso poderia ajudar o negócio da empresa que trabalho?
 comments: true
 image: 2021-02-18-introducao-classificacao-textos.png
 ---
+
+<figure>
+    <a href="/images/posts/2021-02-18-introducao-classificacao-textos-01.png"><img src="/images/posts/2021-02-18-introducao-classificacao-textos-01.png" alt="Classificação de textos."></a>
+</figure>
 
 Tudo pode ser classificado e rotulado, mas porque queremos classificar textos ou como isso poderia ajudar o negócio da empresa que trabalho? Temos diversos tipos de textos que podem ser classificados, como: um comentário sobre o produto da empresa; a descrição de um problema que é informado durante um diálogo com o chatbot; o log gerado por uma máquina; dado uma notícia ou artigo definir um ou mais público alvo; entre outros.
 
@@ -29,7 +33,7 @@ Mas você deve estar se perguntando que mágica foi essa? Como a partir dos text
 
 É isso que quero mostrar nos próximos posts, feito passo a passo e com pontos que você pode mensurar conforme for fazendo.
 
-Na **Figura 1:** temos um exemplo de pipeline para criar um classificador de textos composto pelas seguintes fases: adquirir os exemplos de dados que serão usados para treinar o modelo; limpeza dos dados (pré processamento); conversão dos textos para um formato que pode ser usado no treinamento e avaliação do modelo; separar os dados que serão usados no treino e no teste do modelo; treinamento do modelo (aqui temos vários modelos diferentes para escolher), avaliação do modelo treinado (quão bom esse modelo poderá ser quando colocado em produção); disponibilizar o modelo treinado em produção.
+Na **Figura 1** temos um exemplo de pipeline para criar um classificador de textos composto pelas seguintes fases: adquirir os exemplos de dados que serão usados para treinar o modelo; limpeza dos dados (pré processamento); conversão dos textos para um formato que pode ser usado no treinamento e avaliação do modelo; separar os dados que serão usados no treino e no teste do modelo; treinamento do modelo (aqui temos vários modelos diferentes para escolher), avaliação do modelo treinado (quão bom esse modelo poderá ser quando colocado em produção); disponibilizar o modelo treinado em produção.
 
 \\
 **Figura 1:** Pipeline para criar um classificador de textos.
