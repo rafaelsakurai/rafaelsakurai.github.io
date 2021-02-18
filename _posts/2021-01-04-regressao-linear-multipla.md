@@ -9,8 +9,6 @@ comments: true
 image: 2021-01-04-regressao-linear-multipla.png
 ---
 
-# Regressão Linear Múltipla
-
 Quando queremos entender a relação que existe entre mais de duas variáveis quantitativas para tentar predizer um valor, um método que podemos facilmente fazer isso é usando a **Regressão Linear Múltipla**.
 
 A função da Regressão Linear Múltipla segue o mesmo padrão da Regressão Linear Simples, a diferença é que agora precisamos calcular vários valores de `β`, sendo um para cada variável que queremos utilizar:
