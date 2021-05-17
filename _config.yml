@@ -33,7 +33,7 @@ owner:
   avatar: bio-photo.jpg
   bio: "Big Data Engineer at Tail and Editor at InfoQ Brazil."
   email:
-  disqus-shortname: rafaelsakurai
+  disqus-shortname: #rafaelsakurai
   twitter: rafaelsakurai
   facebook: #username
   google:
@@ -47,7 +47,7 @@ owner:
   stackoverflow: #http://stackoverflow.com/users/123456/username
   linkedin: rafaelsakurai
   xing: #username
-  instagram: #rafaelsakurai
+  instagram: #username
   lastfm: #username
   tumblr: #username
   pinterest: #username
