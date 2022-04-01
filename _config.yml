@@ -4,7 +4,7 @@ title: "Rafael Sakurai"
 description: "Blog sobre Machine Learning e Big Data."
 logo: 'assets/images/favicon.png'
 favicon: 'assets/images/favicon.png'
-baseurl: http://sakurai.dev.br
+baseurl: #http://sakurai.dev.br
 google_analytics: 'UA-60110243-1'
 disqus: 
 mailchimp-list: 
