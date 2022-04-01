@@ -2,11 +2,11 @@
 layout: post
 title: "Automating Notebook Execution with Spark"
 date: 2019-11-21 13:00:00
-tags: []
-published: true
+categories: [ Spark ]
+tags: [spark]
+image: assets/images/posts/2019-11-21-automating-notebooks-spark-01.png
 excerpt: Notebooks help data scientists to explore datasets and has became one of the main tools used in Data Science, but they also add some challenges like how to deploy in production or how to show the results to end users.
-comments: true
-image: 2019-11-21-automating-notebooks-spark-01.png
+
 ---
 
 Notebooks help data scientists to explore datasets and has became one of the main tools used in Data Science, but they also add some challenges like how to deploy in production or how to show the results to end users. In this article, I will introduce how we address these challenges at [Tail](https://www.tail.digital) by automating Notebook execution in Apache Spark.
@@ -26,7 +26,7 @@ Apache Spark is an engine that allows process big datasets using distributed mac
 In Figure 1, we have a sample of Spark Notebook showing a cell that generates a chart as output:
 
 <figure>
-    <a href="/images/posts/2019-11-21-automating-notebooks-spark-01.png"><img src="/images/posts/2019-11-21-automating-notebooks-spark-01.png" alt="Sample of execution of a Spark Notebook cell."></a>
+    <a href="/assets/images/posts/2019-11-21-automating-notebooks-spark-01.png"><img src="/assets/images/posts/2019-11-21-automating-notebooks-spark-01.png" alt="Sample of execution of a Spark Notebook cell."></a>
 </figure>
 
 **Figure 1:** Sample of execution of a Spark Notebook cell.
@@ -54,7 +54,7 @@ We schedule the execution of each notebook and after the execution we take the o
 In Figure 2, we have the architecture of the automated notebook execution, and this architecture is used to explore using a sample of dataset, or to schedule your execution using the complete dataset.
 
 <figure>
-    <a href="/images/posts/2019-11-21-automating-notebooks-spark-02.png"><img src="/images/posts/2019-11-21-automating-notebooks-spark-02.png" alt="Architecture of automating Spark Notebooks execution."></a>
+    <a href="/assets/images/posts/2019-11-21-automating-notebooks-spark-02.png"><img src="/assets/images/posts/2019-11-21-automating-notebooks-spark-02.png" alt="Architecture of automating Spark Notebooks execution."></a>
 </figure>
 
 **Figure 2:** Architecture of automating Spark Notebooks execution.

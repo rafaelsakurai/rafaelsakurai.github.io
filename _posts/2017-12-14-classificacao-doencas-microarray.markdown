@@ -2,16 +2,12 @@
 layout: post
 title: "Classificação de doenças usando dados de expressão gênica"
 date: 2017-12-15 10:00:00
+categories: [ Machine Learning ]
 tags: [mineração de dados, classificação, microarray]
-published: true
+image: assets/images/posts/2017-12-15-classificacao-doencas-microarray.jpg
 excerpt: Este post apresenta um relatório sobre os passos utilizados na resolução do projeto de predição de doenças utilizando Microarrays disponível no KDnuggets.
-comments: true
-image: 2017-12-15-classificacao-doencas-microarray.jpg
----
 
-<figure>
-    <a href="/images/posts/2017-12-15-classificacao-doencas-microarray.jpg"><img src="/images/posts/2017-12-15-classificacao-doencas-microarray.jpg" alt="Genes."></a>
-</figure>
+---
 
 Este post apresenta um relatório sobre os passos utilizados na resolução do projeto de predição de doenças utilizando Microarrays disponível no [KDnuggets](http://www.kdnuggets.com/data_mining_course/assignments/final-project.html) e foi realizado em parceria com a **Clarissa Simoyama David**.
 
@@ -70,7 +66,7 @@ Para tratar tal situação, o primeiro passo de pré-processamento realizado foi
 \\
 **Algoritmo 1:** Algoritmo de normalização que mantém os valores entre o intervalo [20, 16.000].
 
-{% highlight text %}
+```
 Entrada: Este algoritmo recebe como entrada o valor de *nomeArquivo*, 
 que representa nome do arquivo que contêm os valores dos genes que 
 serão normalizados.
@@ -109,7 +105,7 @@ Inicio:
         Se i < entrada.length - 2:
             arquivoSaida.novaLinha();
 Fim
-{% endhighlight %}
+```
 
 O Algoritmo 1 gera dois novos arquivos, chamados *norm_pp5i_train.gr.csv* e *norm_pp5i_test.gr.csv*, que não contém cabeçalho e descrição dos genes, e tem os valores de expressão gênica restritos no intervalo [20, 16.000].
 
@@ -123,7 +119,7 @@ Para calcular a variação genética foi identificado o gene de maior valor e de
 **Equação 1:** Equação para encontrar a variação genética.
 
 <figure>
-    <a href="/images/posts/2017-12-15-equacao-1.png"><img src="/images/posts/2017-12-15-equacao-1.png" alt="Equação para encontrar a variação genética."></a>
+    <a href="/assets/images/posts/2017-12-15-equacao-1.png"><img src="/assets/images/posts/2017-12-15-equacao-1.png" alt="Equação para encontrar a variação genética."></a>
 </figure>
 
 na qual o *maxGene* é o maior valor e *minGene* é o menor valor de um determinado gene entre todas as amostras de exemplos.
@@ -133,7 +129,7 @@ O Algoritmo 2 apresenta um pseudo-algoritmo aplicado para filtrar os genes com v
 \\
 **Algoritmo 2:** Algoritmo que filtra os genes com variação genética menor que 2.
 
-{% highlight text %}
+```
 Entrada: Este algoritmo recebe como entrada o valor de *nomeArquivo*, que 
 representa nome do arquivo que contêm os valores dos genes já normalizados 
 e que serão filtrados.
@@ -163,7 +159,7 @@ Inicio:
             Se i < entrada.length - 1:
                 arquivoSaida.novaLinha();
 Fim
-{% endhighlight %}
+```
 
 Como os 7.070 genes estão dispostos como linhas do arquivo *norm_pp5i_train.gr.csv*, no Algoritmo 2 todas as linhas são lidas e para cada linha é calculado os valores de *maxGenes* e *minGenes* por meio das funções *max()* e *min()*, respectivamente, calculado o valor da *variacao*, os genes cuja variação são maiores ou igual a 2 são gravados em outro arquivo chamado *var_pp5i_train.gr.csv*.
 
@@ -177,7 +173,7 @@ Para identificar os melhores genes foi calculado o valor do *T-Value* dos genes 
 **Equação 2:** Equação para encontrar a variação genética.
 
 <figure>
-    <a href="/images/posts/2017-12-15-equacao-2.png"><img src="/images/posts/2017-12-15-equacao-2.png" alt="Equação para encontrar a variação genética."></a>
+    <a href="/assets/images/posts/2017-12-15-equacao-2.png"><img src="/assets/images/posts/2017-12-15-equacao-2.png" alt="Equação para encontrar a variação genética."></a>
 </figure>
 
 em que para cada classe C, o valor *N_1* representa a quantidade de genes, *Avg_1* representa a média dos valores dos genes e *sigma_1* representa o desvio médio padrão desta classe, enquanto que o valor de *N_2* representa a quantidade de genes, *Avg_2* representa a média dos valores e *sigma_2* representa o desvio médio padrão dos genes das demais classes.
@@ -187,7 +183,7 @@ O Algoritmo 3 apresenta um pseudo-algoritmo que utiliza os dados dos genes com v
 \\
 **Algoritmo 3:** Algoritmo que calcula o valor dos *T-Values* por classe.
 
-{% highlight text %}
+```
 Entrada: Este algoritmo recebe como entrada o valor de *nomeArquivoDados*, 
 que representa o nome do arquivo que contêm os valores dos genes com variação 
 maior ou igual a 2, e também o valor de *nomeArquivoClasses*, que representa 
@@ -220,7 +216,7 @@ Inicio:
         Se i < entrada.length - 1:
             arquivoSaida.novaLinha();
 Fim
-{% endhighlight %}
+```
 
 Para realizar o calculo dos *T-Values* foram criados mais três algoritmos específicos, sendo eles: o *Algoritmo 4* que monta uma lista contendo um mapa para cada um dos 6.411 genes agrupando os genes de acordo com a classe do *microarray*; depois o *Algoritmo 5* que calcula os valores das médias e desvios padrões para cada gene; e por fim o *Algoritmo 6* calcula os valores dos *T-Values* para cada classe.
 
@@ -229,7 +225,7 @@ Como tem cinco classes diferentes foram calculados cinco valores *T-Values*, poi
 \\
 **Algoritmo 4:** Algoritmo que elabora um mapa para cada gene, agrupando-os de acordo com a classe do *microarray*.
 
-{% highlight text %}
+```
 Entrada: Este algoritmo recebe um vetor de *genes* como entrada.
 
 Saida:Como resultado gera uma lista contendo um mapa para cada gene, 
@@ -248,12 +244,12 @@ Inicio:
     
     return lista;
 Fim
-{% endhighlight %}
+```
 
 \\
 **Algoritmo 5:** Algoritmo que monta uma lista contendo para cada gene o valor da média, desvio médio padrão e a quantidade de *microarrays*.
 
-{% highlight text %}
+```
 Entrada: Este algoritmo recebe como entrada uma *lista* contendo um mapa 
 para cada gene que agrupa os genes dos *microarrays* de acordo com a classe.
 
@@ -277,12 +273,12 @@ Inicio:
     
     return avgStdevs;
 Fim
-{% endhighlight %}
+```
 
 \\
 **Algoritmo 6:** Algoritmo que calcula o valor dos *T-Values* para cada gene separados por classes.
 
-{% highlight text %}
+```
 Entrada: Este algoritmo recebe como entrada uma lista contendo para cada 
 gene o valor da média, desvio médio padrão e a quantidade de *microarrays*.
 
@@ -315,7 +311,7 @@ Inicio:
 
     return tValues;
 Fim
-{% endhighlight %}
+```
 
 Com base no arquivo *t_value_pp5i_train.gr.csv* serão selecionados os genes por classe de acordo com o valor absoluto do *T-Value*.
 
@@ -324,7 +320,7 @@ O Algoritmo 7 gera um arquivo *pp5i_train.topN.gr.csv* para cada N = 2, 4, 6, 8,
 \\
 **Algoritmo 7:** Algoritmo que gera os arquivos separados com os melhores 2, 4, 6, 8, 10, 12, 15, 20, 25 e 30 genes.
 
-{% highlight text %}
+```
 Entrada: Este algoritmo recebe como entrada o valor de *nomeArquivo*, que 
 representa nome do arquivo que contêm os valores dos genes e dos *T-Values*.
 
@@ -361,11 +357,11 @@ Inicio:
                     Se i < top.length - 1:
                         arquivoSaida.novaLinha();
 Fim
-{% endhighlight %}
+```
 
 No fim do pré-processamento, o Algoritmo 8 realiza a transposta dos dados, de modo que cada linha represente um *microarray* e cada coluna represente os genes, no final de cada linha inclui a classe e gera um arquivo *pp5i_train.topN.gr.arff* no formato ARFF, como apresentado a seguir:
 
-{% highlight text %}
+```
 @RELATION treinamento
 
 @ATTRIBUTE atributo1 NUMERIC
@@ -377,12 +373,12 @@ No fim do pré-processamento, o Algoritmo 8 realiza a transposta dos dados, de m
 20.0,68.0,31.0,20.0,45.0,88.0,60.0,131.0,20.0,20.0,MED
 ...
 119.0,76.0,54.0,29.0,143.0,200.0,209.0,826.0,92.0,159.0,JPA
-{% endhighlight %}
+```
 
 \\
 **Algoritmo 8:** Algoritmo que converte os arquivos CSVs com os melhores 2, 4, 6, 8, 10, 12, 15, 20, 25 e 30 genes para o formato ARFF.
 
-{% highlight text %}
+```
 Entrada: Este algoritmo recebe como entrada o valor de *nomeArquivoClasses*, 
 que representa nome do arquivo que contêm as classes das amostras de exemplos.
 
@@ -414,7 +410,7 @@ Inicio:
             Se i < entrada.length - 1:
                 arquivoSaida.pulaLinha();
 Fim
-{% endhighlight %}
+```
 
 ## Seleção do melhor classificador e melhor combinação de atributos
 
@@ -428,7 +424,7 @@ O Naive Bayes (ZHANG,  2004) é um modelo de probabilidade condicional. Dado uma
 **Equação 3:** Equação que utiliza o teorema de Bayes para calcular a probabilidade que um exemplo possui em relação a uma classe.
 
 <figure>
-    <a href="/images/posts/2017-12-15-equacao-3.png"><img src="/images/posts/2017-12-15-equacao-3.png" alt=""></a>
+    <a href="/assets/images/posts/2017-12-15-equacao-3.png"><img src="/assets/images/posts/2017-12-15-equacao-3.png" alt=""></a>
 </figure>
 
 O Naive Bayes considera que cada atributo *x_i* da entrada de dados é independente, dessa forma, podemos reescrever a fórmula anterior como a Equação 4.
@@ -437,7 +433,7 @@ O Naive Bayes considera que cada atributo *x_i* da entrada de dados é independe
 **Equação 4:** Reescrevendo a Equação anterior para cada atributo *x_i*.
 
 <figure>
-    <a href="/images/posts/2017-12-15-equacao-4.png"><img src="/images/posts/2017-12-15-equacao-4.png" alt=""></a>
+    <a href="/assets/images/posts/2017-12-15-equacao-4.png"><img src="/assets/images/posts/2017-12-15-equacao-4.png" alt=""></a>
 </figure>
 
 Para cada classe possível do problema, há uma probabilidade P(C \| x) diferente. Para definir a qual classe o exemplo pertence, escolhe-se a classe com maior probabilidade.
@@ -457,7 +453,7 @@ O algoritmo IBk pertencente ao WEKA é a implementação do classificador KNN (c
 **Equação 5:** Equação da distância euclidiana.
 
 <figure>
-    <a href="/images/posts/2017-12-15-equacao-5.png"><img src="/images/posts/2017-12-15-equacao-5.png" alt="Equação da distância euclidiana."></a>
+    <a href="/assets/images/posts/2017-12-15-equacao-5.png"><img src="/assets/images/posts/2017-12-15-equacao-5.png" alt="Equação da distância euclidiana."></a>
 </figure>
 
 Uma decisão importante é a escolha do número *k* de vizinhos, como visto na Figura 1, pois se o *k* for um número pequeno pode não considerar elementos próximos e importantes na classificação. Por outro lado, se *k* for um número grande, pode haver problemas em definir qual grupo o elemento pertence, pois a comparação é feita com diversos vizinhos diferentes, além de possuir um custo computacional maior.
@@ -466,7 +462,7 @@ Uma decisão importante é a escolha do número *k* de vizinhos, como visto na F
 **Figura 1:** Exemplo do algoritmo KNN visto graficamente.
 
 <figure>
-    <a href="/images/posts/2017-12-15-figura-1.png"><img src="/images/posts/2017-12-15-figura-1.png" alt="Exemplo do algoritmo KNN visto graficamente."></a>
+    <a href="/assets/images/posts/2017-12-15-figura-1.png"><img src="/assets/images/posts/2017-12-15-figura-1.png" alt="Exemplo do algoritmo KNN visto graficamente."></a>
 </figure>
 
 ## IB1
@@ -504,7 +500,7 @@ Para cada classificador escolhido, foi medida a taxa de acurácia no conjunto de
 **Figura 2:** Resultado dos classificadores em questão de acurácia.
 
 <figure>
-    <a href="/images/posts/2017-12-15-figura-2.png"><img src="/images/posts/2017-12-15-figura-2.png" alt="Resultado dos classificadores em questão de acurácia."></a>
+    <a href="/assets/images/posts/2017-12-15-figura-2.png"><img src="/assets/images/posts/2017-12-15-figura-2.png" alt="Resultado dos classificadores em questão de acurácia."></a>
 </figure>
 
 Também foi coletado os resultados dos erros médios de cada classificador em cada topN. Os resultados podem ser vistos na Tabela 5 e graficamente na Figura 3.
@@ -529,7 +525,7 @@ Também foi coletado os resultados dos erros médios de cada classificador em ca
 **Figura 3:** Resultado dos classificadores em questão do erro médio.
 
 <figure>
-    <a href="/images/posts/2017-12-15-figura-3.png"><img src="/images/posts/2017-12-15-figura-3.png" alt="Resultado dos classificadores em questão do erro médio."></a>
+    <a href="/assets/images/posts/2017-12-15-figura-3.png"><img src="/assets/images/posts/2017-12-15-figura-3.png" alt="Resultado dos classificadores em questão do erro médio."></a>
 </figure>
 
 Para selecionar o modelo e a quantidade de atributos ideal a ser utilizado, foram observados o classificador com a maior taxa de acurácia juntamente com o menor valor de erro médio. Levando em conta estes quesitos, o modelo escolhido foi com topN = 20, com o classificador K*, que possui taxa de acurácia de 100% e erro médio de valor 0.
@@ -608,14 +604,10 @@ Também foi importante a utilização de ferramentas práticas para a tarefa de 
 
 CLEARY, J. G.; TRIGG, L. E. K. An instance-based learner using an entropic distancemeasure. In: 12th International Conference on Machine Learning. [S.l.:  s.n.], 1995. p. 108–114.
 
-\\
 COLOMBO, J.; RAHAL, P. A. Tecnologia de microarray no estudo do câncer de cabeça e pescoço. Revista Brasileira de Biociências, p. 64–72, 2010.
 
-\\
 COVER, T.; HART, P. Nearest neighbor pattern classification. IEEE transactions on information theory, IEEE, v. 13, n. 1, p. 21–27, 1967.
 
-\\
 QUINLAN, R. C4.5: Programs for Machine Learning. San Mateo, CA: Morgan KaufmannPublishers, 1993.
 
-\\
 ZHANG, H. The optimality of naive bayes. AA, v. 1, n. 2, p. 3, 2004.
