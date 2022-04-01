@@ -1,15 +1,28 @@
 ---
-# Add a comment to make this file sass-y.
-# Change this file for any custom CSS.
+sitemap: false
 ---
 
-/* We need to add display:inline in order to align the '>>' of the 'read more' link */
-.post-excerpt p {
-	display:inline;
-}
+/*
+ *
+ *  Minimal Mistakes
+ *
+ *  Designer: Michael Rose
+ *  Twitter: http://twitter.com/mmistakes
+ *
+*/
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-	"syntax",
-    "starsnonscss"
-;
+// Partials
+@import "variables";
+@import "grid";
+@import "mixins";
+@import "normalize";
+@import "site";
+@import "typography";
+@import "rouge";
+@import "coderay";
+@import "elements";
+@import "forms";
+@import "page";
+@import "vendor/font-awesome/font-awesome";
+@import "vendor/magnific-popup/magnific-popup";
+//@import "vendor/google/fonts";

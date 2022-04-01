@@ -2,11 +2,11 @@
 layout: post
 title: "Classificação usando KNN"
 date: 2020-03-31 18:00:00
-categories: [ Machine Learning, Classificação ]
-tags: [classificação, knn]
-image: assets/images/posts/2020-03-31-classificacao-knn.png
+tags: [classificação, knn, smile, java, python]
+published: true
 excerpt: KNN é um algoritmo que permite classificar novas amostras a partir da distância em relação às demais amostras do dataset. Veja nesse artigo como funciona o KNN.
-
+comments: true
+image: 2020-03-31-classificacao-knn.png
 ---
 
 Na tarefa de classificação estamos procurando por um modelo (algoritmo) que melhor consiga definir a classe (rótulo) dos dados.
@@ -51,7 +51,7 @@ Na **Figura 1** apresento visualmente os dados desse dataset. É sempre interess
 **Figura 1:** Visualizando os dados.
 
 <figure>
-    <a href="/assets/images/posts/2020-03-31-classificacao-knn-01.png"><img src="/assets/images/posts/2020-03-31-classificacao-knn-01.png" alt="Visualizando os dados."></a>
+    <a href="/images/posts/2020-03-31-classificacao-knn-01.png"><img src="/images/posts/2020-03-31-classificacao-knn-01.png" alt="Visualizando os dados."></a>
 </figure>
 
 Como as amostras usadas para montar o dataset inicial foram previamente classificadas, então sei quais dados representam o Círculo Vermelho ou o valor **0**, e quais dados representam o Quadrado Verde ou o valor **1**, dizemos que o KNN utiliza um **treinamento supervisionado**, porque teve a ajuda de um especialista para identificar as classificações de cada amostra.
@@ -71,7 +71,7 @@ Então digamos que temos uma função que mede distância entre duas amostras, c
 **Figura 2:** Distância entre três amostras mais próximas.
 
 <figure>
-    <a href="/assets/images/posts/2020-03-31-classificacao-knn-02.png"><img src="/assets/images/posts/2020-03-31-classificacao-knn-02.png" alt="Distância entre três amostras mais próximas."></a>
+    <a href="/images/posts/2020-03-31-classificacao-knn-02.png"><img src="/images/posts/2020-03-31-classificacao-knn-02.png" alt="Distância entre três amostras mais próximas."></a>
 </figure>
 
 Olhando esses três vizinhos mais próximos, podemos ver que duas amostras são Círculos Vermelhos e apenas uma amostra é Quadrado Verde, então pela maioria podemos dizer que a nova amostra no Triângulo Azul é na verdade da classe do Círculo Vermelho.
@@ -84,7 +84,7 @@ Mas agora se usarmos o **K = 5**, podemos ver na **Figura 3** que entre as amost
 **Figura 3:** Distância entre cinco amostras mais próximas.
 
 <figure>
-    <a href="/assets/images/posts/2020-03-31-classificacao-knn-03.png"><img src="/assets/images/posts/2020-03-31-classificacao-knn-03.png" alt="Distância entre cinco amostras mais próximas."></a>
+    <a href="/images/posts/2020-03-31-classificacao-knn-03.png"><img src="/images/posts/2020-03-31-classificacao-knn-03.png" alt="Distância entre cinco amostras mais próximas."></a>
 </figure>
 
 Mas agora você deve estar perguntando, qual valor utilizar para o K?
@@ -112,7 +112,7 @@ Podemos imaginar que cada característica representa um quarteirão ou uma reta,
 **Figura 4:** função da distância de Manhattan.
 
 <figure>
-    <a href="/assets/images/posts/2020-03-31-classificacao-knn-04.png"><img src="/assets/images/posts/2020-03-31-classificacao-knn-04.png" alt="Distância de Manhattan."></a>
+    <a href="/images/posts/2020-03-31-classificacao-knn-04.png"><img src="/images/posts/2020-03-31-classificacao-knn-04.png" alt="Distância de Manhattan."></a>
 </figure>
 
 Então essa função calcula a distância como a soma de várias retas na horizontal e vertical, simulando o caminho que um carro percorre pelos quarteirões.
@@ -127,7 +127,7 @@ A **Figura 5** apresenta a função da distância Euclidiana.
 **Figura 5:** função da distância Euclidiana.
 
 <figure>
-    <a href="/assets/images/posts/2020-03-31-classificacao-knn-05.png"><img src="/assets/images/posts/2020-03-31-classificacao-knn-05.png" alt="Distância Euclidiana."></a>
+    <a href="/images/posts/2020-03-31-classificacao-knn-05.png"><img src="/images/posts/2020-03-31-classificacao-knn-05.png" alt="Distância Euclidiana."></a>
 </figure>
 
 Na **Figura 6**, temos os caminhos em vermelho, azul e amarelo que representam soluções geradas pela distância de Manhattan e a linha verde é o caminho gerado pela distância Euclidiana.
@@ -136,7 +136,7 @@ Na **Figura 6**, temos os caminhos em vermelho, azul e amarelo que representam s
 **Figura 6:** diferença entre distância Manhattan e Euclidiana.
 
 <figure>
-    <a href="/assets/images/posts/2020-03-31-classificacao-knn-06.svg"><img src="/assets/images/posts/2020-03-31-classificacao-knn-06.svg" alt="Diferença entre distância Manhattan e Euclidiana."></a>
+    <a href="/images/posts/2020-03-31-classificacao-knn-06.svg"><img src="/images/posts/2020-03-31-classificacao-knn-06.svg" alt="Diferença entre distância Manhattan e Euclidiana."></a>
 </figure>
 
 ### Distância de Minkowski
@@ -147,7 +147,7 @@ A distância de Minkowski é considerada uma generalização das distância de M
 **Figura 7:** função da Distância Minkowski.
 
 <figure>
-    <a href="/assets/images/posts/2020-03-31-classificacao-knn-07.png"><img src="/assets/images/posts/2020-03-31-classificacao-knn-07.png" alt="Distância Minkowski."></a>
+    <a href="/images/posts/2020-03-31-classificacao-knn-07.png"><img src="/images/posts/2020-03-31-classificacao-knn-07.png" alt="Distância Minkowski."></a>
 </figure>
 
 Se o valor de p for igual a 1, então o resultado é o mesmo da distância de Manhattan e se o valor de p for igual a 2, então o resultado é o mesmo da distância Euclidiana. 
@@ -178,7 +178,7 @@ Existem três classes **Versicolor**, **Setosa** e **Virginica**, e com base nas
 **Figura 8:** tipos de flores Íris.
 
 <figure>
-    <a href="/assets/images/posts/2020-03-31-classificacao-knn-08.png"><img src="/assets/images/posts/2020-03-31-classificacao-knn-08.png" alt="Tipos de flores Iris."></a>
+    <a href="/images/posts/2020-03-31-classificacao-knn-08.png"><img src="/images/posts/2020-03-31-classificacao-knn-08.png" alt="Tipos de flores Iris."></a>
 </figure>
 
 Vou mostrar a seguir como carregar e treinar esse modelo usando Java e Python, o resultado final é bem similar, mas serve como comparativo entre as duas linguagens.
@@ -191,7 +191,7 @@ Vamos iniciar carregando os dados que estão no [Iris Dataset](https://archive.i
 
 A biblioteca [Smile](http://haifengl.github.io) possui uma implementação em Java do KNN, para usá-lo no seu projeto, você pode fazer [download](http://haifengl.github.io/quickstart.html) do projeto no Github ou adicionar a dependência Maven no pom.xml:
 
-``` java
+{% highlight java%}
 <dependency>
   <groupId>com.github.haifengl</groupId>
   <artifactId>smile-core</artifactId>
@@ -203,13 +203,13 @@ A biblioteca [Smile](http://haifengl.github.io) possui uma implementação em Ja
   <artifactId>smile-io</artifactId>
   <version>2.3.0</version>
 </dependency>
-```
+{% endhighlight %}
 
 Depois de adicionar a dependência no projeto, vamos carregar os dados. Criei um formato do CSV para definir o cabeçalho, porque esse arquivo não possui cabeçalho, depois carreguei o DataFrame a partir do arquivo **iris.data** e criei uma escala para a coluna "Class" que representa os três tipos de rótulos para as flores Iris.
 
 A partir do DataFrame, selecionei as colunas com as características serão usadas no treino do KNN e guardei na matrix **X** e também peguei a coluna "Class", mas primeiro converti ela para a escala numerica e guardei no vetor **y**.
 
-``` java
+{% highlight java %}
 import org.apache.commons.csv.CSVFormat;
 import smile.data.DataFrame;
 import smile.data.measure.NominalScale;
@@ -225,7 +225,7 @@ public class Classificador {
     int[] y = df.stringVector("Class").factorize(nominalScale).toIntArray();
   }
 }
-```
+{% endhighlight %}
 
 Observação: quando você for executar esse código no seu computador, verifique se o caminho do arquivo **iris.data** está correto.
 
@@ -233,14 +233,14 @@ Observação: quando você for executar esse código no seu computador, verifiqu
 
 Para carregar os dados das flores Iris em Python, vou usar o Pandas para ajudar. Neste código importei o Pandas, informei o nome das características do dataset (porque esse arquivo não tem cabeçalho), li o CSV e separei em duas variáveis, sendo **X** uma matriz com as características e **y** um vetor com as classes:
 
-``` python
+{% highlight python %}
 import pandas as pd
 nomes = ['SepalLength', 'SepalWidth', 'PetalLength', 'PetalWidth', 'Class']
 df = pd.read_csv('iris.data', names = nomes)
 
 X = df[df.columns.difference(['Class'])].values
 y = df['Class'].values
-```
+{% endhighlight %}
 
 ### Treinando o KNN
 
@@ -250,7 +250,7 @@ Conseguimos ler os dados do dataset e guardamos as características na matriz **
 
 Altere a classe Classificador para treina o KNN após carregar os dados:
 
-``` java
+{% highlight java %}
 import java.util.Arrays;
 import org.apache.commons.csv.CSVFormat;
 import smile.classification.KNN;
@@ -275,7 +275,7 @@ public class Classificador {
     KNN knn = new KNN(search, y, k);
   }
 }
-```
+{% endhighlight %}
 
 Nesse código estamos instanciando o algoritmo do **KNN** usando a distância Euclidiana para calcular a distância das características das flores que foi passada na variável **X**. Também passei o vetor **y** com as classificações esperadas e o valor do **k** (nesse exemplo usei k = 3).
 
@@ -285,12 +285,12 @@ Quando instanciamos o KNN, nesse momento ocorre o treino do modelo com base nos 
 
 Para treinar o KNN em Python, vou usar a implementação do [Scikit](https://scikit-learn.org/stable):
 
-``` python
+{% highlight python %}
 from sklearn.neighbors import KNeighborsClassifier
 
 iris_classificador = KNeighborsClassifier(n_neighbors = 3)
 iris_classificador.fit(X, y)
-```
+{% endhighlight %}
 
 Importei o **KNeighborsClassifier** que é uma implementação do KNN, configurei o **n_neighbors** (que representa o tamanho do **k** vizinhos) com 3 e depois chamei o método **fit** para treinar o modelo. A implementação padrão usada para calcular a distância é o inverso da função de Minkowski, por tanto um número grande representa uma similaridade maior e um número pequeno representa uma similaridade menor.
 
@@ -310,18 +310,18 @@ Após o treino, utiliza a parte separada para avaliar como está a classificaç�
 
 Avaliando o desempenho do KNN com validação cruzada:
 
-``` python
+{% highlight python %}
 from sklearn.model_selection import cross_val_score
 
 scores_dt = cross_val_score(iris_classificador, X, y, scoring='accuracy', cv=5)
 print(scores_dt.mean())
-```
+{% endhighlight %}
 
 Saída:
 
-```
+{% highlight python %}
 0.9800000000000001
-```
+{% endhighlight %}
 
 O **cross_val_score** é uma implementação da validação cruzada, que recebe como parâmetro o conjunto de dados de entrada **X**, um vetor com as saídas esperadas **y**, o nome da funcao
 
@@ -331,7 +331,7 @@ Executei a validação cruzada para K de 1 até 10:
 **Figura 9:** Resultado da avaliação cruzada para K de 1 até 10.
 
 <figure>
-    <a href="/assets/images/posts/2020-03-31-classificacao-knn-09.png"><img src="/assets/images/posts/2020-03-31-classificacao-knn-09.png" alt="Resultado da avaliação cruzada para K de 1 até 10."></a>
+    <a href="/images/posts/2020-03-31-classificacao-knn-09.png"><img src="/images/posts/2020-03-31-classificacao-knn-09.png" alt="Resultado da avaliação cruzada para K de 1 até 10."></a>
 </figure>
 
 Neste dataset e testando os intervalos de 1 até 10, o melhor KNN treinado foi utilizando **K = 6**. Então para as amostras usadas para testar o KNN, foram usadas as seis amostras com menor distância para definir a qual classe cada uma das amostras pertence.
@@ -356,7 +356,7 @@ A implementação do **KNN** possui o método **predict** que recebe como parâm
 
 Altere a classe **Classificador** e inclui após o treinamento alguns novos exemplos para ver como o KNN vai classificá-los:
 
-``` java
+{% highlight java %}
 double[][] novos_exemplos = new double[][]{
   {5.0, 3.6, 1.6, 0.5}, 
   {5.8, 2.7, 4.2, 1.2}, 
@@ -366,29 +366,29 @@ for (double[] novo : novos_exemplos) {
   int predicao = knn.predict(novo);
   System.out.println(Arrays.toString(novo) + " = " + nominalScale.level(predicao));
 }
-```
+{% endhighlight %}
 
 Saída:
 
-```
+{% highlight java %}
 [5.0, 3.6, 1.6, 0.5] = Iris-setosa
 [5.8, 2.7, 4.2, 1.2] = Iris-versicolor
 [7.0, 3.2, 5.2, 2.4] = Iris-virginica
-```
+{% endhighlight %}
 
 #### Avaliando novas amostras em Python
 
 Para classificar usando a implementação do KNN em Python:
 
-``` python
+{% highlight python %}
 novos_exemplos = [[1.6,0.5,5.0,3.6],
                   [4.2,1.2,5.8,2.7],
                   [5.2,2.4,7.0,3.2]]
 print(iris_classificador.predict(novos_exemplos))
-```
+{% endhighlight %}
 
 O **KNeighborsClassifier** possui o método **predict**, que recebe uma ou mais amostras para ele classificar e sua saída é um vetor com as classificações.
 
-```
+{% highlight python %}
 ['Iris-setosa' 'Iris-versicolor' 'Iris-virginica']
-```
+{% endhighlight %}

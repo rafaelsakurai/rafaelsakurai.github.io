@@ -2,11 +2,11 @@
 layout: post
 title: "Implementando a estrutura de uma Rede Neural Convolucional utilizando o MapReduce do Spark"
 date: 2017-12-20 10:00:00
-categories: [ Machine Learning, Spark ]
-tags: [convolutional neural networks, mapreduce, spark]
-image: assets/images/posts/2017-12-20-cnn-mapreduce.png
+tags: [cnn, convolutional neural networks, mapreduce, spark]
+published: true
 excerpt: Neste documento é apresentado um exemplo de problema que pode ser tratado por meio de Redes Neurais Convolucionais sendo implementado utilizando a técnica de MapReduce do Spark.
-
+comments: true
+image: 2017-12-20-cnn-mapreduce.png
 ---
 
 A classificação de imagens é uma tarefa na qual dada uma figura é obtido uma saída que representa sua classe (rótulo) ou a probabilidade das classes que descrevem a figura. Neste documento é apresentado um exemplo de problema que pode ser tratado por meio de Redes Neurais Convolucionais sendo implementado utilizando a técnica de MapReduce do Spark.
@@ -19,7 +19,7 @@ A Rede Neural Convolucional (do inglês *Convolutional Neural Network* - CNN) ve
 **Figura 1:** Exemplo de topologia da Rede Neural Convolucional.
 
 <figure>
-    <a href="/assets/images/posts/2017-12-20-cnn-mapreduce.png"><img src="/assets/images/posts/2017-12-20-cnn-mapreduce.png" alt="Exemplo de topologia da Rede Neural Convolucional."></a>
+    <a href="/images/posts/2017-12-20-cnn-mapreduce.png"><img src="/images/posts/2017-12-20-cnn-mapreduce.png" alt="Exemplo de topologia da Rede Neural Convolucional."></a>
 </figure>
 
 O diferencial das CNNs está nas diversas camadas convolucionais, que aplica uma função matemática de Convolução nos dados de entrada e depois realizando o Agrupamento (*pooling*). A saída da convolução é passada para a próxima camada convolucional até chegar na última camada conhecida como Camada Densa que normalmente é representada por uma rede *Perceptron* de múltiplas camadas (do inglês *Multilayer Perceptron* - MLP).
@@ -30,7 +30,7 @@ A biblioteca *scikit-learn* possui internamente um conjunto de dados composto po
 
 Neste conjunto de dados estão disponíveis os dígitos e sua classe, como apresentado na **Figura 2**. Cada dígito é formado por uma matriz de dimensão de 8 x 8, como mostrado na **Tabela 1**.
 
-``` python
+{% highlight python %}
 import numpy as np 
 import matplotlib.pyplot as plt
 from sklearn.datasets import load_digits
@@ -43,20 +43,20 @@ for index, (image, label) in enumerate(zip(digits.data[0:5], digits.target[0:5])
   plt.imshow(np.reshape(image, (8,8)), cmap=plt.cm.gray)
   plt.title('Training: %i\n' % label, fontsize = 20)
 plt.show()
-```
+{% endhighlight %}
 
 \\
 **Figura 2:** Exemplo dos dígitos utilizados no treinamento.
 
 <figure>
-    <a href="/assets/images/posts/2017-12-20-digitos.png"><img src="/assets/images/posts/2017-12-20-digitos.png" alt="Exemplo dos dígitos utilizados no treinamento."></a>
+    <a href="/images/posts/2017-12-20-digitos.png"><img src="/images/posts/2017-12-20-digitos.png" alt="Exemplo dos dígitos utilizados no treinamento."></a>
 </figure>
 
 **Tabela 1:** Matriz de dimensão 8 x 8 com os valores que correspondem ao exemplo de um dígito zero.
 
-``` python
+{% highlight python %}
 print(np.reshape(digits.data[0], (8, 8)))
-```
+{% endhighlight %}
 
 |:---|:---|:---|:---|:---|:---|:---|:---|
 |0.0 | 0.0 | 5.0  | 13.0 | 9.0  | 1.0  | 0.0 | 0.0|
@@ -76,34 +76,34 @@ Neste exemplo será apresentado o uso da CNN para a partir dos dados do dígitos
 
 Com base na entrada, por exemplo o digito zero representado na **Figura 3**, pode ser aplicado um mapeamento para gerar diversar partes com tamanho igual ao do *kernel*, como mostrado na **Figura 4**.
 
-``` python
+{% highlight python %}
 plt.figure(figsize=(20,4))
 for index, (image, label) in enumerate(zip(digits.data[0:1], digits.target[0:5])):
   plt.subplot(1, 1, index + 1)
   plt.imshow(np.reshape(image, (8,8)), cmap=plt.cm.gray)
 plt.show()
-```
+{% endhighlight %}
 
 \\
 **Figura 3:** Exemplo do dígito zero.
 
 <figure>
-    <a href="/assets/images/posts/2017-12-20-digito_zero.png"><img src="/assets/images/posts/2017-12-20-digito_zero.png" alt="Exemplo do dígito zero."></a>
+    <a href="/images/posts/2017-12-20-digito_zero.png"><img src="/images/posts/2017-12-20-digito_zero.png" alt="Exemplo do dígito zero."></a>
 </figure>
 
-``` python
+{% highlight python %}
 plt.figure(figsize=(20, 4)) 
 for index, image in enumerate(partesDigito[0][1]):
   plt.subplot(1, len(partesDigito[0][1]), index + 1)
   plt.imshow(image, cmap=plt.cm.gray)
 plt.show()
-```
+{% endhighlight %}
 
 \\
 **Figura 4:** Exemplo de partes que podem ser geradas a partir do dígito zero.
 
 <figure>
-    <a href="/assets/images/posts/2017-12-20-digito_zero_partes.png"><img src="/assets/images/posts/2017-12-20-digito_zero_partes.png" alt="Exemplo de partes que podem ser geradas a partir do dígito zero."></a>
+    <a href="/images/posts/2017-12-20-digito_zero_partes.png"><img src="/images/posts/2017-12-20-digito_zero_partes.png" alt="Exemplo de partes que podem ser geradas a partir do dígito zero."></a>
 </figure>
 
 A convolução é aplicada por meio da **Equação 1**.
@@ -112,12 +112,12 @@ A convolução é aplicada por meio da **Equação 1**.
 **Equação 1:** Equação do calculo da convolução.
 
 <figure>
-    <a href="/assets/images/posts/2017-12-20-equacao-convolucao.png"><img src="/assets/images/posts/2017-12-20-equacao-convolucao.png" alt="Equação do calculo da convolução."></a>
+    <a href="/images/posts/2017-12-20-equacao-convolucao.png"><img src="/images/posts/2017-12-20-equacao-convolucao.png" alt="Equação do calculo da convolução."></a>
 </figure>
 
 em que dado uma entrada *E* e um *kernel K* de dimensão n x n, é somado o resultado da multiplicação de cada posição do *kernel* por uma área correspondente a partir da posição *x* e *y* da entrada, obtendo como resultado uma resposta de ativação.
 
-``` python
+{% highlight python %}
 en = 8 # tamanho da dimensão da entrada
 kn = 3 # tamanho da dimensão do kernel
 k = 10 # quantidade de kernels
@@ -139,10 +139,10 @@ def partes(x):
 
 partesDigito = partes(digits.data[0])
 print(partesDigito[0])
-```
+{% endhighlight %}
 
 Saída:
-```
+{% highlight text %}
 (0, array([[[  0.,   0.,   5.],
         [  0.,   0.,  13.],
         [  0.,   3.,  15.]],
@@ -160,11 +160,11 @@ Saída:
         [  2.,   0.,  11.]],
 
 ...
-```
+{% endhighlight %}
 
 Após aplicar o *kernel* em toda área da matriz de entrada, o resultado obtido é um mapa com todas as ativações.
 
-``` python
+{% highlight python %}
 import math
 
 def sigmoid(x):
@@ -183,10 +183,10 @@ def ativacao(k, x):
 
 print("Mapa de ativações de um kernel")
 print(ativacao(kernels[0], partesDigito[0][1]))
-```
+{% endhighlight %}
 
 Saída:
-```
+{% highlight text %}
 Mapa de ativações de um kernel
 [[ 0.99998564  0.99999983  0.99999518  1.          1.          0.99999839]
  [ 1.          0.99999999  1.          1.          0.99999951  0.99999995]
@@ -194,11 +194,11 @@ Mapa de ativações de um kernel
  [ 0.99995649  0.99999999  0.99999987  1.          0.99908467  0.99998074]
  [ 0.          0.          0.          0.          0.          0.        ]
  [ 0.          0.          0.          0.          0.          0.        ]]
-```
+{% endhighlight %}
 
 A **Figura 5** apresenta um exemplo visual do que poderia ser a representação visual de um mapa de ativações a partir de dez *kernels*.
 
-``` python
+{% highlight python %}
 mapas = np.zeros((k, t, t))
 
 for i in range(0, k):
@@ -209,20 +209,20 @@ for index, image in enumerate(mapas):
   plt.subplot(1, len(mapas), index + 1)
   plt.imshow(image, cmap=plt.cm.gray)
 plt.show()
-```
+{% endhighlight %}
 
 \\
 **Figura 5:** Exemplo de mapa de ativações.
 
 <figure>
-    <a href="/assets/images/posts/2017-12-20-mapa_ativacoes_conv1.png"><img src="/assets/images/posts/2017-12-20-mapa_ativacoes_conv1.png" alt="Exemplo de mapa de ativações."></a>
+    <a href="/images/posts/2017-12-20-mapa_ativacoes_conv1.png"><img src="/images/posts/2017-12-20-mapa_ativacoes_conv1.png" alt="Exemplo de mapa de ativações."></a>
 </figure>
 
 # Agrupamento com Max Pooling
 
 Após gerado o mapa de ativações é realizado seu agrupamento, normalmente utilizando a função *Max Pooling*, que agrupa regiões do mapa de ativações mantendo apenas o maior valor de cada região, assim gerando um mapa de ativações mais compacto e mantendo sua principais ativações.
 
-``` python
+{% highlight python %}
 pn = 2 # tamanho do pooling
 ps = 2 # tamanho do passo do pooling
 
@@ -239,21 +239,21 @@ for i in range(0, len(mapas)):
     pooling.append(maxPooling(mapas[i]))
     
 print(pooling[0])
-```
+{% endhighlight %}
 
 Saída:
-```
+{% highlight text %}
 
 [[ 1.          1.          1.        ]
  [ 0.99999999  1.          0.99999982]
  [ 0.          0.          0.        ]]
-```
+{% endhighlight %}
 
 # Camada densa com Multilayer Perceptron
 
 A cada camada convolucional serão gerados mais mapas de ativações, a última camada convolucional passará os mapas para uma MLP que gera como saída a probabilidade de cada dígito entre 0 e 9 dada a entrada inicial da CNN.
 
-``` python
+{% highlight python %}
 # weights representa os pesos da camada densa (MLP), aqui ainda falta fazer o backpropagation para ajustar esses pesos.
 weights = np.random.randn(10, 90)
 
@@ -270,18 +270,18 @@ def mlp(x):
     return saida
 
 print (mlp(np.asarray(pooling).ravel()))
-```
+{% endhighlight %}
 
 Saída:
-```
+{% highlight text %}
 [0, 0, 0, 4.3701665050961562, 0, 0, 0, 0.60245082809067663, 0, 0, 0.53936137771204695, 12.123892627075183, 5.0597520763051014, 0.27369392536098403, 0, 3.422379266592682, 2.3469559016028905, 0.97873657051551133, 7.7324271328553129, 3.2759378522349918, 2.6000096645266626, 3.6007522524434128, 0, 0, 0, 0, 1.4346841403270592, 0, 1.5324169541119275, 1.378371029334049, 0, 11.142221590259755, 6.5918443871797017, 0, 0, 0, 0, 0, 0.37532997646881272, 0, 2.4526739064332572, 2.9692356615887432, 0.6982483522414773, 1.1695875096513377, 0, 0, 0, 1.7735903055927464, 0, 0, 5.6680899516275787, 3.4132525268346612, 8.5553119395499113, 0, 0, 3.9782447858252392, 0.81613845606182212, 3.727326470346775, 0, 0, 0, 1.7425813090759279, 0, 0, 0, 0, 11.030676379704985, 1.5197188161663346, 7.9210980282255781, 0, 6.4840401213813266, 8.1830919183345063, 0, 0, 0, 5.7380291135098078, 0, 7.6907450104951138, 0, 0.36736327224652277, 0.13878636769635899, 3.90926051261878, 0, 0, 12.233622756093702, 8.5289374934347801, 0.62233906262415628, 0.48997189272927777, 0, 0.54504203418758745, 0.92106676094190298, 0, 0, 4.947342418562382, 1.1909579791507841, 2.8482571182408303, 0, 12.735820503700911, 3.8323855539377258, 2.4634624550847439]
-```
+{% endhighlight %}
 
 # Camada de saída
 
 A camada de saída aplica a função de ativação softmax para gerar uma distribuição de probabilidades entre 0 e 1 nos valores de saída. A saída é um vetor de 10 valores, cada valor representará a probabilidade de que cada um dos números entre zero e nove, tem de representar o número da figura que será classificada.
 
-``` python
+{% highlight python %}
 # weights representa os pesos da camada de saída, aqui ainda falta fazer o backpropagation para ajustar esses pesos.
 weightsOut = np.random.randn(10, 1)
 
@@ -299,14 +299,14 @@ def out(x):
 
 x = mlp(np.asarray(pooling).ravel())
 print(out(x))
-```
+{% endhighlight %}
 
 Saída:
-```
+{% highlight text %}
 [  3.66082504e-252   2.46136020e-096   2.84453882e-197   5.55449523e-273
    2.17623650e-223   2.67780046e-118   8.59637277e-108   1.00000000e+000
    2.25062876e-122   6.18347914e-027]
-```
+{% endhighlight %}
 
 # Montando a Rede Neural Convolucional com o MapReduce
 
@@ -324,7 +324,7 @@ Uma forma de representar uma CNN usando MapReduce seria:
     b) O vetor sequencial é passado para a camada densa que aplica a função de ativação RELU;\\
     c) Os dados são passados para a camada de saída que gera as probabilidades representando cada um dos dígitos.
 
-``` python
+{% highlight python %}
 sc = SparkContext.getOrCreate()
 # Montando um RDD com todo dataset de digitos
 rdd = sc.parallelize(digits.data, 4)
@@ -342,16 +342,16 @@ print(rdd
       .map(lambda x: mlp(x)) # Manda os dados da última camada convolucional agrupada para a camada Densa
       .map(lambda x: out(x)) # Aplica o softmax e retorna os valores das probabilidades de cada número. 
       .take(1))
-```
+{% endhighlight %}
 
 Saída:
 
-```
+{% highlight text %}
 [[0.2303787084411721, 0.2099451726892583, 0.06508030989360919, 
 0.1055256000866959, 0.9971740047740627, 0.09117066280446567, 
 0.9999356557510007, 1.3844127613072241e-05, 0.8562682290831856, 
 0.38278995757093703]]
-```
+{% endhighlight %}
 
 A implementação deste exemplo usando Jupyter Notebook está disponível no [GitHub](https://github.com/rafaelsakurai/bigdata2017/blob/master/Projeto/Projeto%20CNN%20em%20Spark.ipynb).
 

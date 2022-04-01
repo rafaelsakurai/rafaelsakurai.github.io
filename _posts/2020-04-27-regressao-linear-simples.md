@@ -2,11 +2,11 @@
 layout: post
 title: "Regressão Linear Simples"
 date: 2020-04-27 08:00:00
-categories: [ Machine Learning, Regressão ]
-tags: [regressao linear]
-image: assets/images/posts/2020-04-27-regressao-linear-simples.png
+tags: [regressao, linear, smile, java, python, data, science]
+published: true
 excerpt: O que acha de tentar prever quanto será o lucro da empresa com base no investimento de marketing, ou quanto custa um apartamento com base na sua metragem, esse são alguns exemplos do uso da Regressão Linear. Nesse post explico o que é e como você pode implementar passo a passo um programa para calcular a Regressão Linear Simples.
-
+comments: true
+image: 2020-04-27-regressao-linear-simples.png
 ---
 
 A **Regressão Linear Simples** é usada quando queremos entender a relação que existe entre duas variáveis quantitativas, como: o valor e a metragem de um apartamento, ou as horas de estudo e a nota da prova, investimento em marketing e lucro das vendas, etc.
@@ -39,7 +39,7 @@ Na **Figura 1** temos um gráfico de dispersão mostrando como estão dispostos 
 **Figura 1:** Dispersão dos valores de m² e valor dos apartamentos.
 
 <figure>
-    <a href="/assets/images/posts/2020-04-27-regressao-linear-simples-01.png"><img src="/assets/images/posts/2020-04-27-regressao-linear-simples-01.png" alt="Dispersão dos valores de m² e valor dos apartamentos."></a>
+    <a href="/images/posts/2020-04-27-regressao-linear-simples-01.png"><img src="/images/posts/2020-04-27-regressao-linear-simples-01.png" alt="Dispersão dos valores de m² e valor dos apartamentos."></a>
 </figure>
 
 No gráfico, podemos reparar uma correlação nessas duas variáveis, porque quanto mais m² tem o apartamento, mais caro esse apartamento custa.
@@ -48,7 +48,7 @@ No gráfico, podemos reparar uma correlação nessas duas variáveis, porque qua
 
 Para gerar o gráfico vou usar a biblioteca **Smile** e vou mostrar o gráfico dentro de um JFrame.
 
-``` java
+{% highlight java %}
 import java.awt.Color;
 import javax.swing.JFrame;
 import org.apache.commons.csv.CSVFormat;
@@ -72,13 +72,13 @@ public class GraficoDispersao {
     frame.setVisible(true);
   }
 }
-```
+{% endhighlight %}
 
 #### ScatterPlot no Python
 
 Para facilitar a montagem deste gráfico de dispersão, podemos usar a biblioteca **Pandas** para carregar os dados e também a **matplotlib** para gerar o gráfico:
 
-``` python
+{% highlight python %}
 from matplotlib import pyplot as plt
 import pandas as pd
 
@@ -93,7 +93,7 @@ plt.title("Aptos de SBC: Metros vs Preco")
 plt.xlabel("Metros")
 plt.ylabel("Preco")
 plt.show()
-```
+{% endhighlight %}
 
 ## Qual o valor de um apartamento de 100m² em SBC?
 
@@ -103,7 +103,7 @@ Mas quanto custa um apartamento de 100m² em SBC? Se desenharmos uma reta que re
 **Figura 2:** Gráfico do crescimento do valor conforme aumenta o m².
 
 <figure>
-    <a href="/assets/images/posts/2020-04-27-regressao-linear-simples-02.png"><img src="/assets/images/posts/2020-04-27-regressao-linear-simples-02.png" alt="Gráfico do crescimento do valor conforme aumenta o m²."></a>
+    <a href="/images/posts/2020-04-27-regressao-linear-simples-02.png"><img src="/images/posts/2020-04-27-regressao-linear-simples-02.png" alt="Gráfico do crescimento do valor conforme aumenta o m²."></a>
 </figure>
 
 Se desenharmos uma linha tracejada vertical no valor dos 100m² até a linha de crescimento, é outra linha tracejada na horizontal como na **Figura 3**. Podemos chutar que um apartamento de 100m² custa uns R$510.000.
@@ -111,8 +111,9 @@ Se desenharmos uma linha tracejada vertical no valor dos 100m² até a linha de 
 \\
 **Figura 3:** Tentando predizer o valor de um apartamento de 100m².
 
+
 <figure>
-    <a href="/assets/images/posts/2020-04-27-regressao-linear-simples-03.png"><img src="/assets/images/posts/2020-04-27-regressao-linear-simples-03.png" alt="Tentando predizer o valor de um apartamento de 100m²."></a>
+    <a href="/images/posts/2020-04-27-regressao-linear-simples-03.png"><img src="/images/posts/2020-04-27-regressao-linear-simples-03.png" alt="Tentando predizer o valor de um apartamento de 100m²."></a>
 </figure>
 
 Mas o que fizemos foi tentar traçar uma reta que representa a correlação dos dados, mas como fazemos para encontrar os valores dessa reta ou ter certeza que essa é a melhor reta?
@@ -133,18 +134,18 @@ f(x) = α + β.x
 
 #### Implementação no Java:
 
-``` java
+{% highlight java %}
 public double predicao(double alpha, double beta, double x) {
   return alpha + beta * x;
 }
-```
+{% endhighlight %}
 
 #### Implementação no Python:
 
-``` python
+{% highlight python %}
 def predicao(alpha, beta, x):
     return alpha + beta * x
-```
+{% endhighlight %}
 
 ### Mas qual o valor das variáveis α e β?
 
@@ -152,17 +153,17 @@ Sabemos qual função usar e como escrever o código dessa função, também tem
 
 Se achamos que um apartamento de 100m² custa R$510.000, podemos chutar que **alpha = 500.000** e **beta = 100**. Porque:
 
-``` python
+{% highlight python %}
 f(100) = 500.000 + 100 * 100
 f(100) = 510.000
-```
+{% endhighlight %}
 
 Parece bom o nosso chute, mas e se tentarmos predizer o valor de um apartamento de 60m²?
 
-``` python
+{% highlight python %}
 f(60) = 500.000 + 100 × 60
 f(60) = 506.000
-```
+{% endhighlight %}
 
 O valor de uma apartamento de 60m² é muito similar ao de 100m² e bem longe da realidade desses dados. Então não dá para simplesmente ficar chutando valores de alpha e beta.
 
@@ -182,24 +183,24 @@ Observação: se você quiser entender um pouco melhor como funciona a solução
 
 Vou usar as funções de correlação, desvio médio e média da classe **smile.math.MathEx** a biblioteca **Smile**.
 
-``` java
+{% highlight java %}
 public static double[] minimos_quadrados(double[] x, double[] y) {
   double beta = cor(x, y) * sd(y) / sd(x);
   double alpha = mean(y) - beta * mean(x);
   return new double[] {alpha, beta};
 }
-```
+{% endhighlight %}
 
 ##### Implementação no Python
 
 Vou usar as funções de correlação, desvio médio e média do **NumPy**.
 
-``` python
+{% highlight python %}
 def minimos_quadrados(x, y):
     beta = np.corrcoef(x, y)[0, 1] * np.std(y) / np.std(x)
     alpha = np.mean(y) - beta * np.mean(x)
     return alpha, beta
-```
+{% endhighlight %}
 
 ## Treinando e predizendo valores com a Regressão Linear
 
@@ -207,7 +208,7 @@ Agora vamos carregar o dataset com os 100 apartamentos, calcular o valor de alph
 
 Juntando o código Java:
 
-``` java
+{% highlight java %}
 import org.apache.commons.csv.CSVFormat;
 import smile.data.DataFrame;
 import smile.io.CSV;
@@ -241,11 +242,11 @@ public class RegressaoLinear {
     return predicao(alpha_beta[0], alpha_beta[1], z);
   }
 }
-```
+{% endhighlight %}
 
 Juntando o código Python:
 
-``` python
+{% highlight python %}
 import numpy as np
 import pandas as pd
 
@@ -267,13 +268,13 @@ print(beta)  # 5.72587800683
 
 valor = predicao(alpha, beta, 100)
 print("Um apto de 100m custa: %.2f" % valor)
-```
+{% endhighlight %}
 
 Saída:
 
-```
+{% highlight python %}
 Um apto de 100m custa: 515.84
-```
+{% endhighlight %}
 
 Então um apartamento de **100m²** custa **R$515,84**, se calcularmos o preço de um apto de **60m²** temos o valor de **R$286,81**.
 
@@ -283,7 +284,7 @@ Agora que sabemos implementar a Regressão Linear na mão, não precisamos ficar
 
 No **Smile** temos uma implementação da Regressão Linear na classe [OLS](http://haifengl.github.io/regression.html#ols):
 
-``` java
+{% highlight java %}
 import org.apache.commons.csv.CSVFormat;
 import smile.data.DataFrame;
 import smile.data.formula.Formula;
@@ -302,13 +303,13 @@ public class RegressaoLinearSmile {
     System.out.printf("Um apto de 100m custa: %.2f", valor);
   }
 }
-```
+{% endhighlight %}
 
 ### Regressão Linear com scikit-learn
 
 No **Scikit-learn** temos uma implementação pronta da Regressão Linear:
 
-``` python
+{% highlight python %}
 from sklearn.linear_model import LinearRegression
 import pandas as pd
 
@@ -320,7 +321,7 @@ model = LinearRegression()
 model.fit(x, y)
 
 print("Um apto de 100m custa: %.2f" % model.predict(100))
-```
+{% endhighlight %}
 
 ## Continuando os estudos
 

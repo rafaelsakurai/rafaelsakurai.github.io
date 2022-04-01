@@ -2,10 +2,11 @@
 layout: post
 title: "Introdução ao aprendizado de máquinas"
 date: 2018-10-15 22:00:00
-categories: [ Artificial Intelligence, Machine Learning ]
-tags: [machine learning, supervisionado, não supervisionado, reforço]
-image: assets/images/posts/2018-10-15-introducao-ml.png
+tags: [introducao, aprendizado, maquinas, supervisionado, não supervisionado, reforço]
+published: true
 excerpt: Introdução do que é aprendizado de máquinas, modelos e abordagens de treinamento.
+comments: true
+image: 2018-10-15-introducao-ml.png
 ---
 
 O **Aprendizado de Máquinas**, uma linha de pesquisa dentro de Inteligência Artificial, tem como objetivo criar programas capazes de aprender uma determinada tarefa utilizando um conjunto de dados ou medida de desempenho.
@@ -41,7 +42,7 @@ A **Figura 1** apresenta um fluxo resumido de como funciona de modo geral o trei
 **Figura 1:** Aprendizado a partir dos dados.
 
 <figure>
-    <a href="/assets/images/posts/2018-10-15-introducao-ml.png"><img src="/assets/images/posts/2018-10-15-introducao-ml.png" alt="Aprendizado a partir dos dados."></a>
+    <a href="/images/posts/2018-10-15-introducao-ml.png"><img src="/images/posts/2018-10-15-introducao-ml.png" alt="Aprendizado a partir dos dados."></a>
 </figure>
 
 # Aprendizado supervisionado

@@ -2,14 +2,16 @@
 layout: post
 title: "Introdução a classificação de textos"
 date: 2021-02-18 13:30:00
-categories: [ Machine Learning, Classificação ]
-tags: [classificação, inteligencia artificial, machine learning, classificação de textos]
-image: assets/images/posts/2021-02-18-introducao-classificacao-textos-01.png
+tags: [classificação, ia, inteligencia artificial, ml, machine learning, classificação de textos]
+published: true
 excerpt: Tudo pode ser classificado e rotulado, mas porque queremos classificar textos ou como isso poderia ajudar o negócio da empresa que trabalho?
-featured: true
-hidden: true
-
+comments: true
+image: 2021-02-18-introducao-classificacao-textos.png
 ---
+
+<figure>
+    <a href="/images/posts/2021-02-18-introducao-classificacao-textos-01.png"><img src="/images/posts/2021-02-18-introducao-classificacao-textos-01.png" alt="Classificação de textos."></a>
+</figure>
 
 Tudo pode ser classificado e rotulado, mas porque queremos classificar textos ou como isso poderia ajudar o negócio da empresa que trabalho? Temos diversos tipos de textos que podem ser classificados, como: um comentário sobre o produto da empresa; a descrição de um problema que é informado durante um diálogo com o chatbot; o log gerado por uma máquina; dado uma notícia ou artigo definir um ou mais público alvo; entre outros.
 
@@ -37,7 +39,7 @@ Na **Figura 1** temos um exemplo de pipeline para criar um classificador de text
 **Figura 1:** Pipeline para criar um classificador de textos.
 
 <figure>
-    <a href="/assets/images/posts/2021-02-18-introducao-classificacao-textos.png"><img src="/assets/images/posts/2021-02-18-introducao-classificacao-textos.png" alt="Pipeline para criar um classificador de textos."></a>
+    <a href="/images/posts/2021-02-18-introducao-classificacao-textos.png"><img src="/images/posts/2021-02-18-introducao-classificacao-textos.png" alt="Pipeline para criar um classificador de textos."></a>
 </figure>
 
 Esse pipeline mostra como treinamos um modelo, que é gerado como resultado ao aplicar um algoritmo de aprendizado de máquinas que utiliza os dados para aprender padrões que identificam como podem ser classificados. Aqui deixo em aberto o tipo do modelo, porque temos diversos modelos (Decision Tree, Random Forest, KNN, SVM, Neural Network, GXBoost, entre outros que podem ser aplicados na tarefa de classificação e veremos alguns deles e suas diferenças. Esse treinamento serve para que o modelo conheça os tipos de textos e suas classificações. Após realizar o treinamento podemos disponibilizar esse modelo para receber novos textos que serão classificados de acordo com o que o modelo aprendeu.

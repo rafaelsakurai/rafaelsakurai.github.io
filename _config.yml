@@ -1,63 +1,63 @@
-# Site
-name: "Rafael Sakurai"
-title: "Rafael Sakurai"
-description: "Blog sobre Machine Learning e Big Data."
-logo: 'assets/images/favicon.png'
-favicon: 'assets/images/favicon.png'
-baseurl: #http://sakurai.dev.br
-google_analytics: 'UA-60110243-1'
-disqus: 
-mailchimp-list: 
-include: ["_pages"]
-permalink: /:title/
+# Site wide configuration
 
-# Authors
-authors:
-  rafael:
-    name: Rafael Sakurai
-    display_name: Sakurai
-    gravatar: 
-    email: rafasakurai@gmail.com
-    web: http://www.sakurai.dev.br
-    twitter: https://twitter.com/rafaelsakurai
-    description: "Big Data Tech Lead at Tail"
-
-# Plugins
+title:  Rafael Sakurai
+locale: pt_BR
+url:    http://www.sakurai.dev.br
 plugins:
-  - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-archives
-    
-# Archives
-jekyll-archives:
-  enabled:
-    - categories
-  layout: archive
-  permalinks:
-    category: '/category/:name/'
-    
-# Pagination 
-paginate: 9
-paginate_path: /page:num/
-    
-# Other
-markdown: kramdown
+  
+# Jekyll configuration
+
+permalink:   /:categories/:title/
+markdown:    kramdown
+highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: compressed
 
 kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
   input: GFM
-  syntax_highlighter: rouge
   syntax_highlighter_opts:
-    block:
-      line_numbers: true
+    default_lang: html
+    css_class   : 'syntax'
 
-# Adsense (change to "enabled" to activate, also your client id and ad slot. Create a new ad unit from your Adsense account to get the slot.)
-adsense: "disable"
-adsense-data-ad-client: ""
-adsense-data-ad-slot: ""
 
-# Lazy Images ("enabled" or "disabled")
-lazyimages: "disabled"
+# Site owner
+owner:
+  name: Rafael Sakurai
+  avatar: bio-photo.jpg
+  bio: "Big Data Engineer at Tail and Editor at InfoQ Brazil."
+  email:
+  disqus-shortname: #rafaelsakurai
+  twitter: rafaelsakurai
+  facebook: #username
+  google:
+    plus: #username
+    analytics: UA-60110243-1
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:
+  github: rafaelsakurai
+  stackoverflow: #http://stackoverflow.com/users/123456/username
+  linkedin: rafaelsakurai
+  xing: #username
+  instagram: #username
+  lastfm: #username
+  tumblr: #username
+  pinterest: #username
+  foursquare: #username
+  steam: #username
+  dribbble: #username
+  youtube: #username
+  soundcloud: #username
+  weibo: #username
+  flickr: #username
 
-exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]

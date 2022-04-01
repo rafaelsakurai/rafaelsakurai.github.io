@@ -2,13 +2,11 @@
 layout: post
 title: "Regressão Linear Múltipla"
 date: 2021-01-04 21:20:00
-categories: [ Machine Learning, Regressão ]
-tags: [regressão linear]
-image: assets/images/posts/2021-01-04-regressao-linear-multipla.png
+tags: [regressão, linear, múltipla, predição, python]
+published: true
 excerpt: Há situações nas quais queremos utilizar mais de duas variáveis para realizar uma predição mais precisa e neste caso podemos utilizar a Regressão Linear Múltipla.
-featured: true
-hidden: true
-
+comments: true
+image: 2021-01-04-regressao-linear-multipla.png
 ---
 
 Quando queremos entender a relação que existe entre mais de duas variáveis quantitativas para tentar predizer um valor, um método que podemos facilmente fazer isso é usando a **Regressão Linear Múltipla**.
@@ -50,7 +48,7 @@ Olhando a **Figura 1**, parece que se o apartamento é novo ou se já foi reform
 **Figura 1:** Gráfico de dispersão entre valor e se o apartamento está reformado.
 
 <figure>
-    <a href="/assets/images/posts/2021-01-04-regressao-linear-multipla-01.png"><img src="/assets/images/posts/2021-01-04-regressao-linear-multipla-01.png" alt="Gráfico de dispersão entre valor e se o apartamento está reformado."></a>
+    <a href="/images/posts/2021-01-04-regressao-linear-multipla-01.png"><img src="/images/posts/2021-01-04-regressao-linear-multipla-01.png" alt="Gráfico de dispersão entre valor e se o apartamento está reformado."></a>
 </figure>
 
 Mas interessante, na **Figura 2** e **Figura 3** podemos observar que se levarmos em consideração a quantidade de vagas de garagem ou quartos do apartamento, podemos notar que quanto mais, maior será o seu valor.
@@ -59,14 +57,14 @@ Mas interessante, na **Figura 2** e **Figura 3** podemos observar que se levarmo
 **Figura 2:** Gráfico de dispersão entre valor e a quantidade de quartos do apartamento.
 
 <figure>
-    <a href="/assets/images/posts/2021-01-04-regressao-linear-multipla-02.png"><img src="/assets/images/posts/2021-01-04-regressao-linear-multipla-02.png" alt="Gráfico de dispersão entre valor e a quantidade de quartos do apartamento."></a>
+    <a href="/images/posts/2021-01-04-regressao-linear-multipla-02.png"><img src="/images/posts/2021-01-04-regressao-linear-multipla-02.png" alt="Gráfico de dispersão entre valor e a quantidade de quartos do apartamento."></a>
 </figure>
 
 \\
 **Figura 3:** Gráfico de dispersão entre valor e a quantidade de vagas de garagem.
 
 <figure>
-    <a href="/assets/images/posts/2021-01-04-regressao-linear-multipla-03.png"><img src="/assets/images/posts/2021-01-04-regressao-linear-multipla-03.png" alt="Gráfico de dispersão entre valor e a quantidade de vagas de garagem."></a>
+    <a href="/images/posts/2021-01-04-regressao-linear-multipla-03.png"><img src="/images/posts/2021-01-04-regressao-linear-multipla-03.png" alt="Gráfico de dispersão entre valor e a quantidade de vagas de garagem."></a>
 </figure>
 
 Também podemos visualizar se três variáveis podem ajudar a definir o preço do apartamento. Na **Figura 4** temos o gráfico de dispersão usando as variáveis metros, valor e quantidade de quartos.
@@ -75,7 +73,7 @@ Também podemos visualizar se três variáveis podem ajudar a definir o preço d
 **Figura 4:** Gráfico de dispersão entre metros, valor e a quantidade de quartos do apartamento.
 
 <figure>
-    <a href="/assets/images/posts/2021-01-04-regressao-linear-multipla-04.png"><img src="/assets/images/posts/2021-01-04-regressao-linear-multipla-04.png" alt="Gráfico de dispersão entre metros, valor e a quantidade de quartos do apartamento."></a>
+    <a href="/images/posts/2021-01-04-regressao-linear-multipla-04.png"><img src="/images/posts/2021-01-04-regressao-linear-multipla-04.png" alt="Gráfico de dispersão entre metros, valor e a quantidade de quartos do apartamento."></a>
 </figure>
 
 Na **Figura 5** temos o gráfico de dispersão usando as variáveis metros, valor e quantidade de vagas de garagem.
@@ -83,7 +81,7 @@ Na **Figura 5** temos o gráfico de dispersão usando as variáveis metros, valo
 **Figura 5:** Gráfico de dispersão entre metros, valor e a quantidade de vagas de garagem.
 
 <figure>
-    <a href="/assets/images/posts/2021-01-04-regressao-linear-multipla-05.png"><img src="/assets/images/posts/2021-01-04-regressao-linear-multipla-05.png" alt="Gráfico de dispersão entre valor e a quantidade de vagas de garagem."></a>
+    <a href="/images/posts/2021-01-04-regressao-linear-multipla-05.png"><img src="/images/posts/2021-01-04-regressao-linear-multipla-05.png" alt="Gráfico de dispersão entre valor e a quantidade de vagas de garagem."></a>
 </figure>
 
 Poderíamos fazer esta mesma combinação para outras 3 variáveis, mas acredito que já deu para ver que algumas variáveis influenciam no valor do apartamento.
@@ -141,20 +139,20 @@ Vamos obter 17 novas características, e para cada bairro teremos uma caracterí
 
 O pandas possui uma implementação para realizar a binarização por meio do método `get_dummies`, exemplo:
 
-``` python
+{% highlight python %}
 import pandas as pd
 
 df = pd.read_csv('aptos.csv')
 bairros = pd.get_dummies(df[['bairro']]).values
-```
+{% endhighlight %}
 
 Neste código carregamos o dataset e geramos um novo dataset contendo apenas as características do bairro no formato binarizado, o resultado dos bairros das 3 primeiras linhas do dataset é:
 
-``` python
+{% highlight python %}
 bairros[0] = [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
 bairros[1] = [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1]
 bairros[2] = [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0]
-```
+{% endhighlight %}
 
 Agora que já sabemos como tratar a coluna bairro, podemos ajustar o dataset e prosseguir com o treino da Regressão Múltipla.
 
@@ -163,55 +161,55 @@ Agora que já sabemos como tratar a coluna bairro, podemos ajustar o dataset e p
 
 Para realizar o treinamento, vamos separar o dataset em duas parte: **X** será uma matriz para representar as características de entrada e **y** representa um vetor com os valores esperados pela regressão. 
 
-``` python
+{% highlight python %}
 X = pd.get_dummies(df[['metros', 'quartos', 'vagas', 'reformado', 'bairro']]).values
 y = df[['valor']].values
-```
+{% endhighlight %}
 
 A seguir temos as primeiras linhas da matriz **X**:
 
-``` python
+{% highlight python %}
 [107 3  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1]
 [107 3  2  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1]
 [49  2  1  0  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0]
-```
+{% endhighlight %}
 
 A seguir temos as primeiras linhas do vetor **y**:
 
-``` python
+{% highlight python %}
 [[560]
  [555]
  [196]
  ...
  [200]]
-```
+{% endhighlight %}
 
 Agora vamos treinar a Regressão Linear Múltipla:
 
-``` python
+{% highlight python %}
 model = LinearRegression()
 model.fit(X, y)
-```
+{% endhighlight %}
 
 A variável **model** agora representa um modelo de Regressão Linear Múltipla que foi treinado para predizer o valor de um apartamento com base nas demais informações.
 
 Para realizar a predição precisamos montar um vetor contendo todas as características, incluindo as que representam o bairro no formato binarizado, exemplo:
 
-``` python
+{% highlight python %}
 [100, 3, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0]
-```
+{% endhighlight %}
 
 Executando a predição:
 
-``` python
+{% highlight python %}
 print("Um apto de 100m com 3 quartos, 2 vagas, reformado no bairro Rudge Ramos custa: %.2f" % model.predict([[100, 3, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0]]))
-```
+{% endhighlight %}
 
 Temos o resultado:
 
-``` python
+{% highlight python %}
 Um apto de 100m com 3 quartos, 2 vagas, reformado no bairro Rudge Ramos custa: 491.18
-```
+{% endhighlight %}
 
 Se quiser faça um teste ai, usando o dataset de aptos responda quanto custa um apartamento de 100m, com 3 quartos, 2 vagas no bairro Centro?
 

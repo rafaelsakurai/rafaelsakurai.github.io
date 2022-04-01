@@ -2,11 +2,11 @@
 layout: post
 title: "Angry Birds: Divide the target in four parts."
 date: 2015-05-04 03:10:00
-categories: [ Artificial Intelligence, Game ]
 tags: [ia, angrybirds, java, random]
-image: assets/images/posts/2015-05-04-angry-birds-random-agent-improved.png
+published: true
 excerpt: Continuing the last post I'm trying to improve the random agent to obtain a best score.
-
+image: 2015-05-04-angry-birds-random-agent-improved.png
+comments: true
 ---
 
 ## Continuing the last post
@@ -15,7 +15,7 @@ If the score is less than the minimum necessary, so I keep the target object and
 
 The first shot was realized in all objects using with reference the center of target, but in sometimes the center isn't the best place to shot, so after execute all shots and don't get the minimum score to win, so the target is split in four parts and another shots will be execute in each part, to try another shot further up, down, left or right to get a best shot, like this:
 
-```java
+{% highlight java %}
 ABObject t1 = new ABObject(ab.getBounds(), ab.getType(), ab.getId());
 t1.setLocation((int) t1.getMinX(), (int) t1.getMinY());
 t1.setSize((int) (t1.getWidth() / 2), (int) (t1.getHeight() / 2));
@@ -31,11 +31,15 @@ t3.setSize((int) (t3.getWidth() / 2), (int) (t3.getHeight() / 2));
 ABObject t4 = new ABObject(ab.getBounds(), ab.getType(), ab.getId());
 t4.setLocation((int) (t4.getMinX() + t4.getWidth() / 2), (int) (t4.getMinY() + t4.getHeight() / 2));
 t4.setSize((int) (t4.getWidth() / 2), (int) (t4.getHeight() / 2));
-```
+{% endhighlight %}
 
 Sometimes need more than one shot to win, because how more high level, more complex is organized the screen objects. Using the same list of scores obtained after execute the shots, the algorithm begin to combine two or more shots to obtain three stars. 
 
-After exhausting all possibilities and don't get the three start, so is saved the best shot and go to the next level. Passing the levels, all data is saved and the knowledge is expanded so the algorithm can stop and restart in any moment and to continue at the same point. So I leave the algorithm running for some hours and it get three start until level 17.
+After exhausting all possibilities and don't get the three start, so is saved the best shot and go to the next level. Passing the levels, all data is saved and the knowledge is expanded so the algorithm can stop and restart in any moment and to continue at the same point. So I leave the algorithm running for some hours and it get three start until level 17, like show in next image:
+
+<figure>
+    <a href="/images/posts/2015-05-04-angry-birds-random-agent-improved.png"><img src="/images/posts/2015-05-04-angry-birds-random-agent-improved.png" alt="Angry Birds."></a>
+</figure>
 
 ## Comparison between the agents
 

@@ -2,12 +2,16 @@
 layout: post
 title: "Creating an intelligent agent to play Angry Birds in Java"
 date: 2015-02-25 10:47:00
-categories: [ Artificial Intelligence, Game ]
 tags: [ia, angrybirds, java]
-image: assets/images/posts/2015-02-25-creating-ai-agent-angry-birds-aibirds.png
+published: true
 excerpt: This post explain how to configure and start to create an intelligent agent to play Angry Birds.
-
+comments: true
+image: 2015-02-25-creating-ai-agent-angry-birds-aibirds.png
 ---
+
+<figure>
+    <a href="/images/posts/2015-02-25-creating-ai-agent-angry-birds-aibirds.png"><img src="/images/posts/2015-02-25-creating-ai-agent-angry-birds-aibirds.png" alt="Angry Birds."></a>
+</figure>
 
 [Angry Birds AI Competition](http://aibirds.org/) its an event in which we can create intelligent agent to play Angry Birds. This competition occur every year, in a different city around the World, since 2012, and the event is affiliated to the [Internation Joint Conference on Artificial Intelligence](http://ijcai-15.org/) proving to be a good place to show your knowledge.
 
@@ -26,7 +30,7 @@ Inside of `abV1.32.zip` file you can find the structure from example of a simple
 Inside of package `ab.vision` you can find two ways of image segmentation that get the image of game screen, identify and return the components of screem. It is possible to see the output just using the command with flag `-showMBR`. Minimum bounded rectangle (MBR) use rectangle to represent each component of screen, like show in next image:
 
 <figure>
-    <a href="/assets/images/posts/2015-02-25-creating-ai-agent-angry-birds-showMBR.png"><img src="/assets/images/posts/2015-02-25-creating-ai-agent-angry-birds-showMBR.png" alt="Image Segmentation MBR."></a>
+    <a href="/images/posts/2015-02-25-creating-ai-agent-angry-birds-showMBR.png"><img src="/images/posts/2015-02-25-creating-ai-agent-angry-birds-showMBR.png" alt="Image Segmentation MBR."></a>
 </figure>
 
 The `ab.vision.VisionMBR.java` class contains the implementation of MBR and you can see how this work.
@@ -34,7 +38,7 @@ The `ab.vision.VisionMBR.java` class contains the implementation of MBR and you 
 Another option to get a better components position is using `-showReal`, is a bit slower, but you can get a more specific position of each component, like show in next image:
 
 <figure>
-    <a href="/assets/images/posts/2015-02-25-creating-ai-agent-angry-birds-showReal.png"><img src="/assets/images/posts/2015-02-25-creating-ai-agent-angry-birds-showReal.png" alt="Image Segmentation Real."></a>
+    <a href="/images/posts/2015-02-25-creating-ai-agent-angry-birds-showReal.png"><img src="/images/posts/2015-02-25-creating-ai-agent-angry-birds-showReal.png" alt="Image Segmentation Real."></a>
 </figure>
 
 Using -showReal its possible to see a line that represent the floor and the components have a more detailed scale. The `ab.vision.VisionRealShape.java` class contains the real implementation and you can see how this work.
