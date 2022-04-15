@@ -2,11 +2,11 @@
 layout: post
 title: "Introdução ao Big Data"
 date: 2017-11-22 00:00:00
+categories: [ Big Data ]
 tags: [big data, mapreduce]
-published: true
+image: assets/images/posts/2017-11-22-introducao-big-data.png
 excerpt: Uma breve introdução ao uso de Big Data com seu pipeline básico, e também a ideia de como o MapReduce é usado para tratar a distribuição dos dados.
-comments: true
-image: 2017-11-22-introducao-big-data.png
+
 ---
 
 ## Introdução
@@ -37,13 +37,7 @@ Mas mapear e reduzir gera o que? Esse é o ponto principal, dado a tarefa que de
 
 Os sistemas de arquivos distribuídos (HDFS, GFS, CloudStore, etc) tendem a armazenar as informações em partes de 64MB replicados em pelo menos três servidores em hacks diferentes para evitar falhas. A localização de cada parte dos dados é de conhecimento do Nó Mestre que também é replicado para evitar falhas.
 
-E a aplicação do MapReduce nesses sistemas de arquivos distribuídos normalmente é feito da seguinte forma:
-
-<figure>
-    <a href="/images/posts/2017-11-22-introducao-big-data.png"><img src="/images/posts/2017-11-22-introducao-big-data.png" alt="MapReduce"></a>
-</figure>
-
-O *map* tende a mapear os dados nos nós que contêm cada parte dos dados e depois seus resultados são agrupados no Nó Mestre, que divide novamente os dados entre os nós para realizar o *reduce* e por fim combinar gerando o resultado de saída do algoritmo.
+Quando aplicamos MapReduce nesses sistemas de arquivos distribuídos: o *map* tende a mapear os dados nos nós que contêm cada parte dos dados e depois seus resultados são agrupados no Nó Mestre, que divide novamente os dados entre os nós para realizar o *reduce* e por fim combinar gerando o resultado de saída do algoritmo.
 
 Nessa situação se ocorrer falha em algum dos nós, basta esperar que o outro nó devolva o resultado, pois todas as operações são realizadas de modo distribuído em mais de um servidor diferente, evitando assim possíveis falhas.
 

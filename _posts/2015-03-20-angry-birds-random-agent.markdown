@@ -2,11 +2,11 @@
 layout: post
 title: "Angry Birds: Execute a random shot and save the shots."
 date: 2015-03-20 04:30:00
+categories: [ Artificial Intelligence, Game ]
 tags: [ia, angrybirds, java, random]
-published: true
+image: assets/images/posts/2015-03-20-angry-birds-random-agent.png
 excerpt: In this post I explain how create a agent that execute a shot in a random object in the screen, and save in a file (to future use) the shots used to win the level.
-image: 2015-03-20-angry-birds-random-agent.png
-comments: true
+
 ---
 
 ## Creating a random agent
@@ -17,7 +17,7 @@ I will explain each part of code, and in the end of this post you can find the e
 
 To start, I created the `saveKnowledge()` method to save the shots, basically the `BestShot` class contains the attributes: `level`, `score` and `List<Shot>`, so I can save any new level score, but only save if get over the level. Also I created the `loadKnowledge()` to restore the save shots.
 
-{% highlight java %}
+```java
   public void saveKnowledge() {
     try{
       knowledge = new File("knowledge.txt");
@@ -53,11 +53,11 @@ To start, I created the `saveKnowledge()` method to save the shots, basically th
 
     return bestShots;
   }
-{% endhighlight %}
+```
 
 The `run()` method execute the game (until manually interrupt the code), execute the `solve()` that made the shots. If won save or update the best shot in knowledge.txt file.
 
-{% highlight java %}
+```java
   // run the client
   public void run() {
     listObjects = new ArrayList<Shot>();
@@ -120,11 +120,11 @@ The `run()` method execute the game (until manually interrupt the code), execute
       }
     }
   }
-{% endhighlight %}
+```
 
 The `solve()` method choose a random object as target, and make the shot of bird to this target. If are playing a level that know how to win so just execute the best shot saved.
 
-{% highlight java %}
+```java
   public GameState solve() {
     boolean hasBestShot = bestShots.size() > currentLevel - 1 
       && bestShots.get(currentLevel - 1) != null 
@@ -182,11 +182,11 @@ The `solve()` method choose a random object as target, and make the shot of bird
     
     return state;
   }
-{% endhighlight %}
+```
 
 The `getReleasePoint()`, `getTapTime()`, `distance()` are the same from `ab.demo.NaiveAgent` I just encapsulate in specific methods.
 
-{% highlight java %}
+```java
   public Point getReleasePoint(Rectangle sling, Point _tpt) {
     Point releasePoint = null;
     // estimate the trajectory
@@ -237,11 +237,11 @@ The `getReleasePoint()`, `getTapTime()`, `distance()` are the same from `ab.demo
   private double distance(Point p1, Point p2) {
     return Math.sqrt((double) ((p1.x - p2.x) * (p1.x - p2.x) + (p1.y - p2.y) * (p1.y - p2.y)));
   }
-{% endhighlight %}
+```
 
 The `createShot` method create a new shot with the information of screen like slingshot, target, and release point. I made a change in `Shot` class, and just create a new constructor method to receive the `releasePoint`, because this information is used to adjust the trajectory shot after shot.
 
-{% highlight java %}
+```java
   public Shot createShot(ABObject abObject, Rectangle sling, Point _tpt, Point releasePoint) {
     Shot shot = null;
     
@@ -269,11 +269,11 @@ The `createShot` method create a new shot with the information of screen like sl
     
     return shot;
   }
-{% endhighlight %}
+```
 
 The `executeShot` method get the screen information and execute the shot in direction of choose object, after execute the shot with `aRobot.cshoot(shot)` add the shot in `listObjects` that will be save. I count the shot number just to recreate the same shot.
 
-{% highlight java %}
+```java
   public GameState executeShot(Rectangle sling, Shot shot, GameState state, Point releasePoint) {
     // check whether the slingshot is changed. the change of the slingshot indicates a change in the scale.
     ActionRobot.fullyZoomOut();
@@ -306,19 +306,19 @@ The `executeShot` method get the screen information and execute the shot in dire
     }
     return state;
   }
-{% endhighlight %}
+```
 
 After almost two hours playing alone, this code finish the first 21 levels and save the best shots.
 
 <figure>
-    <a href="/images/posts/2015-03-20-angry-birds-random-agent.png"><img src="/images/posts/2015-03-20-angry-birds-random-agent.png" alt="Angry Birds."></a>
+    <a href="/assets/images/posts/2015-03-20-angry-birds-random-agent.png"><img src="/assets/images/posts/2015-03-20-angry-birds-random-agent.png" alt="Angry Birds."></a>
 </figure>
 
 As we can see, I don't made many modifications. I just save the shots to execute again and change the target from pigs to all objects on screen.
 
 Following we have the `BestShot` class:
 
-{% highlight java %}
+```java
 package ab.ai;
 
 import java.io.Serializable;
@@ -346,11 +346,11 @@ public class BestShot implements Serializable {
     return "BestShot [level=" + level + ", score=" + score + ", shots=" + shots + "]";
   }
 }
-{% endhighlight %}
+```
 
 And this is the complete code from `RandonAgent` class:
 
-{% highlight java %}
+```java
 package ab.ai;
 
 import java.awt.Point;
@@ -674,6 +674,6 @@ public class RandomAgent implements Runnable {
     na.run();
   }
 }
-{% endhighlight %}
+```
 
 So if you have more time, leave the gaming playing alone to see how far it can get. Last information, don't forget implements Serializable in all objects that will be saved in a file.
