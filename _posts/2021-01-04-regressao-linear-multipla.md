@@ -6,8 +6,8 @@ categories: [ Machine Learning, Regressão ]
 tags: [regressão linear]
 image: assets/images/posts/2021-01-04-regressao-linear-multipla.png
 excerpt: Há situações nas quais queremos utilizar mais de duas variáveis para realizar uma predição mais precisa e neste caso podemos utilizar a Regressão Linear Múltipla.
-featured: true
-hidden: true
+featured: false
+hidden: false
 
 ---
 
