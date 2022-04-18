@@ -4,7 +4,7 @@ title: "Revisão de álgebra linear em Python"
 date: 2019-06-21 22:50:00
 categories: [ Algebra Linear ]
 tags: [numpy, vetores, matriz, distancia, euclidiana]
-image: assets/images/posts/2019-06-21-revisao-algebra-linear-python-01.png
+image: assets/images/posts/2019-06-21-revisao-algebra-linear-python.png
 excerpt: Veja uma revisão de alguns conceitos importantes de Álgebra Linear e como usar em Python com a biblioteca NumPy.
 ---
 

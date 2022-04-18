@@ -4,7 +4,7 @@ title: "Review of Linear Algebra in Python"
 date: 2019-06-21 23:00:00
 categories: [ Algebra Linear ]
 tags: [numpy, vector, matrix, distance, euclidian]
-image: assets/images/posts/2019-06-21-revisao-algebra-linear-python-01.png
+image: assets/images/posts/2019-06-21-revisao-algebra-linear-python.png
 excerpt: Review some basic concepts of Linear Algebra, and how to calculate using Python with NumPy.
 
 ---
