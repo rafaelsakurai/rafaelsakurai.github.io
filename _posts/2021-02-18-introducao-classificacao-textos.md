@@ -6,8 +6,8 @@ categories: [ Machine Learning, Classificação ]
 tags: [classificação, inteligencia artificial, machine learning, classificação de textos]
 image: assets/images/posts/2021-02-18-introducao-classificacao-textos-01.png
 excerpt: Tudo pode ser classificado e rotulado, mas porque queremos classificar textos ou como isso poderia ajudar o negócio da empresa que trabalho?
-featured: true
-hidden: true
+featured: false
+hidden: false
 
 ---
 
