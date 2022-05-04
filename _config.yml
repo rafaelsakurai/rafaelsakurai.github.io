@@ -5,6 +5,7 @@ description: "Blog sobre Machine Learning e Big Data."
 logo: 'assets/images/favicon.png'
 favicon: 'assets/images/favicon.png'
 baseurl: https://www.sakurai.dev.br
+url: https://www.sakurai.dev.br
 google_analytics: 'UA-60110243-1'
 disqus: 
 mailchimp-list: 
