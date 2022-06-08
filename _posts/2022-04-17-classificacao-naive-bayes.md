@@ -6,8 +6,8 @@ categories: [ Machine Learning, Classificação ]
 tags: [classificação, inteligencia artificial, machine learning, naive bayes]
 image: assets/images/posts/2022-04-17-classificacao-nb.png
 excerpt: Veja como usar Naive Bayes e calcular as probabilidades das características para realizar uma tarefa de classificação.
-featured: true
-hidden: true
+featured: false
+hidden: false
 
 ---
 
