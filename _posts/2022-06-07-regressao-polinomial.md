@@ -5,7 +5,7 @@ date: 2022-06-07 23:15:00
 categories: [ Machine Learning, Regressão ]
 tags: [inteligencia artificial, machine learning, regressão polinomial]
 image: assets/images/posts/2022-06-07-regressao-polinomial.png
-excerpt: Veja neste post como usar o k-Means para realizar a tarefa de agrupamento de dados.
+excerpt: Muitas vezes uma função de 1º grau que gera reta não é bom o bastante para ser usada na regressão, nesse caso podemos usar funções polinomiais para ajudar predição dos valores, veja neste post como usar a Regressão Polinomial.
 featured: true
 hidden: true
 ---

@@ -6,8 +6,8 @@ categories: [ Machine Learning, Agrupamento ]
 tags: [agrupamento, inteligencia artificial, machine learning, k-means]
 image: assets/images/posts/2022-04-28-agrupamento-kmeans.png
 excerpt: Veja neste post como usar o k-Means para realizar a tarefa de agrupamento de dados.
-featured: true
-hidden: true
+featured: false
+hidden: false
 ---
 
 Há tarefas de reconhecimento de padrões nas quais queremos agrupar nossos dados, mas não temos os rótulos ou classes previamente definidas no dataset, neste cenário podemos usar técnicas de aprendizado de máquinas não supervisionado. 
