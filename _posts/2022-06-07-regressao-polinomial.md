@@ -6,8 +6,8 @@ categories: [ Machine Learning, Regressão ]
 tags: [inteligencia artificial, machine learning, regressão polinomial]
 image: assets/images/posts/2022-06-07-regressao-polinomial.png
 excerpt: Muitas vezes uma função de 1º grau que gera reta não é bom o bastante para ser usada na regressão, nesse caso podemos usar funções polinomiais para ajudar predição dos valores, veja neste post como usar a Regressão Polinomial.
-featured: true
-hidden: true
+featured: false
+hidden: false
 ---
 
 Nem sempre os dados estão relacionados de tal modo que tenhamos seus valores em uma escala crescente ou decrescente, de tal forma que podemos simplesmente ter uma reta que se aproxima da maioria dos valores.
