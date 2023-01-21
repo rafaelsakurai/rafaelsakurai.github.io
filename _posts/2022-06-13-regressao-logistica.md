@@ -6,8 +6,8 @@ categories: [ Machine Learning, Regressão, Classificação ]
 tags: [inteligencia artificial, machine learning, regressão logística, classificação]
 image: assets/images/posts/2022-06-13-regressao-logistica.png
 excerpt: Veja neste post como usar a Regressão Lógistica e também como podemos usar uma regressão para fazer a tarefa de classificação, neste exemplo vamos classificar textos de SMS como Spam ou Não Spam.
-featured: true
-hidden: true
+featured: false
+hidden: false
 ---
 
 A Regressão Logística internamente calcula o valor da regressão e passa esse valor por uma [função logística](https://pt.m.wikipedia.org/wiki/Fun%C3%A7%C3%A3o_log%C3%ADstica), no qual dado o valor de entrada, teremos como resultado um valor de saída entre 0 e 1. Então dado a predição feita pela regressão, se o valor predito for maior ou igual a 0.5, temos como saída uma classe positiva, ou o valor 1, mas caso o valor predito for menor que 0.5, então temos como saída uma classe negativa, ou o valor 0.
