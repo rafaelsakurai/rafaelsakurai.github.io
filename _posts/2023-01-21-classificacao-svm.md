@@ -5,7 +5,7 @@ date: 2023-01-21 13:00:00
 categories: [ Machine Learning, SVM, Classificação ]
 tags: [inteligencia artificial, machine learning, svm, classificação, scikit-learn]
 image: assets/images/posts/2023-01-21-svm-classificacao.png
-excerpt: 
+excerpt: Vejamos como funciona a Máquina de Vetores de Suporte (SVM) e como podemos usá-la para treinar um modelo que classifica dígitos que foram escritos manualmente. 
 featured: true
 hidden: true
 ---
@@ -188,8 +188,8 @@ Acurácia: 0.9148580968280468
 
 Isso indica que dado o conjunto de teste, o modelo conseguiu classificar corretamente 91% das amostras.
 
-
 Um ponto importante é que não passei nenhuma configuração personalizada para o treino do modelo, caso você queira, dê uma olhada nos parâmetros que o **LinearSVC** permite configurar e treine novamente o modelo para tentar obter uma classificação melhor.
+
 
 # Matriz de confusão
 
