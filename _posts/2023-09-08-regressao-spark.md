@@ -5,7 +5,7 @@ date: 2023-01-21 13:00:00
 categories: [ Apache Spark, Machine Learning, Regressão ]
 tags: [spark, machine learning, regressão]
 image: assets/images/posts/2023-09-08-sparkregressao-linear.png
-excerpt: 
+excerpt: Já comentei sobre Regressão Linear Simples e Múltipla, e agora veremos como implementar em Scala usando usando a biblioteca MLLib do Apache Spark.
 featured: true
 hidden: true
 ---
@@ -94,7 +94,7 @@ df.show()
 +-----+-----+-------+-----+---------+--------------+
 ```
 
-Observação: os gráficos gerados servem para entender melhor os dados, utilizei a biblioteca de gráficos do Spark Notebook, estou colocando os códigos de como gerar os gráficos para caso você também queira reproduzir. 
+> Observação: os gráficos gerados servem para entender melhor os dados, utilizei a biblioteca de gráficos do Spark Notebook, estou colocando os códigos de como gerar os gráficos para caso você também queira reproduzir. 
 
 A partir deste DataFrame, podemos fazer algumas explorações, vejamos no gráfico de dispersão (Figura 2) a relação entre os valores da área e preço dos apartamentos.
 
@@ -105,7 +105,7 @@ ScatterChart(df, fields=Some("area", "preco"))
 **Figura 2:** Gráfico de dispersão entre o valor do preço e a área dos apartamentos.
 
 <figure>
-    <a href="/images/posts/2023-09-08-sparkregressao-linear-02.png"><img src="/images/posts/2023-09-08-sparkregressao-linear-02.png" alt="Gráfico de dispersão entre o valor do preço e a área dos apartamentos."></a>
+    <a href="/assets/images/posts/2023-09-08-sparkregressao-linear-02.png"><img src="/assets/images/posts/2023-09-08-sparkregressao-linear-02.png" alt="Gráfico de dispersão entre o valor do preço e a área dos apartamentos."></a>
 </figure>
 
 
@@ -202,7 +202,7 @@ Na **Figura 3** temos um gráfico de linha que compara o valor do preço real co
 **Figura 3:** Comparação entre o valor real e o valor predito pelo modelo.
 
 <figure>
-    <a href="/images/posts/2023-09-08-sparkregressao-linear-03.png"><img src="/images/posts/2023-09-08-sparkregressao-linear-03.png" alt="Comparação entre o valor real e o valor predito pelo modelo."></a>
+    <a href="/assets/images/posts/2023-09-08-sparkregressao-linear-03.png"><img src="/assets/images/posts/2023-09-08-sparkregressao-linear-03.png" alt="Comparação entre o valor real e o valor predito pelo modelo."></a>
 </figure>
 
 
@@ -293,16 +293,16 @@ predicao.show()
 Como resultado temos um novo DataFrame chamado **predicao** com a nova coluna **prediction** que contém os valores predito pela Regressão Linear:
 
 ```
-+----+-----+-------+-----+---------+---------+--------------------+------------------+
++----+-----+-------+-----+---------+-----------+--------------------+------------------+
 |area|preco|quartos|vagas|reformado|bairroIndex|            features|        prediction|
-+----+-----+-------+-----+---------+---------+--------------------+------------------+
-|45.0|215.0|      2|    1|        1|      2.0|[45.0,2.0,1.0,1.0...|216.05851244370365|
-|48.0|217.0|      2|    1|        0|      8.0|[48.0,2.0,1.0,0.0...| 213.3625333848461|
-|49.0|196.0|      2|    1|        0|      8.0|[49.0,2.0,1.0,0.0...|218.14164863150677|
-|50.0|245.0|      2|    1|        1|      7.0|[50.0,2.0,1.0,1.0...|229.59115512969237|
-|52.0|272.0|      2|    1|        0|      5.0|[52.0,2.0,1.0,0.0...|238.69675449987758|
++----+-----+-------+-----+---------+-----------+--------------------+------------------+
+|45.0|215.0|      2|    1|        1|        2.0|[45.0,2.0,1.0,1.0...|216.05851244370365|
+|48.0|217.0|      2|    1|        0|        8.0|[48.0,2.0,1.0,0.0...| 213.3625333848461|
+|49.0|196.0|      2|    1|        0|        8.0|[49.0,2.0,1.0,0.0...|218.14164863150677|
+|50.0|245.0|      2|    1|        1|        7.0|[50.0,2.0,1.0,1.0...|229.59115512969237|
+|52.0|272.0|      2|    1|        0|        5.0|[52.0,2.0,1.0,0.0...|238.69675449987758|
 ...
-+----+-----+-------+-----+---------+---------+--------------------+------------------+
++----+-----+-------+-----+---------+------==---+--------------------+------------------+
 ```
 
 Na **Figura 4** temos um gráfico de linha que compara o valor do preço real com o valor que foi predito pelo modelo, note que apesar de linear, agora não temos mais uma linha contínua, temos variação por conta das diversas características usadas no treino.
