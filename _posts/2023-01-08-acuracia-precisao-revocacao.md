@@ -6,8 +6,8 @@ categories: [ Machine Learning, Métricas, Acurácia, Precisão, Revocação ]
 tags: [inteligencia artificial, machine learning, metricas]
 image: assets/images/posts/2023-01-08-acuracia-precisao-revocacao.png
 excerpt: A partir da Matriz de Confusão conseguimos obter as métricas Acurácia, Precisão e Revocação para entender melhor como está o modelo.
-featured: true
-hidden: true
+featured: false
+hidden: false
 ---
 
 Quando montamos uma matriz de confusão, podemos verificar na diagonal principal se estamos associando as amostras corretamente com seus rótulos, mas vamos olhar de maneira mais geral para todos valores apresentados nessa matriz.

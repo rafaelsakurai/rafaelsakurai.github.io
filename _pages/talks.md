@@ -6,7 +6,7 @@ permalink: /talks
 ### Boas práticas de Code Review
 * Code Review é uma prática em que todos os envolvidos aprendem, mas nem todos gostam de fazer ou participar, nesta palastra comento sobre algumas práticas para deixar o Code Review legal e produtivo.
 
-* <a href="https://drive.google.com/file/d/1tavxOesIwCB2AKfWLyrKEenG2tgtfNyr/view?usp=sharing" target="_blank">Slides</a>
+* <a href="https://drive.google.com/file/d/1WrcugahSpZ6jOtG6vIYyA1LeP6tFwUG3/view?usp=sharing" target="_blank">Slides</a>
 
 
 ### Apache Spark: particionando dados para trabalhar com Big Data de verdade

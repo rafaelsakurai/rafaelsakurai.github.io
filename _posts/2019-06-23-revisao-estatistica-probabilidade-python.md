@@ -70,10 +70,12 @@ O código do cálculo da mediana é:
 ``` python
 def mediana(x):
     n = len(x)
+    x.sort() # os elementos de x precisam estar ordenados
+    posicaoCentral = int(n / 2)
     if n % 2 == 1:
-        return x[n / 2]
+        return x[posicaoCentral]
     else:
-        return (x[n / 2 - 1] + x[n / 2]) / 2
+        return (x[posicaoCentral - 1] + x[posicaoCentral]) / 2
 ```
 
 ## Dispersão
