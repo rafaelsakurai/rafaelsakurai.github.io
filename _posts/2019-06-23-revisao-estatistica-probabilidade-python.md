@@ -128,7 +128,7 @@ np.std(alturas)    # 8.38
 
 Portanto, podemos afirmar que a média das alturas é 1.67m com desvio para mais ou para menos de 8cm.
 
-## Covariancia
+## Covariância
 
 A variância é utilizada quando queremos calcular a dispersão dos dados em relação a uma única variável, quando queremos calcular a dispersão com base em duas variáveis diferentes utilizamos a covariância. Dado uma matriz com altura e peso:
 
