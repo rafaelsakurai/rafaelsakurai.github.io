@@ -6,8 +6,8 @@ categories: [ Machine Learning, SVM, Classificação ]
 tags: [inteligencia artificial, machine learning, svm, classificação, scikit-learn]
 image: assets/images/posts/2023-01-21-svm-classificacao.png
 excerpt: Vejamos como funciona a Máquina de Vetores de Suporte (SVM) e como podemos usá-la para treinar um modelo que classifica dígitos que foram escritos manualmente. 
-featured: true
-hidden: true
+featured: false
+hidden: false
 ---
 
 Dado que temos um conjunto de dados composto por amostras com as características `x` e `y`, e representada pelas classes `círculo vermelho` e `quadrado verde`, como mostrado na Figura 1, como podemos separar as duas classes dos exemplos?
