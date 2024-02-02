@@ -32,7 +32,7 @@ A primeira parte do livro aborda alguns desafios que fazem parte da base das apl
 - **velocidade com que os dados mudam**, as aplicações continuam crescendo e evoluindo com o passar do tempo, surgem novas funcionalidades, o esquema das tabelas muda, novas fontes de dados podem ser incorporadas, novos formatos de dados podem ser suportados.
 
 
-[Capítulo 1 - Disponibilidade, escalabilidade e manutenibilidade de aplicações](https://sakurai.dev.br/2024-02-01-resumo-data-intensive-cap-01)
+[Capítulo 1 - Disponibilidade, escalabilidade e manutenibilidade de aplicações](https://www.sakurai.dev.br/resumo-data-intensive-cap-01)
 
 Capítulo 2 - Modelos de dados e linguagens de consulta
 
