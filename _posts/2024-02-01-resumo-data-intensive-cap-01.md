@@ -2,7 +2,7 @@
 layout: post
 title: "Resumo do capítulo 1 do livro Designing Data-Intensive Applications"
 date: 2024-02-01 23:45:00
-categories: [ Livro, Desenvolvimento de Aplicações Distribuídas ]
+categories: [ Livro, Designing Data-Intensive Applications ]
 tags: [livro, desenvolvimento de aplicações, disponibilidade, escalabilidade, manutenibilidade]
 excerpt: Este primeiro capítulo o autor aborda três grandes pilares relacionados ao desenvolvimento de aplicações (disponibilidade, escalabilidade e manutenibilidade).
 featured: false
@@ -64,3 +64,5 @@ Sobre esse assunto, o autor foca em três princípios de desenvolvimento de soft
 Quem gosta de ficar arrumando bug em produção de madrugada ou corrigindo códigos que poderiam ter sido implementados de forma correta logo na primeira vez, na prática muitas equipes de desenvolvimento adotam padrões para constantemente melhorarem o código, então para ser um desenvolvedor melhor é necessário estar sempre aprendendo coisas novas, o código que você escreveu ontem já é legado, aproveite hoje para aprender a fazer só um pouco melhor aquilo que você fez ontem, tenho certeza que não é só seu código que vai melhorar, mas sua carreira também vai melhorar.
 
 O autor apresenta várias sugestões para atender esses três princípios, mas em resumo é pensar em como facilitar a vida de quem usa e desenvolve o sistema.
+
+No [capítulo 2](https://www.sakurai.dev.br/resumo-data-intensive-cap-02) o livro aborda o tema dos modelos de dados e linguagens de consulta, comentando sobre como o dado é transformado entre as camadas da aplicação, os diversos tipos de banco de dados e linguagens para consultar os dados.

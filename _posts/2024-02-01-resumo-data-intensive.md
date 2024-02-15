@@ -2,7 +2,7 @@
 layout: post
 title: "Resumo do livro Designing Data-Intensive Applications [Em construção]"
 date: 2024-02-01 23:30:00
-categories: [ Livro, Dados Distribuídos, Processamento Batch, Processamento Stream ]
+categories: [ Livro, Designing Data-Intensive Applications, Dados Distribuídos, Processamento Batch, Processamento Stream ]
 tags: [livro, dados distribuídos, replicação de dados, particionamento de dados, processamento batch, processamento stream]
 image: assets/images/posts/2024-02-01-resumo-data-intensive.png
 excerpt: Resumo comentado dos capítulos do livro Designing Data-Intensive Applications do Martin Keplemmann.
@@ -34,7 +34,7 @@ A primeira parte do livro aborda alguns desafios que fazem parte da base das apl
 
 [Capítulo 1 - Disponibilidade, escalabilidade e manutenibilidade de aplicações](https://www.sakurai.dev.br/resumo-data-intensive-cap-01)
 
-Capítulo 2 - Modelos de dados e linguagens de consulta
+[Capítulo 2 - Modelos de dados e linguagens de consulta](https://www.sakurai.dev.br/resumo-data-intensive-cap-02)
 
 Capítulo 3 - Armazenar e recuperar os dados
 
