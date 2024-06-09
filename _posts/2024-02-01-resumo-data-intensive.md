@@ -36,7 +36,7 @@ A primeira parte do livro aborda alguns desafios que fazem parte da base das apl
 
 [Capítulo 2 - Modelos de dados e linguagens de consulta](https://www.sakurai.dev.br/resumo-data-intensive-cap-02)
 
-Capítulo 3 - Armazenar e recuperar os dados
+[Capítulo 3 - Armazenar e recuperar os dados](https://www.sakurai.dev.br/resumo-data-intensive-cap-03)
 
 Capítulo 4 - Encoding e Evolução
 
