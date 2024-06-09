@@ -78,5 +78,4 @@ O **Cypher** é uma linguagem de consulta declarativa para consultar em grafos e
 No livro o autor também compara uma consulta SQL que precisa ser feita de forma recursiva para conseguir obter o resultado esperado, com uma consulta usando o Cypher que facilita percorrer os vértices do grafo para executar de forma bem mais simples a mesma consulta recursiva escrita no SQL.
 
 
-
-No capítulo 3 o foco do livro será em como armazenar e recuperar os dados.
+No [capítulo 3](https://www.sakurai.dev.br/resumo-data-intensive-cap-03) o autor aborda como os dados são armazenados e recuperados, como construir um index para melhorar a recuperação das informação, diferença entre OLAP e OLTP, armazenamento orientado a colunas e materialized view.
