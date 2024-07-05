@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Classificação usando SVM"
+title: "Regressão Linear no Spark com MLLib"
 date: 2023-01-21 13:00:00
 categories: [ Apache Spark, Machine Learning, Regressão ]
 tags: [spark, machine learning, regressão]
 image: assets/images/posts/2023-09-08-sparkregressao-linear.png
-excerpt: Já comentei sobre Regressão Linear Simples e Múltipla, e agora veremos como implementar em Scala usando usando a biblioteca MLLib do Apache Spark.
+excerpt: Já comentei sobre Regressão Linear Simples e Múltipla, e agora veremos como implementar em Scala usando a biblioteca MLLib do Apache Spark.
 featured: true
 hidden: true
 ---
