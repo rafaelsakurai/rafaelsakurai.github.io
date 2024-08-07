@@ -38,7 +38,7 @@ A primeira parte do livro aborda alguns desafios que fazem parte da base das apl
 
 [Capítulo 3 - Armazenar e recuperar os dados](https://www.sakurai.dev.br/resumo-data-intensive-cap-03)
 
-Capítulo 4 - Encoding e Evolução
+[Capítulo 4 - Encoding e Evolução](https://www.sakurai.dev.br/resumo-data-intensive-cap-04)
 
 
 ### Parte 2 - Dados distribuídos
