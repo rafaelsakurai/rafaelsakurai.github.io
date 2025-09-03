@@ -45,9 +45,9 @@ A primeira parte do livro aborda alguns desafios que fazem parte da base das apl
 
 Na primeira parte do livro o foco eram os sistemas em que os dados estavam armazenados em uma única máquina, agora ficou mais intenso o uso dos dados e é necessário um ambiente distribuído para conseguir armazenar, processar ou consultar esses dados.
 
-Capítulo 5 - Replicação
+[Capítulo 5 - Replicação](https://www.sakurai.dev.br/resumo-data-intensive-cap-05)
 
-Capítulo 6 - Particionamento
+[Capítulo 6 - Particionamento](https://www.sakurai.dev.br/resumo-data-intensive-cap-06)
 
 Capítulo 7 - Transações
 

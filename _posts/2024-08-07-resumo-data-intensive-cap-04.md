@@ -46,4 +46,4 @@ No capítulo anterior o autor comenta que o mesmo dado pode ser representado de 
 Pode ser que a aplicação que você está desenvolvendo precise de um ou de todos esses modos para manipular os dados, o autor conclui este capítulo lembrando que é necessário tomar cuidado com a compatibilidade ao longo do ciclo de vida do dado.
 
 
-A seguir o livro começa uma nova parte que aborda alguns desafios relacionados a dados distribuídos, em que o dado não é armazenado em apenas uma única maquina. O capítulo 5 vai tratar o assunto da replicação dos dados que está relacionado com a forma como disponibilizamos o mesmo dado em mais de uma máquina a fim de garantir o acesso rápido, recuperação em caso de desastre, etc.
+A seguir o livro começa uma nova parte que aborda alguns desafios relacionados a dados distribuídos, em que o dado não é armazenado em apenas uma única maquina. O [capítulo 5](https://www.sakurai.dev.br/resumo-data-intensive-cap-05) vai tratar o assunto da replicação dos dados que está relacionado com a forma como disponibilizamos o mesmo dado em mais de uma máquina a fim de garantir o acesso rápido, recuperação em caso de desastre, etc.
